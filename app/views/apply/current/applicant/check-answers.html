@@ -1,0 +1,298 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+<h2 class="govuk-heading-xl">Check your answers</h2>
+
+
+<h2 class="govuk-heading-m">About you</h2>
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            What is your name?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            {{data['applicants-title'] }} {{data['applicant-first-name'] }} {{data['applicant-middle-name'] }} {{data['applicant-last-name']
+            }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_name.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Does the other parent know you by a different name?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">No</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_date_of_birth.html">
+                Change
+                <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+        </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         What is your National Insurance number?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">{{data['applicant-national-insurance-number'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_national_insurance_number.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Do you need us to use any different formats when we contact you by letter or phone?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">Yes</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_national_insurance_number.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+        What type of contact do you need in a different format?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">Letters <br/> Phone calls</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_national_insurance_number.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         What format do you need us to use when we send you letters?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">Something else</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_national_insurance_number.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         How can we help when we send you letters?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">This is what the customer types in the box.</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_national_insurance_number.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+        What format do you need us to use when we contact you by phone
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">Sign Language</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_national_insurance_number.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         What’s the best number to call you on?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            {{data['mobile-number'] }}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_phone_number.html">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+Is this your own number?        </dt>
+        <dd class="govuk-summary-list__value">
+            Yes
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_phone_number.html">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             When can we call you?</dt>
+            <dd class="govuk-summary-list__value">
+                Anytime
+
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="../about_applicant/applicants_phone_number.html">
+                    Change
+                    <span class="govuk-visually-hidden"> contact details</span>
+                </a>
+            </dd>
+        </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Can we leave you a voicemail message?</dt>
+        <dd class="govuk-summary-list__value">
+            No
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_phone_number.html">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Can we send you text messages?</dt>
+        <dd class="govuk-summary-list__value">
+            No
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_phone_number.html">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+             Where can we send letters?
+
+        </dt>
+        <dd class="govuk-summary-list__value">
+            10 Hilltop drive
+            <br>Ayton
+            <br>Cramlington
+            <br>NE32 2LB
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_correspondence_address.html">
+                Change
+                <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+             Do you live at this address?
+
+        </dt>
+        <dd class="govuk-summary-list__value">
+            Yes
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_correspondence_address.html">
+                Change
+                <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+             Do you want to receive email updates?
+
+        </dt>
+        <dd class="govuk-summary-list__value">
+            Yes
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_correspondence_address.html">
+                Change
+                <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+             Email Address
+
+        </dt>
+        <dd class="govuk-summary-list__value">
+            example@example.com
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_correspondence_address.html">
+                Change
+                <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+        </dd>
+    </div>
+
+</dl>
+
+<button type="submit" class="govuk-button">
+    Continue
+</button>
+</form>
+</div>
+                                                 {% include "exit-button.html" %}
+
+</div>
+</main>
+</div>
+{% endblock %}

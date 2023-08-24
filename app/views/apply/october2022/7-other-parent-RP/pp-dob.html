@@ -1,0 +1,78 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                                 Do you know the other parent’s date of birth?
+                            </h1>
+                        </legend>
+
+                        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="how-contacted-conditional" name="dob" type="radio" value="yes~pp-nino" data-aria-controls="conditional-how-contacted-conditional" >
+                                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+                                  Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+                                                            <p>Date of birth</p>
+                                                            <span class="govuk-hint"> For example, 15 7 1985
+                                                            </span>
+
+                                <div class="govuk-form-group">
+                                    <div class="govuk-date-input__item">
+                                      <!-- day -->
+                                      <label class="govuk-label govuk-date-input__label" for="dob-day">
+                                        Day
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" spellcheck="false">
+                                    </div>
+                                    <!-- Month -->
+                                    <div class="govuk-date-input__item">
+                                      <label class="govuk-label govuk-date-input__label" for="dob-month">
+                                        Month
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" spellcheck="false">
+                                    </div>
+                                    <!-- Year -->
+                                    <div class="govuk-date-input__item">
+                                      <label class="govuk-label govuk-date-input__label" for="dob-year">
+                                        Year
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number"
+                                                                        spellcheck="false">
+                                     </div>
+                                   </div>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="how-contacted-conditional-2" name="dob" type="radio" value="no~pp-partial-dob" data-aria-controls="conditional-how-contacted-conditional-2">
+                                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                                   No
+                                </label>
+                            </div>
+
+
+                        </div>
+                    </fieldset>
+                </div>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+             {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

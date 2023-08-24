@@ -1,0 +1,84 @@
+{% extends "layout.html" %} {% block pageTitle %} Which of the following best describes your White background? {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="religion-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                      Which of the following best describes your White background?
+                            </h1>
+                          </legend>
+
+                        <br>
+                          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="religion" name="religion" type="radio" value="none~religion-irish" data-aria-controls="conditional-religion">
+                              <label class="govuk-label govuk-radios__label" for="religion">
+                            English, Welsh, Scottish, Northern Irish or British
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="religion-2" name="religion" type="radio" value="buddhist~religion-irish" data-aria-controls="conditional-religion-2">
+                                <label class="govuk-label govuk-radios__label" for="religion-2">
+                                Irish
+                                </label>
+                              </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="religion-2" name="religion" type="radio" value="christian~religion-irish" data-aria-controls="conditional-religion-2">
+                              <label class="govuk-label govuk-radios__label" for="religion-2">
+                          Gypsy or Irish Traveller
+                              </label>
+                            </div>
+
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="ethnic-group-4" name="ethnic-group" type="radio" value="another-mixed-background~religion" data-aria-controls="conditional-ethnic-group-4">
+                              <label class="govuk-label govuk-radios__label" for="ethnic-group-4">
+                                Any other White background
+                              </label>
+                            </div>
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-ethnic-group-4">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label" for="ethnicity-white-other">
+                                  Your White background (optional)
+                                </label>
+                                <input class="govuk-input govuk-!-width-two-thirds" id="ethnicity-white-other" name="ethnicity-white-other" type="text"></div>
+
+                            </div>
+
+                            <div class="govuk-radios__divider">or</div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="religion-8" name="religion" type="radio" value="no~religion-irish" data-aria-controls="conditional-religion-8">
+                                <label class="govuk-label govuk-radios__label" for="religion-8">
+                                  Prefer not to say
+                                </label>
+                              </div>
+
+                          </div>
+
+                        </fieldset>
+                      </div>
+
+                      <br>
+
+                    <button id="personalDetailsBtn" type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+                         {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+
+{% endblock %}

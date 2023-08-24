@@ -1,0 +1,82 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="shared-benefit-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                              What was your total taxable income on {{data['date-1-day'] }}
+                                  {% if data['date-1-month'] === '1' %}
+                                  January
+                                  {% elseif data['date-1-month'] === '2' %}
+                                  February
+                                  {% elseif data['date-1-month'] === '3' %}
+                                  March
+                                  {% elseif data['date-1-month'] === '4' %}
+                                  April
+                                  {% elseif data['date-1-month'] === '5' %}
+                                  May
+                                  {% elseif data['date-1-month'] === '6' %}
+                                  June
+                                  {% elseif data['date-1-month'] === '7' %}
+                                  July
+                                  {% elseif data['date-1-month'] === '8' %}
+                                  August
+                                  {% elseif data['date-1-month'] === '9' %}
+                                  September
+                                  {% elseif data['date-1-month'] === '10' %}
+                                  October
+                                  {% elseif data['date-1-month'] === '11' %}
+                                  November
+                                  {% elseif data['date-1-month'] === '12' %}
+                                  December
+                                    {% endif %}
+                                  {{data['date-1-year'] }} for {{data['employer-1'] }}?
+                            </h1>
+                          </legend>
+                          <div id="shared-benefit-hint" class="govuk-hint">
+
+                          </div>
+
+                            <br>
+<!-- amount 1 -->
+
+<div class="govuk-form-group">
+
+   <div class="govuk-input__wrapper">
+       <div class="govuk-input__prefix" aria-hidden="true">£</div>
+       <input class="govuk-input govuk-input--width-5" id="amount-1" name="amount-1" type="text" spellcheck="false">
+     </div>
+</div>
+
+
+
+
+
+                            <br>
+
+                        </fieldset>
+                      </div>
+                    <br>
+                    <br>
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+            </div>
+                                                                         {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

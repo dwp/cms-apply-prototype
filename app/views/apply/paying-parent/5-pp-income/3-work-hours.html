@@ -1,0 +1,52 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                          Is your pay from {{data['employer-1'] }} the same every {{data['often-paid']}}?
+                            </h1>
+
+                          </legend>
+                          <p>We need to know if your income changes every {{data['often-paid']}} because it can affect how much child maintenance you pay.
+
+                          <br>
+                          <div class="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="yes" name="samehours" type="radio" value="yes~3-fixed-income">
+                              <label class="govuk-label govuk-radios__label" for="yes">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="no" name="samehours" type="radio" value="no~3-add-job">
+                              <label class="govuk-label govuk-radios__label" for="no">
+                                No
+                              </label>
+                            </div>
+                          </div>
+
+                        </fieldset>
+                      </div>
+                    <br>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+            </div>
+                                                                         {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

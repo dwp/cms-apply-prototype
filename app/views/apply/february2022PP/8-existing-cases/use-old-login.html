@@ -1,0 +1,49 @@
+{% extends "layout.html" %} {% block pageTitle %} Using your online account {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+                            <legend
+                                class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+                                    Using your online account
+                                    <div class="govuk-inset-text">You can use the same online account to track the
+                                        progress of your new application.</div>
+
+                        </fieldset>
+
+                        <p>To use your online account you will need your:
+                        </p>
+
+                        <ul class="govuk-list govuk-list--bullet">
+
+                            <li>National Insurance number
+                            </li>
+                            <li>customer reference number (you’ll find this on letters we’ve sent you about your case)
+                            </li>
+                            <li>7-digit Personal Identification Number (PIN)
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!--end-->
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "layout.html" %} {% block pageTitle %} Have you ever lived with the other parent? {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <!--start-->
+                    <div class="govuk-form-group">
+                        
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                    <h1 class="govuk-fieldset__heading" id="otherParentKnowAddressInformation">
+                                         Have you ever lived with the other parent?
+                                         
+                                    </h1>
+                                    
+                                    </legend>
+                              <div class="govuk-radios" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="yes~pp-postal">
+                                  <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                                    Yes
+                                  </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="no~pp-address-1-current">
+                                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                                    No
+                                  </label>
+                                </div>
+                                
+                              </div>
+                          
+                            </fieldset>
+                          </div>
+                    </div>
+                    <!--Stop-->
+
+
+
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+                                                                             {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                              Do you know your annual income from {{data['employer-1']}}?
+                            </h1>
+                          </legend>
+
+
+
+
+                          <div class="govuk-form-group">
+
+
+
+
+
+  </fieldset>
+
+
+
+                          </div>
+                        </fieldset>
+
+
+
+                          <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="yes" name="annual-income" type="radio" value="yes~annual-income-amount">
+        <label class="govuk-label govuk-radios__label" for="yes">
+        Yes
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="no" name="annual-income" type="radio" value="no~3-fixed-income" >
+        <label class="govuk-label govuk-radios__label" for="no">
+        No
+        </label>
+      </div>
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+  </fieldset>
+
+                          </div>
+
+                        <button type="submit" class="govuk-button">
+                            Continue
+                        </button>
+                        </form>
+                        </div>
+                        {% include "exit-button.html" %}
+
+                        </div>
+                        </main>
+                        </div>
+                        {% endblock %}

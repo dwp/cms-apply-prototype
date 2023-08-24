@@ -1,0 +1,116 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+                        <h2 class="govuk-error-summary__title" id="error-summary-title">
+                          There is a problem
+                        </h2>
+                        <div class="govuk-error-summary__body">
+                          <ul class="govuk-list govuk-error-summary__list">
+                            <li>
+                              <a href="#phone-lang">Select whether we should use English or Welsh if we contact you by phone</a>
+                            </li>
+                            <li>
+                                <a href="#letter-lang">Select whether we should write to you in English or Welsh</a>
+                              </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+                                    Your language preferences
+                                </h1>
+
+                            </legend>
+                        </fieldset>
+
+                        <p class="govuk-body">If you live in Wales you can choose to communicate with us in Welsh.</p>
+
+                        
+                            <br>
+                            <div class="govuk-form-group govuk-form-group--error">
+                            <div class="form-group">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
+                                    <h1 class="govuk-fieldset__heading">
+                                        What language should we use if we need to contact you by phone?</h1>
+                            </div>
+                            <span id="lang-error" class="govuk-error-message">
+                                <span class="govuk-visually-hidden">Error:</span> Select whether we should use English or Welsh if we contact you by phone
+                              </span>
+
+                            <div class="govuk-form-group">
+                                <div class="govuk-radios" id="how-regular">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="phone-lang" name="phone-lang" type="radio" value="English~check-answers">
+                                        <label class="govuk-label govuk-radios__label" for="phone-lang">
+                                            English
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="phone-lang-2" name="phone-lang" type="radio" value="Welsh~check-answers">
+                                        <label class="govuk-label govuk-radios__label" for="phone-lang-2">
+                                            Welsh
+                                        </label>
+                                    </div>
+                                </div> 
+                            </div>
+                            </div>
+
+                            <br>
+                            <div class="govuk-form-group govuk-form-group--error">
+                            <div class="form-group">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
+                                    <h1 class="govuk-fieldset__heading">
+                                        What language should we write to you in?</h1>
+                                </legend>
+                            </div>
+                            <div id="changed-name-hint" class="govuk-hint">
+                                This includes letters and text messages.
+                              </div>
+                            <span id="lang-error" class="govuk-error-message">
+                                <span class="govuk-visually-hidden">Error:</span> Select whether we should write to you in English or Welsh
+                              </span>
+
+                            <div class="govuk-form-group">
+                                <div class="govuk-radios" id="how-regular">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="letter-lang" name="letter-lang" type="radio" value="English">
+                                        <label class="govuk-label govuk-radios__label" for="letter-lang">
+                                            English
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="letter-lang-2" name="letter-lang" type="radio" value="Welsh">
+                                        <label class="govuk-label govuk-radios__label" for="letter-lang-2">
+                                            Welsh
+                                        </label>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+                                 {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

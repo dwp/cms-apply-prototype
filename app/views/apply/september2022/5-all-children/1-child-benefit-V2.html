@@ -1,0 +1,100 @@
+{% extends "layout.html" %} {% block pageTitle %} Who receives child benefit for this child? {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="cifba-benefit-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Who receives child benefit for [Joe]?
+                </h1>
+              </legend>
+              <p>If someone is receiving child benefit for the child it helps us to process your Child Maintenance application more quickly – it does not matter which adult receives the child benefit.</p>
+              <div class="govuk-inset-text">
+                A Child Maintenance application for a child who is not registered for child benefit will take 10-12 weeks longer to process. </div>
+                <div class="govuk-warning-text">
+                  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                  <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                    If you are not a UK national and your visa says "no recourse to public funds" - do not apply for child benefit. You will be unsuccessful and this will slow your Child Maintenance application.
+                  </strong>
+                </div>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item" id="cifba-benefit">
+                  <input class="govuk-radios__input" id="cifba-benefit-1" name="cifba-benefit" type="radio"
+                    value="yes~3-check-your-answers-roc">
+                  <label class="govuk-label govuk-radios__label" for="cifba-benefit-1">
+                    I do
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="cifba-benefit-2" name="cifba-benefit" type="radio"
+                    value="no~3-check-your-answers-roc">
+                  <label class="govuk-label govuk-radios__label" for="cifba-benefit-2">
+                   The other parent does
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="cifba-benefit-2" name="cifba-benefit" type="radio"
+                    value="no~3-check-your-answers-roc">
+                  <label class="govuk-label govuk-radios__label" for="cifba-benefit-2">
+                    Someone else does
+                  </label>
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email"
+                      data-aria-controls="conditional-contact">
+                    <label class="govuk-label govuk-radios__label" for="contact">
+                      No one does
+                    </label>
+                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                      You may want to apply for child benefit before you make this application. If you go ahead with this application before you've applied for child benefit, we will need to contact you to process your application - please save the following number to your phone now: [contact number]
+                    </div> 
+                  </div>
+                  <div class="govuk-radios__divider">or</div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="cifba-benefit-3" name="cifba-benefit" type="radio"
+                      value="I don't know~3-check-your-answers-roc">
+                    <label class="govuk-label govuk-radios__label" for="cifba-benefit-3">
+                      I cannot apply for child benefit
+                    </label>
+                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                      We will need to contact you to process your application - please save the following number to your
+                      phone now: [contact number]
+                    </div>
+                  </div>
+                </div>
+            </fieldset>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  How do I apply to receive child benefit for my child?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                You can <a href="" class="govuk-link">
+                  apply for child benefit online
+              </a>(link opens in a new tab).
+              </div>
+            </details>
+          </div>
+          <br>
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+
+        </form>
+      </div>
+      {% include "exit-button.html" %}
+
+    </div>
+  </main>
+</div>
+{% endblock %}

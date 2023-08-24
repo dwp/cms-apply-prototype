@@ -1,0 +1,129 @@
+{% extends "layout.html" %} {% block pageTitle %} Application sent {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner-padding-top.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">
+                        Application sent
+                    </h1>
+                </div>
+
+
+                <h2 class="govuk-heading-m">What happens next</h2>
+
+                <p>We will:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>send you a text message with your customer reference number in the next 5 days</li>
+                    <li>send you an information pack about the Child Maintenance Service</li>
+                    <li>try to contact the other parent using the information you’ve given</li>
+                    <li>work out how much child maintenance you need to pay and when you need to pay it </li>
+
+                </ul>
+
+                <h2 class="govuk-heading-m">How long your application will take</h2>
+
+                <p>It will take about 6 weeks to process your application.
+                </p>
+                <p>You’ll become responsible for paying child maintenance once the other parent accepts the arrangement. This is usually 2 weeks after you apply.
+                </p>
+                <p>We will send you a letter with how much you need to pay and when you need to pay it. </p>
+
+                <p>If the other parent does not respond or tells us they do not want to receive child maintenance, we cannot set up an arrangement. </p>
+
+
+                <h2 class="govuk-heading-m">Updates about your application</h2>
+
+<p> <a href="http://www.childmaintenanceservice.direct.gov.uk/">Sign into your online child maintenance account</a> to track the progress of your application and contact us about your case.
+You will need your:
+
+                </p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>new customer reference number, it will start with 121</li>
+                    <li>7-digit personal identification number (PIN)</li>
+                    <li>National Insurance number</li>
+                </ul>
+
+
+                <h2 class="govuk-heading-m">Support if you’ve experienced domestic abuse
+                </h2>
+            
+                <p> <a href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help">Find out how to get help if you, your children or anyone you know have ever experienced domestic abuse.</a>
+
+
+            </div>
+
+
+
+            <div class="govuk-grid-column-one-third">
+
+                <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+                <div class="govuk-button--sticky">
+
+                    <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                        data-module="govuk-button">
+                        Hide this page
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+</div>
+</main>
+</div>
+
+
+
+<style>
+    .survey-heading a {
+        background-color: #005ea5;
+        font-family: "nta", Arial, sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.11111;
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .survey-heading a:hover {
+
+        text-decoration: underline;
+    }
+
+    .survey-heading {
+        text-align: center;
+        margin: 0px;
+
+    }
+
+    c-related-navigation {
+        color: #0b0c0c;
+        border-top: 2px solid #005ea5;
+    }
+
+    .app-related-items {
+        border-top: 0px solid #005ea5;
+        padding-top: 0px;
+    }
+</style>
+
+{% endblock %}

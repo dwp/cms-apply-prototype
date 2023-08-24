@@ -1,0 +1,49 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="ROC-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                              Does {{data['child-1-first-name'] }} live with you most of the time?
+                            </h1>
+                          </legend>
+                          <br>
+                          <div class="govuk-radios" id="ROC">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="ROC-1" name="ROC" type="radio" value="Yes~child-1-benefit">
+                              <label class="govuk-label govuk-radios__label" for="ROC-1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="ROC-2" name="ROC" type="radio" value="No~child-1-address">
+                              <label class="govuk-label govuk-radios__label" for="ROC-2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                      
+                        </fieldset>
+                      </div>
+                    <br>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+            </div>
+                                                                         {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

@@ -1,0 +1,288 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+<h2 class="govuk-heading-xl">Check your answers about you</h2>
+
+
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            What is your name?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            {{data['pp-title'] }} {{data['pp-first-name'] }} {{data['pp-middle-name'] }} {{data['pp-last-name']
+            }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-name">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Does the other parent know you by a different name?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">{{data['different-name'] }} </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-name">
+                Change
+                <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         What is your National Insurance number?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">{{data['applicant-national-insurance-number'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-nino">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Will you answer the equality questions?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">yes</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            What is your ethnic group?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">
+                White
+                <br>
+                English, Welsh, Scottish, Northern Irish or British</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            What is your religion?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">No religion</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Which of the following best describes your sexual orientation?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">Hetrosexual or Straight</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-nino">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Do you have any access needs?        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">Yes<br> Lift, Ramp
+            </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-nino">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         What’s the best number to call you on?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            {{data['mobile-number'] }}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-phone">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+Is this your own number?        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['phone-number']}}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-phone">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             When can we call you?</dt>
+            <dd class="govuk-summary-list__value">
+              {{data['phone-time']}}
+
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="pp-phone-time">
+                    Change
+                    <span class="govuk-visually-hidden"> contact details</span>
+                </a>
+            </dd>
+        </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Can we leave you a voicemail message?</dt>
+        <dd class="govuk-summary-list__value">
+          {{data['voicemail']}}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-phone-time">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Do you want to receive email updates about Child Maintenance?</dt>
+        <dd class="govuk-summary-list__value">
+          Yes<br>
+          test@email.com
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="do-you-want-confirmation">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Can we send you text messages?</dt>
+        <dd class="govuk-summary-list__value">
+            {{data['text']}}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-text">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+             Where can we send letters?
+
+        </dt>
+        <dd class="govuk-summary-list__value">
+            10 Hilltop drive
+            <br>Ayton
+            <br>Cramlington
+            <br>NE32 2LB
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-postal-2">
+                Change
+                <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+             Do you live at this address?
+
+        </dt>
+        <dd class="govuk-summary-list__value">
+            Yes
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_applicant/applicants_correspondence_address.html">
+                Change
+                <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+        </dd>
+    </div>
+
+</dl>
+
+<button type="submit" class="govuk-button">
+    Continue
+</button>
+</form>
+</div>
+                                                 {% include "exit-button.html" %}
+
+</div>
+</main>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "layout.html" %} {% block pageTitle %} Tell us about your children {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">Tell us about your children</h1>
+
+                <p>To calculate your maintenance properly, we need to get some information about your children. </p>
+                <p>First, we need to know about the child or children you’re applying to include in this maintenance arrangement. Children must be under 16, or considered a qualifying young person, to include in a Child Maintenance Service arrangement.</p>
+
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        
+Who is considered a qualifying young person?
+
+
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        A person is considered to be a qualifying young person if they are aged 16-19 and child benefit is payable or they are in full-time non-advanced education or approved training.
+
+
+<br><br>
+See HMRC for the <a href="https://www.tax.service.gov.uk/information/help?helpcategory=shortform&helpid=CBOFTECH299e" class="govuk-link">list of full-time non-advanced education and approved training</a>.
+                    </div>
+                  </details>
+
+                <p>Then we also need to know if you have any other children who you pay maintenance for, if it’s a private arrangement (not using Child Maintenance Service). </p>
+                <p>Finally, we need to know if any other children live with you the majority of the time (like a partner’s children).</p>
+                <p>We’ll ask about one child at a time, and you can keep adding children to your application until you have added them all. </p>
+                <p>All children must be under the age of 20.</p>
+
+                
+
+                <form method="post" novalidate>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+                                                             {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

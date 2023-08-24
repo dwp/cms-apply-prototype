@@ -1,0 +1,69 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+<h2 class="govuk-heading-xl">Check your answers about your pension</h2>
+
+<br>
+
+<h2 class="govuk-heading-m">Your pension details for {{data['pension-1'] }}</h2>
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you pay in to a pension?
+        </dt>
+        <dd class="govuk-summary-list__value">
+        {{data['pension'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="5-pension-query">
+                Change
+                <span class="govuk-visually-hidden"> company name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+        What type of pension do you pay in to?
+        </dt>
+        <dd class="govuk-summary-list__value">
+{{data['pensiontype']}}
+
+
+
+
+
+
+
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="5-pension-details">
+                Change
+                <span class="govuk-visually-hidden"> occupation</span>
+            </a>
+        </dd>
+    </div>
+
+
+</dl>
+
+<button type="submit" class="govuk-button">
+    Continue
+</button>
+</form>
+</div>
+                                                 {% include "exit-button.html" %}
+
+</div>
+</main>
+</div>
+{% endblock %}

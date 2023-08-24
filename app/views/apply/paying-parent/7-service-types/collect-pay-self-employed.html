@@ -1,0 +1,82 @@
+{% extends "layout.html" %} {% block pageTitle %} How would you prefer to make Collect and Pay payments? {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                            <h1 class="govuk-fieldset__heading">
+                              How you make Collect and Pay payments
+                            </h1>
+                        </legend>
+
+                    </fieldset>
+                </div>
+
+                <p>If the other parent agrees to use Collect and Pay, there are 2 ways you can make payments. These are:
+
+
+
+
+                </p>
+
+
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>Direct debit - this is where you send payments to the Child Maintenance Service and we pass them on to the other parent
+
+                    </li>
+                    <li>Deduction of earnings - this is where we take your child maintenance payments directly from your wage
+
+                    </li>
+
+</li>
+                </ul>
+
+
+                                <form method="post" novalidate>
+                <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <h1 class="govuk-heading-l">How would you prefer to make Collect and Pay payments?</h1>
+    </legend>
+
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="dd" name="type-of-payment" type="radio" value="Direct debit~check-your-answers"
+            aria-controls="conditional-other-parent-dob-1" aria-expanded="true">
+        <label class="govuk-label govuk-radios__label" for="dd">
+    Direct debit
+        </label>
+    </div>
+
+
+
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="deductions" name="type-of-payment" type="radio" value="Deduction of earnings~check-your-answers">
+        <label class="govuk-label govuk-radios__label" for="deductions">
+          Deduction of earnings
+        </label>
+    </div>
+
+  </fieldset>
+</div>
+
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+
+            {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "layout.html" %} {% block pageTitle %} Select the address you used to live at with the other parent {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">Select the address you used to live at with the other parent</h1>
+
+
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+
+
+                          <div class="govuk-radios govuk-radios--inline">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                              <label class="govuk-label govuk-radios__label" for="changed-name">
+                              10 Hilltop drive
+                              </label>
+                            </div>
+
+
+                        </fieldset>
+                      </div>
+
+                    </div>
+                    <p class="govuk-body">
+                      <a href="applicants_address_manual_input" class="govuk-link">Enter address manually</a>
+
+                      </p>
+                    <button type="submit" class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+            </div>
+        </div>
+
+
+</div>
+</form>
+
+
+</div>
+
+</div>
+
+</main>
+</div>
+{% endblock %}

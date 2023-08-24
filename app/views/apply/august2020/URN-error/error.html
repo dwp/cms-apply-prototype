@@ -1,0 +1,68 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                                <h1 class="govuk-fieldset__heading">
+Check you have entered the correct unique reference number
+                                </h1>
+                            </legend>
+                            <p class="govuk-body">This is in the email you were sent after speaking to Child Maintenance Options. It starts with 95.
+
+                            </p>
+<h2 class="govuk-heading-m">If you have already applied for child maintenance
+</h2>
+<p class="govuk-body"><a href="">Sign in to your online child maintenance account</a> to track your application. You will need your:
+
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>customer reference number</li>
+    <li>National Insurance number</li>
+    <li>7-digit personal identification number (PIN) </li>
+</ul>
+</p>
+
+<h3 class="govuk-heading-m">If there is still a problem with your reference number
+</h3>
+<p class="govuk-body">Speak to Child Maintenance Options to get a new unique reference number.
+</p>
+
+<div class="govuk-inset-text">
+
+
+    <p>
+        <strong>Child Maintenance Options</strong>
+        <br> Telephone: 0800 988 0988
+        <br> Textphone: 18001 0800 988 0988
+        <br>
+        <br>
+        <a href="https://dwpnino.signvideo.net/">Video relay service</a> for British Sign Language (BSL) users -
+        <a href="https://www.youtube.com/watch?v=Osx7FFxFpNY">check you can use the Video Relay Service</a>
+        <br>
+        <br> Monday to Friday, 9.30am to 3.30pm (excluding bank holidays)
+        <br>
+        <a href="https://www.gov.uk/call-charges">Find out about call charges</a>.</p>
+</div>
+
+                            <!--end-->
+                          
+                </form>
+
+                </div>
+            </div>
+            {% include "exit-button.html" %}
+
+
+        </div>
+    </main>
+</div>
+{% endblock %}

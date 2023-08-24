@@ -1,0 +1,65 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                            <h1 class="govuk-fieldset__heading">
+                               
+                                If the other parent stops paying
+                                
+                               
+                            </h1>
+                        </legend>
+
+                    </fieldset>
+                </div>
+
+                <p>You should keep a record of Direct Pay payments in case there are any problems. You’ll need to tell us if a payment is more than 5 working days late so we can take enforcement action.
+
+
+                </p>
+
+                <p>If a payment is missed, we will:
+
+                </p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>contact the other parent to find out why they have not paid
+
+                    </li>
+                    <li>arrange for them to pay what they owe
+
+                    </li>
+                    <li>warn them about action that might be taken if they do not pay
+
+                    </li>
+                    <li>take action to get the child maintenance owed if they do not respond
+</li>
+                </ul>
+
+               <div class="govuk-inset-text">We will tell you more about this after you send your application.
+</div>
+
+                <form method="post" novalidate>
+
+                   
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+
+            {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

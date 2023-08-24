@@ -1,0 +1,49 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+Have you ever used the Child Maintenance Service to make an application before?                                </h1>
+                            </legend>
+                           <span class="govuk-hint">If you have made a child maintenance application before you’ll have a 12-digit customer reference number beginning with ‘121’.
+                        You’ll find this on letters we’ve sent you about your case.</span>
+                            </span>
+                            <div class="govuk-radios govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="maintenance-liability-1" name="maintenance-liability" type="radio" value="yes~previous-portal">
+                                    <label class="govuk-label govuk-radios__label" for="maintenance-liability-1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="maintenance-liability-2" name="maintenance-liability" type="radio" value="no~manage-online">
+                                    <label class="govuk-label govuk-radios__label" for="maintenance-liability-2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!--end-->
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+                                                                     {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

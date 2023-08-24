@@ -1,0 +1,57 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <form method="post" novalidate>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="other-children-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                        Do you have any other children who live with you most of the time?
+                        </h1>
+                      </legend>
+                      <div id="other-children-hint" class="govuk-hint">
+                        The Child Maintenance Service will take other children into account when calculating how much you should pay. Only tell us about children you have not already included in this application.
+                      </div>
+
+                      <br>
+                      <br>
+
+                      <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="other-children" name="other-children" type="radio" value="yes~2-child-1-name">
+                          <label class="govuk-label govuk-radios__label" for="other-children">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="other-children-2" name="other-children" type="radio" value="no~cifba-other-children">
+                          <label class="govuk-label govuk-radios__label" for="other-children-2">
+                            No
+                          </label>
+                        </div>
+                      </div>
+
+                    </fieldset>
+                  </div>
+
+                <br>
+                <br>
+
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

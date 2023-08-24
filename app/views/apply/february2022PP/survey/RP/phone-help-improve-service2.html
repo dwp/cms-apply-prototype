@@ -1,0 +1,483 @@
+{% extends "layout.html" %} {% block pageTitle %} Help improve this service {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Help improve this service</h1>
+
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                If you had more support, do you think it would be possible to make your own private arrangement with the
+                other parent?
+              </h1>
+            </legend>
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="helpful" name="how-helpful" type="radio" value="text"
+                  data-aria-controls="conditional-helpful">
+                <label class="govuk-label govuk-radios__label" for="elpful">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-helpful">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="helpful-why">
+                    What support would help?
+                  </label>
+                  <span id="security-details-pin-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card
+                    details in any of your answers. </span>
+
+                  <textarea class="govuk-textarea govuk-js-character-count" id="unhelpful-why" name="unhelpful-why"
+                    rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 200 characters
+                  </div>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="neither" name="how-helpful" type="radio" value="text"
+                  data-aria-controls="conditional-neither">
+                <label class="govuk-label govuk-radios__label" for="neither">
+                  Not sure
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-neither">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="neither-why">
+                    What support would help?
+                  </label>
+                  <span id="security-details-pin-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card
+                    details in any of your answers. </span>
+
+                  <textarea class="govuk-textarea govuk-js-character-count" id="unhelpful-why" name="unhelpful-why"
+                    rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 200 characters
+                  </div>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="unhelpful" name="how-helpful" type="radio" value="text"
+                  data-aria-controls="conditional-unhelpful">
+                <label class="govuk-label govuk-radios__label" for="unhelpful">
+                  No
+                </label>
+              </div>
+              
+              <p> or </p>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="notsay" name="how-helpful" type="radio" value="text">
+                <label class="govuk-label govuk-radios__label" for="notsay">
+                  Prefer not to say
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Which of the following best describes how you felt about the support available for people who
+                experienced domestic abuse?
+              </h1>
+            </legend>
+            <span id="security-details-pin-hint" class="govuk-hint">
+              You may have been told about domestic abuse support during your application or when you spoke to Child
+              Maintenance Options.
+            </span>
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="too-much" name="support" type="radio" value="text"
+                  data-aria-controls="conditional-too-much">
+                <label class="govuk-label govuk-radios__label" for="too-much">
+                  There was too much support
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-too-much">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="too-much-why">
+                    Why do you feel this way?
+                  </label>
+                  <span id="security-details-pin-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card
+                    details in any of your answers. </span>
+
+                  <textarea class="govuk-textarea govuk-js-character-count" id="unhelpful-why" name="unhelpful-why"
+                    rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 200 characters
+                  </div>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="right-amount" name="support" type="radio" value="text"
+                  data-aria-controls="conditional-right-amount">
+                <label class="govuk-label govuk-radios__label" for="right-amount">
+                  There was the right amount of support
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-right-amount">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="right-amount-why">
+                    Why did you feel this way?
+                  </label>
+                  <span id="security-details-pin-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card
+                    details in any of your answers. </span>
+
+                  <textarea class="govuk-textarea govuk-js-character-count" id="unhelpful-why" name="unhelpful-why"
+                    rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 200 characters
+                  </div>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="little" name="support" type="radio" value="text"
+                  data-aria-controls="conditional-little">
+                <label class="govuk-label govuk-radios__label" for="little">
+                  There was too little support
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-little">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="little-why">
+                    Why did you feel this way?
+                  </label>
+                  <span id="security-details-pin-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card
+                    details in any of your answers. </span>
+
+                  <textarea class="govuk-textarea govuk-js-character-count" id="unhelpful-why" name="unhelpful-why"
+                    rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 200 characters
+                  </div>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="something" name="support" type="radio" value="text"
+                  data-aria-controls="conditional-something">
+                <label class="govuk-label govuk-radios__label" for="something">
+                  Something else
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-something">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="something-why">
+                    How did you feel about the support available for people who have experienced domestic abuse?
+                  </label>
+                  <span id="security-details-pin-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card
+                    details in any of your answers. </span>
+
+                  <textarea class="govuk-textarea govuk-js-character-count" id="unhelpful-why" name="unhelpful-why"
+                    rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 200 characters
+                  </div>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="not-apply" name="support" type="radio" value="text">
+                <label class="govuk-label govuk-radios__label" for="not-apply">
+                  Does not apply
+                </label>
+              </div>
+
+              <p> or </p>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="not-say" name="support" type="radio" value="text">
+                <label class="govuk-label govuk-radios__label" for="not-say">
+                  Prefer not to say
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Is there anything you thought you would need to tell us when applying that we didn't ask for?
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="yes-tell" name="support" type="radio" value="text"
+                  data-aria-controls="conditional-yes-tell">
+                <label class="govuk-label govuk-radios__label" for="yes-tell">
+                 Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes-tell">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="yes-tell-why">
+                    What did you think you would have to tell us?
+                  </label>
+                  <span id="security-details-pin-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card
+                    details in any of your answers. </span>
+
+                  <textarea class="govuk-textarea govuk-js-character-count" id="unhelpful-why" name="unhelpful-why"
+                    rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 200 characters
+                  </div>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="no" name="support" type="radio" value="text"
+                  data-aria-controls="conditional-no">
+                <label class="govuk-label govuk-radios__label" for="no~why">
+                 No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Is there anything you need to know that we haven't told you?
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="yes" name="support" type="radio" value="text"
+                  data-aria-controls="conditional-yes">
+                <label class="govuk-label govuk-radios__label" for="yes">
+                 Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="yes-why">
+                    What do you need to know?
+                  </label>
+                  <span id="security-details-pin-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card
+                    details in any of your answers. </span>
+
+                  <textarea class="govuk-textarea govuk-js-character-count" id="unhelpful-why" name="unhelpful-why"
+                    rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 200 characters
+                  </div>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="no" name="support" type="radio" value="text"
+                  data-aria-controls="conditional-no">
+                <label class="govuk-label govuk-radios__label" for="no~why">
+                 No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Overall, how easy or difficult was it to complete your application?
+              </h1>
+            </legend>
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="very-easy" name="complete" type="radio" value="text"
+                  data-aria-controls="conditional-very-easy">
+                <label class="govuk-label govuk-radios__label" for="very-easy">
+                  Very easy
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-very-easy">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="very-easy-why">
+                    Why do you feel this way?
+                  </label>
+                  <span id="security-details-pin-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card
+                    details in any of your answers. </span>
+
+                  <textarea class="govuk-textarea govuk-js-character-count" id="unhelpful-why" name="unhelpful-why"
+                    rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 200 characters
+                  </div>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="easy" name="complete" type="radio" value="text"
+                  data-aria-controls="conditional-easy">
+                <label class="govuk-label govuk-radios__label" for="easy">
+                  Easy
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-easy">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="easy-why">
+                    Why did you feel this way?
+                  </label>
+                  <span id="security-details-pin-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card
+                    details in any of your answers. </span>
+
+                  <textarea class="govuk-textarea govuk-js-character-count" id="unhelpful-why" name="unhelpful-why"
+                    rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 200 characters
+                  </div>
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="very-difficult" name="complete" type="radio" value="text"
+                  data-aria-controls="conditional-very-difficult">
+                <label class="govuk-label govuk-radios__label" for="very-difficult">
+                  Neither easy nor difficult
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="difficult" name="complete" type="radio" value="text"
+                  data-aria-controls="conditional-difficult">
+                <label class="govuk-label govuk-radios__label" for="difficult">
+                  Difficult
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-difficult">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="difficult-why">
+                    Why did you feel this way?
+                  </label>
+                  <span id="security-details-pin-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card
+                    details in any of your answers. </span>
+
+                  <textarea class="govuk-textarea govuk-js-character-count" id="unhelpful-why" name="unhelpful-why"
+                    rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 200 characters
+                  </div>
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="very-difficult" name="complete" type="radio" value="text"
+                  data-aria-controls="conditional-very-difficult">
+                <label class="govuk-label govuk-radios__label" for="very-difficult">
+                  Very difficult
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-very-difficult">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="very-difficult-why">
+                    Why did you feel this way?
+                  </label>
+                  <span id="security-details-pin-hint" class="govuk-hint">
+                    Do not include personal or financial information, like your National Insurance number or credit card
+                    details in any of your answers. </span>
+
+                  <textarea class="govuk-textarea govuk-js-character-count" id="unhelpful-why" name="unhelpful-why"
+                    rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 200 characters
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </fieldset>
+        </div>
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Can we email you for more feedback about this service?
+              </h1>
+            </legend>
+            <div id="contact-hint" class="govuk-hint">
+              We will not share or use your email address for anything else.
+            </div>
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="yes" name="feedback" type="radio" value="text"
+                  data-aria-controls="conditional-yes">
+                <label class="govuk-label govuk-radios__label" for="yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="name">
+                    Your name
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="name" name="name" type="text"
+                    spellcheck="false" autocomplete="email">
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="email">
+                    Email address
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="email" name="email" type="text"
+                    spellcheck="false" autocomplete="email">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <label class="govuk-label govuk-radios__label" for="no">
+                  No
+                </label>
+              </div>
+
+
+
+            </div>
+          </fieldset>
+        </div>
+
+
+
+
+
+        <button type="submit" class="govuk-button">
+          Send feedback
+        </button>
+
+      </div>
+      {% include "exit-button.html" %}
+
+    </div>
+  </main>
+</div>
+{% endblock %}

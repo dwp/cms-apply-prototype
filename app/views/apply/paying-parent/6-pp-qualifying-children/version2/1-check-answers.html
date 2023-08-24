@@ -1,0 +1,446 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <!--start of answers-->
+
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+                <form method="post" novalidate>
+                    <h1 class="govuk-heading-xl">Check {{data['child-1-first-name'] }} {{data['child-1-last-name'] }}'s details</h1>
+
+
+                    <!--{% if data['child-lives'] === 'yes' %} -->
+
+
+                    <dl class="govuk-summary-list ">
+
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                 What is {{data['child-1-first-name'] }}'s full name?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body">
+                                    {{data['child-1-first-name'] }} {{data['child-1-middle-name'] }} {{data['child-1-last-name'] }}
+                                </p>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="../about_qualifying_child/child_name.html">
+                                    Change
+                                    <span class="govuk-visually-hidden"> name</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                 What is {{data['child-1-first-name'] }}’s date of birth?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body">{{data['child-1-date-of-birth-day'] }}
+
+                                  {% if data['child-1-date-of-birth-month'] === '1' %}
+                                  January
+                                  {% elseif data['child-1-date-of-birth-month'] === '2' %}
+                                  February
+                                  {% elseif data['child-1-date-of-birth-month'] === '3' %}
+                                  March
+                                  {% elseif data['child-1-date-of-birth-month'] === '4' %}
+                                  April
+                                  {% elseif data['child-1-date-of-birth-month'] === '5' %}
+                                  May
+                                  {% elseif data['child-1-date-of-birth-month'] === '6' %}
+                                  June
+                                  {% elseif data['child-1-date-of-birth-month'] === '7' %}
+                                  July
+                                  {% elseif data['child-1-date-of-birth-month'] === '8' %}
+                                  August
+                                  {% elseif data['child-1-date-of-birth-month'] === '9' %}
+                                  September
+                                  {% elseif data['child-1-date-of-birth-month'] === '10' %}
+                                  October
+                                  {% elseif data['child-1-date-of-birth-month'] === '11' %}
+                                  November
+                                  {% elseif data['child-1-date-of-birth-month'] === '12' %}
+                                  December
+                                    {% endif %}
+
+
+                               {{data['child-1-date-of-birth-year']
+                                    }}</p>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="../about_qualifying_child/child_date_of_birth.html">
+                                    Change
+                                    <span class="govuk-visually-hidden"> date of birth</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                             Does {{data['child-1-first-name'] }} live with the other parent most of the time?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body">{{data['child-lives']}}</p>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+                                    Change
+                                    <span class="govuk-visually-hidden"> contact details</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                             Are you named on {{data['child-1-first-name'] }}’s birth certificate?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body">Yes</p>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+                                    Change
+                                    <span class="govuk-visually-hidden"> contact details</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                    </dl>
+
+                      <!--  {% endif %}-->
+
+
+
+
+                                        <!--    {% if data['child-lives'] === 'no' %}-->
+
+
+                                            <dl class="govuk-summary-list ">
+
+
+                                                <div class="govuk-summary-list__row">
+                                                    <dt class="govuk-summary-list__key">
+                                                         What is {{data['child-1-first-name'] }}'s full name?
+                                                    </dt>
+                                                    <dd class="govuk-summary-list__value">
+                                                        <p class="govuk-body">
+                                                            {{data['child-1-first-name'] }} {{data['child-1-middle-name'] }} {{data['child-1-last-name'] }}
+                                                        </p>
+                                                    </dd>
+                                                    <dd class="govuk-summary-list__actions">
+                                                        <a class="govuk-link" href="../about_qualifying_child/child_name.html">
+                                                            Change
+                                                            <span class="govuk-visually-hidden"> name</span>
+                                                        </a>
+                                                    </dd>
+                                                </div>
+
+                                                <div class="govuk-summary-list__row">
+                                                    <dt class="govuk-summary-list__key">
+                                                         What is {{data['child-1-first-name'] }}’s date of birth?
+                                                    </dt>
+                                                    <dd class="govuk-summary-list__value">
+                                                        <p class="govuk-body">{{data['child-1-date-of-birth-day'] }}
+
+                                                          {% if data['child-1-date-of-birth-month'] === '1' %}
+                                                          January
+                                                          {% elseif data['child-1-date-of-birth-month'] === '2' %}
+                                                          February
+                                                          {% elseif data['child-1-date-of-birth-month'] === '3' %}
+                                                          March
+                                                          {% elseif data['child-1-date-of-birth-month'] === '4' %}
+                                                          April
+                                                          {% elseif data['child-1-date-of-birth-month'] === '5' %}
+                                                          May
+                                                          {% elseif data['child-1-date-of-birth-month'] === '6' %}
+                                                          June
+                                                          {% elseif data['child-1-date-of-birth-month'] === '7' %}
+                                                          July
+                                                          {% elseif data['child-1-date-of-birth-month'] === '8' %}
+                                                          August
+                                                          {% elseif data['child-1-date-of-birth-month'] === '9' %}
+                                                          September
+                                                          {% elseif data['child-1-date-of-birth-month'] === '10' %}
+                                                          October
+                                                          {% elseif data['child-1-date-of-birth-month'] === '11' %}
+                                                          November
+                                                          {% elseif data['child-1-date-of-birth-month'] === '12' %}
+                                                          December
+                                                            {% endif %}
+
+
+                                                       {{data['child-1-date-of-birth-year']
+                                                            }}</p>
+                                                    </dd>
+                                                    <dd class="govuk-summary-list__actions">
+                                                        <a class="govuk-link" href="../about_qualifying_child/child_date_of_birth.html">
+                                                            Change
+                                                            <span class="govuk-visually-hidden"> date of birth</span>
+                                                        </a>
+                                                    </dd>
+                                                </div>
+
+                                                <div class="govuk-summary-list__row">
+                                                    <dt class="govuk-summary-list__key">
+                                                     Does {{data['child-1-first-name'] }} live with the other parent most of the time?
+                                                    </dt>
+                                                    <dd class="govuk-summary-list__value">
+                                                        <p class="govuk-body">{{data['child-lives']}}</p>
+                                                    </dd>
+                                                    <dd class="govuk-summary-list__actions">
+                                                        <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+                                                            Change
+                                                            <span class="govuk-visually-hidden"> contact details</span>
+                                                        </a>
+                                                    </dd>
+                                                </div>
+
+                                                <div class="govuk-summary-list__row">
+                                                    <dt class="govuk-summary-list__key">
+                                                     Does {{data['child-1-first-name'] }} live with you most of the time?
+                                                    </dt>
+                                                    <dd class="govuk-summary-list__value">
+                                                        <p class="govuk-body">{{data['live-with-you']}}</p>
+                                                    </dd>
+                                                    <dd class="govuk-summary-list__actions">
+                                                        <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+                                                            Change
+                                                            <span class="govuk-visually-hidden"> contact details</span>
+                                                        </a>
+                                                    </dd>
+                                                </div>
+
+
+                                                <div class="govuk-summary-list__row">
+                                                    <dt class="govuk-summary-list__key">
+                                                     Do you get Child Benefit for {{data['child-1-first-name'] }}?
+                                                    </dt>
+                                                    <dd class="govuk-summary-list__value">
+                                                        <p class="govuk-body">{{data['oc-benefit']}}</p>
+                                                    </dd>
+                                                    <dd class="govuk-summary-list__actions">
+                                                        <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+                                                            Change
+                                                            <span class="govuk-visually-hidden"> contact details</span>
+                                                        </a>
+                                                    </dd>
+                                                </div>
+
+                                                {% if data['live-with-you'] === 'yes' %}
+                                                <div class="govuk-summary-list__row">
+                                                    <dt class="govuk-summary-list__key">
+                                                     Do you currently pay child maintenance for {{data['child-1-first-name'] }}?
+                                                    </dt>
+                                                    <dd class="govuk-summary-list__value">
+                                                        <p class="govuk-body">{{data['pay-child-maintenance']}}</p>
+                                                    </dd>
+                                                    <dd class="govuk-summary-list__actions">
+                                                        <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+                                                            Change
+                                                            <span class="govuk-visually-hidden"> contact details</span>
+                                                        </a>
+                                                    </dd>
+                                                </div>
+                                                  <!--{% endif %}-->
+
+
+                                            </dl>
+
+                                              <!--  {% endif %}
+
+
+<!-- Lives with someone else -->
+<!--{% if data['lives-with-you'] === 'yes' %}-->
+
+
+<dl class="govuk-summary-list ">
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+             What is {{data['child-1-first-name'] }}'s full name?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">
+                {{data['child-1-first-name'] }} {{data['child-1-middle-name'] }} {{data['child-1-last-name'] }}
+            </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_qualifying_child/child_name.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+             What is {{data['child-1-first-name'] }}’s date of birth?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">{{data['child-1-date-of-birth-day'] }}
+
+              {% if data['child-1-date-of-birth-month'] === '1' %}
+              January
+              {% elseif data['child-1-date-of-birth-month'] === '2' %}
+              February
+              {% elseif data['child-1-date-of-birth-month'] === '3' %}
+              March
+              {% elseif data['child-1-date-of-birth-month'] === '4' %}
+              April
+              {% elseif data['child-1-date-of-birth-month'] === '5' %}
+              May
+              {% elseif data['child-1-date-of-birth-month'] === '6' %}
+              June
+              {% elseif data['child-1-date-of-birth-month'] === '7' %}
+              July
+              {% elseif data['child-1-date-of-birth-month'] === '8' %}
+              August
+              {% elseif data['child-1-date-of-birth-month'] === '9' %}
+              September
+              {% elseif data['child-1-date-of-birth-month'] === '10' %}
+              October
+              {% elseif data['child-1-date-of-birth-month'] === '11' %}
+              November
+              {% elseif data['child-1-date-of-birth-month'] === '12' %}
+              December
+                {% endif %}
+
+
+           {{data['child-1-date-of-birth-year']
+                }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_qualifying_child/child_date_of_birth.html">
+                Change
+                <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+        </dd>
+    </div>
+
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Do you pay child maintenance for {{data['child-1-first-name'] }}?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">{{data['pay-child-maintenance']}}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+        Where does {{data['child-1-first-name'] }} live?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">{{data['cifba-address-line-1']}} <br>
+                {{data['cifba-address-line-2']}} <br>
+                {{data['cifba-address-town']}} <br>
+                {{data['cifba-address-county']}} <br>
+                {{data['cifba-address-postcode']}}
+
+
+            </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+        How much do you pay to support {{data['child-1-first-name'] }}?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">
+
+            </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+      How have you supported {{data['child-1-first-name'] }} in the last year?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">
+
+            </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+      Does {{data['child-1-first-name'] }}'s other parent get child benefit?
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">
+
+            </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="../about_qualifying_child/shared_care.html">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+</dl>
+
+    <!-- {% endif %} -->
+
+
+                    <form action="/form-handler" method="post" novalidate>
+
+                        <input type="hidden" name="answers-checked" value="true">
+
+                        <button type="submit" class="govuk-button">
+                            Continue
+                        </button>
+
+                    </form>
+
+            </div>
+
+
+
+             {% include "exit-button.html" %}
+
+</div>
+
+
+</main>
+</div>
+
+
+
+
+{% endblock %}

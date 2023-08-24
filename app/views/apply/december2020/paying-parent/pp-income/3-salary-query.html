@@ -1,0 +1,64 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="salary-change-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                        Has your salary changed by 25% or more in the last year?
+                        </h1>
+                      </legend>
+                      <div id="salary-change-hint" class="govuk-hint">
+                        We use HMRC to confirm your income. If your salary has changed in the last year, HMRC's records may be out of date.
+                      </div>
+                      <br>
+                      <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="salary-change" name="salary-change" type="radio" value="yes~3-salary-update">
+                          <label class="govuk-label govuk-radios__label" for="salary-change">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="salary-change-2" name="salary-change" type="radio" value="no~3-add-job">
+                          <label class="govuk-label govuk-radios__label" for="salary-change-2">
+                            No
+                          </label>
+                        </div>
+                        <div class="govuk-radios__divider">or</div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="salary-change-2" name="salary-change" type="radio" value="no~3-salary-update">
+                            <label class="govuk-label govuk-radios__label" for="salary-change-3">
+                              I don't know
+                            </label>
+                        </div>
+                        <br>
+                      </div>
+                  
+                    </fieldset>
+                  </div>
+              
+               
+
+
+
+
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

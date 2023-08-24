@@ -1,0 +1,86 @@
+{% extends "layout.html" %} {% block pageTitle %} Do you want to manage your child maintenance application online? {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+                                Manage your application online 
+                                </h1>
+                            </legend>
+                            <span id="maintenance-liability-hint" class="govuk-hint">
+                                <p class="govuk-body">The online child maintenance account is a secure way to view the progress of your application. Nobody else can access your account.</p>
+                            
+                            </span>
+
+                            <h2 class="govuk-heading-m"> Create a personal identification number (PIN) with 7 numbers</h2>
+                            <p class="govuk-body">You’ll need to remember this so you can sign in to your online account.</p>
+        
+        
+        
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-input--width-10" for="security-details-pin">
+                                    <strong>Create PIN</strong>
+                                </label>
+                                <span id="security-details-pin-hint" class="govuk-hint">
+        
+                                </span>
+                                <input class="govuk-input govuk-input--width-10" id="security-details-pin" name="security-details-pin" type="text" aria-describedby="security-details-pin-hint">
+                            </div>
+
+
+                        </fieldset>
+                    </div>
+                    <!--end-->
+                    <a href="/apply/october2022/8-existing-cases/create-password" role="button" draggable="false" class="govuk-button" data-module="govuk-button" formnovalidate>Continue
+                    </a>
+
+                    <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            Why do I need an online account?
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                         You can use your online account to manage your application. You will be able to:
+                        
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>see when payments are due</li>
+                            <li>tell us if any payments have been missed</li>
+                            <li>contact us about your application</li>
+                            <li>ask us a question via webchat which is available on payment and report a change screens
+                            </li>
+                            <li>update your contact details</li>
+                            <li>tell us about changes to your circumstances</li>
+                            <li> tell us if you have any additional expenses or income </li></ul>
+                        
+                        </div>
+                      </details>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            What if I already have an online account?
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                            You still need to create a PIN so that information about this application and any previous cases will be available in the same account.
+                        
+                        </div>
+                      </details>
+                </form>
+            </div>
+                                                                                 {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

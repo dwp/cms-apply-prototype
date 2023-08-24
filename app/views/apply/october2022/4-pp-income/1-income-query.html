@@ -1,0 +1,93 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="income-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                              Where does your income come from?
+                            </h1>
+                          </legend>
+                          <div id="income-hint" class="govuk-hint">
+                            Select all that apply.
+                          </div>
+                          <br>
+                          <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="benefits" name="income" type="checkbox" value="benefits">
+                              <label class="govuk-label govuk-checkboxes__label" for="benefits">
+                                Benefits or State Pension
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="employment" name="income" type="checkbox" value="employment">
+                              <label class="govuk-label govuk-checkboxes__label" for="employment">
+                                Employment
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="self-employment" name="income" type="checkbox" value="self-employment">
+                              <label class="govuk-label govuk-checkboxes__label" for="self-employment">
+                                Self-employment
+                              </label>
+                            </div>
+                            <p>or</p>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="none" name="income" type="checkbox" value="none">
+                              <label class="govuk-label govuk-checkboxes__label" for="none">
+                                None of the above
+                              </label>
+                            </div>
+
+
+                        </div>
+
+                        </fieldset>
+                      </div>
+
+                      <details class="govuk-details">
+                          <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">
+                                  Find out how to tell us about expenses or additional income that could affect your child maintenance calculation
+                              </span>
+                          </summary>
+                          <div class="contact">
+
+                            <h2 class="govuk-heading-m">Additional expenses</h2>
+                            <p> Your child maintenance calculation may reduce if you are employed or self-employed and have additional expenses.<br/> <br/>
+                              For example, if you spend over £10 a week on transportation to keep in regular contact with your children. </p>
+
+
+                              <h2 class="govuk-heading-m">Additional income</h2>
+                              <p>Your child maintenance calculation may increase if you have another source of income, as well as your income from employment, self-employment, or benefits.<br/> <br/>
+                                For example, if you earn over £2500 a year in rent from property or land. </p>
+
+                                <h2 class="govuk-heading-m">How to tell us about additional expenses or income</h2>
+                                <p>Once you complete your application, you can use your online child maintenance account to report additional expenses or income. We will tell you how to set this up later in the application. </p>
+                          <br>
+
+                      </details>
+                      
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+
+
+                </form>
+            </div>
+
+                                                                         {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

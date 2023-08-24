@@ -1,0 +1,342 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <!--start of new code-->
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <h1 class="govuk-heading-l">Help us improve this service
+
+                            <span class="govuk-caption-m"><br>This survey is optional. We will not share your answers with the other parent. Your feedback will not affect your application in any way. 
+
+                            </span>
+                        </h1>
+                    </div>
+
+                    <!-- Question 1 -->
+               
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="difficulty-hint">
+                            <h2 class="govuk-heading-s">How easy or difficult was it to work out how often your children stay overnight with the other parent?</h2>
+
+                         
+                          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="difficulty" name="difficulty" type="radio" value="very-easy" data-aria-controls="conditional-difficulty">
+                              <label class="govuk-label govuk-radios__label" for="difficulty">
+                                Very Easy
+                              </label>
+                            </div>
+                          
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="difficulty-2" name="difficulty" type="radio" value="easy" data-aria-controls="conditional-difficulty-2">
+                              <label class="govuk-label govuk-radios__label" for="difficulty-2">
+                                Easy
+                              </label>
+                            </div>
+                           
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="difficulty-3" name="difficulty" type="radio" value="neither" data-aria-controls="conditional-difficulty-3">
+                              <label class="govuk-label govuk-radios__label" for="difficulty-3">
+                                Neither easy nor difficult
+                              </label>
+                            </div>
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-difficulty-3">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label" for="neither-feedback">
+                                  Why did you feel this way?
+                                </label>
+                                <div id="event-name-hint" class="govuk-hint">
+                                  Do not include personal or financial information, like your National Insurance number or credit card details in any of your answers.
+                                </div>
+                                <textarea class="govuk-textarea" id="neither-feedback" name="neither-feedback" rows="3" aria-describedby="neither-feedback-hint"></textarea>
+                              </div>
+                               
+                      
+                            </div>
+                           
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="difficulty-4" name="difficulty" type="radio" value="difficult" data-aria-controls="conditional-difficulty-4">
+                                <label class="govuk-label govuk-radios__label" for="difficulty-4">
+                                  Difficult
+                                </label>
+                              </div>
+                              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-difficulty-4">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label" for="difficult-feedback">
+                                    Why did you feel this way?
+                                  </label>
+                                  <div id="event-name-hint" class="govuk-hint">
+                                    Do not include personal or financial information, like your National Insurance number or credit card details in any of your answers.
+                                  </div>
+                                  <textarea class="govuk-textarea" id="difficult-feedback" name="difficult-feedback" rows="3" aria-describedby="difficult-feedback-hint"></textarea>
+                              </div>
+                              </div>
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="difficulty-5" name="difficulty" type="radio" value="very-difficult" data-aria-controls="conditional-difficulty-5">
+                                <label class="govuk-label govuk-radios__label" for="difficulty-5">
+                                  Very difficult
+                                </label>
+                              </div>
+                              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-difficulty-5">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label" for="very-difficult-feedback">
+                                    Why did you feel this way?
+                                  </label>
+                                  <div id="event-name-hint" class="govuk-hint">
+                                    Do not include personal or financial information, like your National Insurance number or credit card details in any of your answers.
+                                  </div>
+                                  <textarea class="govuk-textarea" id="very-difficult-feedback" name="very-difficult-feedback" rows="3" aria-describedby="very-difficult-feedback-hint"></textarea>
+                        
+                              </div>
+                          </div>
+                      
+                        </fieldset>
+                      </div>
+
+                      <!-- Question 2 -->
+               
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="difficulty-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                            <h1 class="govuk-fieldset__heading">
+                              How easy or difficult was it to understand how you will receive child maintenance from the other parent?
+                            </h1>
+                          </legend>
+                          <div id="changed-name-hint" class="govuk-hint">
+                            You may have chosen Direct Pay or requested Collect and Pay.
+                          </div>
+                          
+                         
+                          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="difficulty" name="difficulty" type="radio" value="ver-easy" data-aria-controls="conditional-difficulty">
+                              <label class="govuk-label govuk-radios__label" for="difficulty">
+                                Very Easy
+                              </label>
+                            </div>
+                          
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="difficulty-2" name="difficulty" type="radio" value="easy" data-aria-controls="conditional-difficulty-2">
+                              <label class="govuk-label govuk-radios__label" for="difficulty-2">
+                                Easy
+                              </label>
+                            </div>
+                           
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="difficulty-3" name="difficulty" type="radio" value="neither" data-aria-controls="conditional-difficulty-3-1">
+                              <label class="govuk-label govuk-radios__label" for="difficulty-3">
+                                Neither easy nor difficult
+                              </label>
+                            </div>
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-difficulty-3-1">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label" for="neither-feedback">
+                                    Why did you feel this way?
+                                  </label>
+                                  <div id="event-name-hint" class="govuk-hint">
+                                    Do not include personal or financial information, like your National Insurance number or credit card details in any of your answers.
+                                  </div>
+                                  <textarea class="govuk-textarea" id="neither-feedback" name="neither-feedback" rows="3" aria-describedby="neither-feedback-hint"></textarea>
+                                </div>
+                        
+                              </div>
+                           
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="difficulty-4" name="difficulty" type="radio" value="difficult" data-aria-controls="conditional-difficulty-4-1">
+                                <label class="govuk-label govuk-radios__label" for="difficulty-4">
+                                  Difficult
+                                </label>
+                              </div>
+                              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-difficulty-4-1">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label" for="difficult-feedback">
+                                    Why did you feel this way?
+                                  </label>
+                                  <div id="event-name-hint" class="govuk-hint">
+                                    Do not include personal or financial information, like your National Insurance number or credit card details in any of your answers.
+                                  </div>
+                                  <textarea class="govuk-textarea" id="difficult-feedback" name="difficult-feedback" rows="3" aria-describedby="difficult-feedback-hint"></textarea>
+                                </div>
+                        
+                              </div>
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="difficulty-5" name="difficulty" type="radio" value="very-difficult" data-aria-controls="conditional-difficulty-5-1">
+                                <label class="govuk-label govuk-radios__label" for="difficulty-5">
+                                  Very difficult
+                                </label>
+                              </div>
+                              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-difficulty-5-1">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label" for="very-difficult-feedback">
+                                    Why did you feel this way?
+                                  </label>
+                                  <div id="event-name-hint" class="govuk-hint">
+                                    Do not include personal or financial information, like your National Insurance number or credit card details in any of your answers.
+                                  </div>
+                                  <textarea class="govuk-textarea" id="very-difficult-feedback" name="very-difficult-feedback" rows="3" aria-describedby="very-difficult-feedback-hint"></textarea>
+                                </div>
+                        
+                              </div>
+                          </div>
+                      
+                        </fieldset>
+                      </div>
+
+                      <!-- Question 3 -->
+               
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" aria-describedby="difficulty-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                          <h1 class="govuk-fieldset__heading">
+                            Did you need any help with your child maintenance application?
+                          </h1>
+                        </legend>
+                        <div id="changed-name-hint" class="govuk-hint">
+                          For example, advice from a friend, searching for information online or using webchat or email to talk to a child maintenance advisor.
+                        </div>
+                          
+                        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="add-help-yes" name="add-help" type="radio" value="yes" data-aria-controls="add-help">
+                            <label class="govuk-label govuk-radios__label" for="add-help-yes">
+                              Yes
+                            </label>
+                          </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="add-help">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="add-help-yes">
+                                What did you need help with?
+                              </label>
+                              <div id="event-name-hint" class="govuk-hint">
+                                Do not include personal or financial information, like your National Insurance number or credit card details in any of your answers.
+                              </div>
+                              <textarea class="govuk-textarea" id="add-help-yes" name="add-help-yes" rows="3" aria-describedby="add-help-yes"></textarea>
+                            </div>
+                          </div>
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="add-help-no" name="add-help" type="radio" value="no" data-aria-controls="add-help-n0">
+                            <label class="govuk-label govuk-radios__label" for="add-help-no">
+                              No
+                            </label>
+                          </div>
+                        </div>
+
+                        </fieldset>
+                      </div>
+
+
+
+                     
+                      <!-- Quesiton 4 -->
+
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                          
+                            <h3 class="govuk-heading-s">Overall, how easy or difficult was it to complete your application?
+                            </h3>
+                         
+                          <div class="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="feedback" name="feedback" type="radio" value="easy">
+                              <label class="govuk-label govuk-radios__label" for="feedback">
+                                Very easy
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="feedback-2" name="feedback" type="radio" value="very-easy">
+                              <label class="govuk-label govuk-radios__label" for="feedback-2">
+                                Easy
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="feedback-3" name="feedback" type="radio" value="neither">
+                              <label class="govuk-label govuk-radios__label" for="feedback-3">
+                                Neither easy nor difficult
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="feedback-4" name="feedback" type="radio" value="difficult">
+                              <label class="govuk-label govuk-radios__label" for="feedback-4">
+                                Difficult
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="feedback-5" name="feedback" type="radio" value="very-difficult">
+                                <label class="govuk-label govuk-radios__label" for="feedback-5">
+                                Very difficult
+                                </label>
+                              </div>
+                          </div>
+                      
+                        </fieldset>
+                      </div>
+
+
+                      <div class="govuk-form-group">
+                        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="event-name">
+                            Why did you feel this way?
+                          </label>
+                        </h1>
+                        <div id="event-name-hint" class="govuk-hint">
+                          Do not include personal or financial information, like your National Insurance number or credit card details in any of your answers.
+                        </div>
+                        <textarea class="govuk-textarea" id="feedback" name="feedback" rows="5" aria-describedby="feedback-hint"></textarea>
+                      </div>
+
+
+                      <button type="submit" class="govuk-button">
+                        Send Feedback
+                    </button>
+
+                </form>
+              
+
+
+                <!-- <div class="govuk-button--sticky">
+                                                          
+                  <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                      data-module="govuk-button">
+                      Hide this page
+                  </a>
+              
+              </div> -->
+
+            </div>
+            {% include "exit-button.html" %}
+        </div>
+    </main>
+</div>
+
+
+<!-- <style>
+    .app-task-list__item:first-child {
+        border-top: 0px solid #bfc1c3 !important;
+    }
+
+
+    .tasklist_float_60 {
+        float: left;
+        width: 60%;
+    }
+
+    .tasklist_float_20 {
+        float: left;
+        width: 20%;
+        text-align: right;
+    }
+
+    .app-task-list__items {
+        padding-left: 0px;
+    }
+</style> -->
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="oc-benefit-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                            Do you or someone you live with receive Child Benefit for {{data['child-2-first-name'] }}?
+                            </h1>
+                          </legend>
+                          <br>
+                          <div class="govuk-radios" id="oc-benefit">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="oc-benefit-1" name="oc-benefit" type="radio" value="yes~2-check-answers">
+                              <label class="govuk-label govuk-radios__label" for="oc-benefit-1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="oc-benefit-2" name="oc-benefit" type="radio" value="no~2-check-answers">
+                              <label class="govuk-label govuk-radios__label" for="oc-benefit-2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+
+                        </fieldset>
+                      </div>
+                    <br>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+            </div>
+                                                                         {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                                <h1 class="govuk-fieldset__heading">
+Sorry, there is a problem with the service                            </h1>
+                            </legend>
+
+
+                                <p class="govuk-body">
+
+                                                You can call or email Child Maintenance Service to complete your application.<br><br/>
+                                              You will need to provide:
+
+                                                  <ul class="govuk-list govuk-list--bullet">
+
+  <li>
+  the following payment ref no:  12345678998765
+  </li>
+  <li>
+  your unique reference number - this is in the email you were sent after speaking to Child Maintenance Options
+  </li>
+  <li>your telephone number, so we can get back to you if you send us an email </li>
+
+</ul>
+
+
+
+                                                        </p>
+
+
+
+                                                        <div class="govuk-inset-text">
+                                                          <p>
+                                                              <strong>Child Maintenance Service </strong>
+
+                                                              <br> Email: <a href="">apply.childmaintenance@dwp.gov.uk</a><br/>
+                                                              <br>You can email us if you’re applying outside of phone hours. We will usually get back to you within 1 working day.<br/><br/>
+
+                                                              <br> Telephone: 0800 171 2345
+                                                              <br> Relay UK: 18001 0800 171 2345
+                                                              <br/>
+                                                              <br>Monday to Friday, 9.30am to 3.30pm (excluding bank holidays)
+                                                              <br>Calls to the Child Maintenance Service are free from landlines and mobiles
+                                                              <br>
+                                                              <br/>
+
+
+
+                                                        <strong>  If you use British or Irish sign language</strong><br/><br/>
+                                                              <a href="https://www.youtube.com/watch?v=Osx7FFxFpNY">Check if you can use the video sign language relay service</a>
+                                                            <br/><br/>  <a href="http://dwpcmg.signvideo.net/">Video relay service for British Sign Language (BSL) users</a>
+                                                              <a href="http://dwpcmgni.signvideo.net/">Video relay service for Irish Sign Language (ISL) users</a>
+
+                                                              <br>
+                                                              <br> Monday to Friday, 9.30am to 3.30pm (excluding bank holidays)
+
+
+
+                                                          </div>
+</div>
+                    </div></div>
+                    </fieldset>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+                                                     {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

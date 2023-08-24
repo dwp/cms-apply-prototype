@@ -1,0 +1,190 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <h1 class="govuk-heading-xl">Check your answers</h1>
+
+
+
+
+                <h2 class="govuk-heading-m">About other parent</h2>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                  <!-- q1  -->
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          Do you know anything about the other parent's current address?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+
+                          {% if data['op-address'] === 'yes' %}
+                          Yes
+                            {% elseif data['op-address'] === 'no' %}
+                            No
+
+                                      {% endif %}
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="pp-address-1">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+
+                    {% if data['op-address'] === 'yes' %}
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          The other parent's current address
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+
+                          {{data['other-parent-address-line-1']}} <br/>
+                          {{data['other-parent-address-line-2']}} <br/>
+                          {{data['other-parent-address-town']}} <br/>
+                          {{data['other-parent-address-county']}} <br/>
+                          {{data['other-parent-address-postcode']}} <br/>
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="pp-address-2">
+                                Change
+                                <span class="govuk-visually-hidden"> address</span>
+                            </a>
+                        </dd>
+                    </div>
+
+
+                    <!-- q3 -->
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                        How do you know this is the other parent's current address
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          {{data['dropped-month']}} /   {{data['dropped-year']}}
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="pp-address-3">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                        How do you know this is the other parent's current address
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          {{data['how-know-address']}}
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="pp-address-3">
+                                Change
+                                <span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+
+  {% endif %}
+
+
+  <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+    When was the last time you dropped your child off at this address?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{data['dropped-month']}} /   {{data['dropped-year']}}
+
+      </dd>
+      <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="pp-address-3">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+          </a>
+      </dd>
+  </div>
+
+
+  <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+  When are the court papers, letters or documents dated?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{data['court-day']}}/{{data['court-month']}}/{{data['court-year']}}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="pp-address-3">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+          </a>
+      </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+Do you know which town or city the other parent currently lives in or near?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{data['court-day']}}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="pp-current-town">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+          </a>
+      </dd>
+  </div>
+                  </dl>
+
+
+
+
+
+
+
+
+
+
+  <br/>
+
+
+
+
+                <form method="post" novalidate>
+
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                    </p>
+                </form>
+
+                </div>
+                                                         {% include "exit-button.html" %}
+
+            </div>
+    </main>
+    </div>
+    <script>
+        function showDivPreviousAddress() {
+            if (otherParentKnowAddressInformation = "other-parent-know-address-2") {
+                document.getElementById('previous-address').style.display = 'visible';
+            }
+            else {
+                document.getElementById('previous-address').style.display = 'hidden';
+
+            }
+
+        }
+    </script> {% endblock %}

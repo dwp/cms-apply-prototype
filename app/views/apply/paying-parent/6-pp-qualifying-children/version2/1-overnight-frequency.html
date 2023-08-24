@@ -1,0 +1,101 @@
+{% extends "layout.html" %} {% block pageTitle %} How often does this child stay overnight with you? {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="child1DateBirthInformation" role="group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+                                    How often does {{data['child-1-first-name'] }} stay overnight with you?
+                                </h1>
+                            </legend>
+                            <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <p>We have to confirm your answers with the other parent. You may need to provide evidence of the agreement if the other parent disagrees with it. </p>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live" name="how-long-stay" type="radio" >
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          Never
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in">
+          Less than once a week
+        </label>
+        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          (fewer than 52 nights a year)
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in">
+          1 to 2 nights a week
+        </label>
+        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          (52 to 103 nights a year)
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in">
+          2 to 3 nights a week
+        </label>
+        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          (104 to 155 nights a year)
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in">
+          3 nights a week
+        </label>
+        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          (156 to 159 nights a year)
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in">
+          More than 3 nights a week
+        </label>
+        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          (160 to 182 a year)
+        </div>
+      </div>
+
+      <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-6" name="where-do-you-live" type="radio" value="abroad">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-6">
+          {{data['child-1-first-name'] }} stays with me half the time
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+                        </fieldset>
+                    </div>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+
+                                                                         {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                                <h1 class="govuk-fieldset__heading">
+                                    You&rsquo;re eligible to apply
+                                </h1>
+                            </legend>
+                            <!-- <p class="govuk-body">Based on your answers, you&rsquo;re eligible to apply to use the Child Maintenance Service.</p> -->
+
+                            <h2 class="govuk-heading-m">Before you start, you'll need</h2>
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>your unique reference number - you may have received this in an email or text message</li>
+                    <li>your
+                        <a class="govuk-link" href="https://www.gov.uk/lost-national-insurance-number">National Insurance number</a>
+                    </li>
+                    <li>details of the children you're applying for</li>
+                    <li>the other parent's first and last name and as much other information about them as you can give - for example, where they live or their phone number</li>
+                    <li>your bank or building society account details, if you need to give them to the other parent </li>
+                    </ul>
+
+                <br>
+                
+
+
+
+                    <p>You can also speak to your bank or building society about setting up an account that will not give away your location.</p>
+
+
+                <br>
+
+                            <!--end-->
+                     <a href="urn-rp.html" role="button" draggable="false" type="submit" class="govuk-button">
+                        Continue
+                    </a>
+
+
+                </form>
+                </div>
+
+
+            </div>
+             {% include "exit-button.html" %}
+        </div>
+    </main>
+    </div>
+    {% endblock %}

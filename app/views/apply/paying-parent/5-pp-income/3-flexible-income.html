@@ -1,0 +1,127 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                              How much was your last payment from {{data['employer-1'] }}?
+                            </h1>
+                          </legend>
+                          <p> Your child maintenance calculation is based on your income before tax and National Insurance, but after pension contributions. </p>
+                          <p>We will use this information if:</p>
+                          <ul class="govuk-list govuk-list--bullet">
+                              <li>we cannot get your income from HMRC </li>
+                              <li>your income has changed by 25% or more</li>
+                          </ul>
+                          <br/>
+
+
+
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+                              How often are you paid from {{data['employer-1']}}?
+                            </h1>
+                          </legend>
+
+                          <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="weekly" name="period" type="radio" value="weekly" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="weekly">
+          Weekly
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="weekly-income">
+            What is your weekly taxable income?
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="weekly-income" name="weekly-income" type="email" spellcheck="false" autocomplete="email"></div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="2weeks" name="period" type="radio" value="2weeks" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="2weeks">
+          Every 2 weeks
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="2weeks-income">
+            What is your taxable income?
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="2weeks-income" name="2weeks-income" type="tel" autocomplete="tel"></div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="4weeks" name="period" type="radio" value="text" data-aria-controls="conditional-contact-3">
+        <label class="govuk-label govuk-radios__label" for="4weeks">
+          Every 4 weeks
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="4weeks-income">
+            What is your taxable income?
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="4weeks-income" name="4weeks-income" type="tel" autocomplete="tel"></div>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="monthly" name="period" type="radio" value="text" data-aria-controls="conditional-contact-4">
+        <label class="govuk-label govuk-radios__label" for="monthly">
+        Monthly
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="monthly-income">
+            What is your taxable income?
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="monthly-income" name="monthly-income" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="annually" name="period" type="radio" value="text" data-aria-controls="conditional-contact-5">
+        <label class="govuk-label govuk-radios__label" for="annually">
+          Annually
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-5">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="annual-income">
+            What is your taxable income?
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="annual-income" name="annual-income" type="tel" autocomplete="tel"></div>
+      </div>
+    </div>
+
+
+
+  </fieldset>
+
+                          </div>
+                        </fieldset>
+                        </div>
+                        <br>
+                        <button type="submit" class="govuk-button">
+                            Continue
+                        </button>
+                        </form>
+                        </div>
+                        {% include "exit-button.html" %}
+
+                        </div>
+                        </main>
+                        </div>
+                        {% endblock %}

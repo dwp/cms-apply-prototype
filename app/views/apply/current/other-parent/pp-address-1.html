@@ -1,0 +1,56 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <!--start-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="otherParentKnowAddressInformation">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading" id="otherParentKnowAddressInformation">
+                                     Do you know anything about the other parent’s current address?
+                                </h1>
+                                <span id="other-parent-date-of-birth-hint" class="govuk-hint">
+                                The child maintenance service are more likely to find the other parent if you can give some information about where they live. For example, you might just know the street or town.</span>
+                            </legend>
+
+                            <div class="govuk-radios govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="yes" name="op-address" type="radio" value="yes~pp-address-2">
+                                    <label class="govuk-label govuk-radios__label" for="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="no" name="op-address" type="radio" value="no~pp-current-town">
+                                    <label class="govuk-label govuk-radios__label" for="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!--Stop-->
+
+
+
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+                                                                             {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+
+{% endblock %}

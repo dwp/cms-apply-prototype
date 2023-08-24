@@ -1,0 +1,62 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <h1 class="govuk-heading-xl">Do you have any expenses that may affect your child maintenance payments?</h1>
+
+                    <p class="govuk-body">
+                    The Child Maintenance Service will contact you for evidence of your expenses. Your expenses may reduce the amount of child maintenance you pay.
+                    </p>
+                    <p>
+                    Expenses can include:</p>
+
+
+                    <ul class="govuk-list govuk-list--bullet">
+
+                        <li>spending over £10 a week on transport to keep in regular contact with your children. For example, petrol or train travel</li>
+                        <li>ongoing costs to support a child who lives with you and has a long-term illness or disability</li>
+                        <li>spending over £10 a week to pay debts that still benefit the other parent and your child. For example, finance for a car the other parent still drives (this does not include credit card debts)</li>
+                        <li>paying over £10 a week for certain mortgages, home improvement loans or insurance policies (this only includes payments for the home the other parent still lives in, you should not have any legal or equitable interest in the home)</li>
+                        <li>boarding school living expenses. For example, food or accommodation (this does not include the cost of full-time boarding or private school education)</li>
+
+                    </ul>
+
+                    <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="yes" name="expenses" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="yes">
+        Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="no" name="expenses" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="no">
+            No
+          </label>
+        </div>
+
+      </div>
+
+    </fieldset>
+  </div>
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

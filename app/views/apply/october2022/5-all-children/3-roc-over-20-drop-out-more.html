@@ -1,0 +1,31 @@
+{% extends "layout.html" %} {% block pageTitle %} We cannot take this child into account for this child maintenance arrangement {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">We cannot take [Steve] into account for this child maintenance arrangement</h1>
+
+                <p>The Child Maintenance Service can only take into account children who are under the age of 20 when making calculations for child maintenance arrangements. </p>
+                
+                <div class="govuk-button-group">
+                    <!--3132-->
+                    
+                    <a href="3-add-another-child-roc.html" role="button" draggable="false" class="govuk-button"
+                        data-module="govuk-button">
+                        Continue
+                    </a>
+                  </div>
+                
+
+                
+            </div>
+                {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

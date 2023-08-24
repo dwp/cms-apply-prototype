@@ -1,0 +1,48 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <h1 class="govuk-heading-xl">Additional income </h1>
+
+                    <p class="govuk-body">
+You can tell us about your additional income or expenses using your online child maintenance account. We will tell you how to set this up later in the application.                     </p>
+                    <p>
+
+You’ll need to provide evidence of your additional income or expenses, and they may change the amount of child maintenance you pay. </p>
+
+<p> <b>Additional income can include:<b/> </p>
+                    <ul class="govuk-list govuk-list--bullet">
+
+                        <li>receiving over £2500 a year in rent from property or land</li>
+                        <li>receiving over £2500 a year in dividends or interest from savings or investments</li>
+                        <li>earning an income of over £100 a week from employment or self-employment in addition to any benefits you get</li>
+                        <li>some of your income is paid to another person through a limited company</li>
+                        <li>increased pension contributions</li>
+                        <li>employment benefits that reduce your take-home salary. For example, a company car</li>
+                        <li>assets valued over £31,250. For example, cash, property, land, gold, stocks, shares, unit trusts, gilt-edged securities, or crypto currency</li>
+
+                    </ul>
+
+
+
+
+
+
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

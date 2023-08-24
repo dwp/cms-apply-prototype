@@ -1,0 +1,86 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start-->
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                  <h1 class="govuk-fieldset__heading">
+                    You have told us the other parent’s previous address is:
+                  </h1>
+                </legend>
+
+                <span class="govuk-caption-l">
+                  {{data['prev-address-line-1'] }}<br />
+                  {{data['prev-address-line-2'] }}<br />
+                  {{data['prev-address-town'] }} <br />
+                  {{data['prev-address-county'] }}<br />
+                  {{data['prev-address-postcode'] }}
+                </span>
+                <br />
+                </h1>
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                  <h1 class="govuk-heading-m">
+                    When did you last know the other parent to live at this address?
+                  </h1>
+                </legend>
+
+                <span class="govuk-hint">For example, 9 2020 or just the year.
+                </span>
+
+                <div class="govuk-form-group">
+
+                  <div class="govuk-date-input__item">
+
+                    <label class="govuk-label govuk-date-input__label" for="contact-by-email">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                      id="contact-by-email" name="contact-by-email" type="number" spellcheck="false">
+                  </div>
+                  <div class="govuk-date-input__item">
+
+                    <label class="govuk-label govuk-date-input__label" for="contact-by-email">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                      id="contact-by-email" name="contact-by-email" type="number" spellcheck="false">
+
+                  </div>
+                </div>
+                <br>
+                <br>
+                
+
+                
+
+
+                <!--Stop-->
+
+
+
+
+                <a href="pp-other-info" role="button" draggable="false" class="govuk-button">
+                  Continue
+
+                </a>
+        </form>
+      </div>
+    </div>
+    {% include "exit-button.html" %}
+
+</div>
+</main>
+</div>
+
+
+
+{% endblock %}

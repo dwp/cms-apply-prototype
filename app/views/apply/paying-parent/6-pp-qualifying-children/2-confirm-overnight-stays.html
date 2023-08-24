@@ -1,0 +1,150 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% include "feedback-banner.html" %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+
+                <!--start of new code-->
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <h1 class="govuk-heading-l">Confirm childcare arrangements for {{data['child-2-first-name'] }}
+
+                            <span class="govuk-caption-xl"> You have told us that {{data['child-2-first-name'] }} stays overnight with you:
+  <!-- <span class="govuk-caption-xl"> You have told us: -->
+                            </span>
+                        </h1>
+                    </div>
+                    <!-- nights per week + special occassion -->
+
+
+
+
+
+                    <!-- Option 1  -->
+
+
+                        <h2 class="govuk-heading-m">
+                          {% if data['arrangement'] === 'weekly' %}
+                            Weekly arrangement
+                              {% elseif data['arrangement'] === 'fortnightly' %}
+                              Fortnightly arrangement
+                              {% elseif data['arrangement'] === 'monthly' %}
+                              Monthly arrangement
+                              {% elseif data['arrangement'] === 'no-arrangement' %}
+                              No set arrangement
+                                                {% endif %}
+                                              </h2>
+                            <!-- weekly -->
+                            {% if data['arrangement'] === 'weekly' %}
+                            <p>{{data['weekly-arrangement'] }}   nights a week{{data['how-regular']  }}</p>
+                            <!-- fortnightly -->
+                            {% elseif data['arrangement'] === 'fortnightly' %}
+                            <p>{{data['fortnightly-arrangement']}} nights in the first week<br/>
+                            {{data['fortnightly-arrangement-2']}} nights in the second week</p>
+                             <!-- monthly -->
+                             {% elseif data['arrangement'] === 'monthly' %}
+                               <p>{{data['monthly-arrangement']}} nights a month </p>
+                              <!-- no arrangement -->
+                               {% elseif data['arrangement'] === 'once' %}
+                            {% endif %}
+
+
+
+
+
+                    <!-- Second section - additional nights -->
+                                        <h2 class="govuk-heading-m">
+                                          {% if data['additional-nights'] === 'yes' %}
+                                            Additional nights
+                                            {% elseif data['additional-nights'] === 'no' %}
+                                              No additional nights
+
+                                            {% endif %}
+                                            </h2>
+
+
+                                      {% if data['additional-nights'] === 'yes' %}
+                                      <p>{{data['special-nights'] }}  additional nights a year<br/>
+                                       {{data['additional-night-info'] }}</p>
+                                       <!--  -->
+                                      {% endif %}
+
+
+
+
+
+
+
+
+                    <div class="govuk-form-group">
+
+                        <h1 class="govuk-heading-m">
+                            Is this correct?</h1>
+
+                        <!--start of list-->
+
+                        <!--Start of radio buttons-->
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+                                <div class="govuk-radios govuk-radios--inline">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="add-another-child-1-yes" name="add-another-child-1" type="radio" value="yes~2-arrangement-details">
+                                        <label class="govuk-label govuk-radios__label" for="add-another-child-1-yes">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="add-another-child-1-no" name="add-another-child-1" type="radio" value="no~3-arrangement">
+                                        <label class="govuk-label govuk-radios__label" for="add-another-child-1-no">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <!--end of radio buttons-->
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<style>
+    .app-task-list__item:first-child {
+        border-top: 0px solid #bfc1c3 !important;
+    }
+
+
+    .tasklist_float_60 {
+        float: left;
+        width: 60%;
+    }
+
+    .tasklist_float_20 {
+        float: left;
+        width: 20%;
+        text-align: right;
+    }
+
+    .app-task-list__items {
+        padding-left: 0px;
+    }
+</style>
+
+{% endblock %}

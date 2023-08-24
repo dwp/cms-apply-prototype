@@ -1,0 +1,95 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner-padding-top.html" %}
+
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">February 2022 - Prototype</h1>
+        <p><strong>Last Update:</strong> -- February 2022</p>
+        <p><strong>Flow version: </strong> 4E/F/G </p>
+        <a href="1-start-eligibility/welcome.html" role="button" draggable="false"
+          class="govuk-button govuk-button--start" data-module="govuk-button">
+          Start now
+          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
+            viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg></a>
+        <p><strong>Summary of Changes:</strong></p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Email gather section moved from Section 9 to Section 3</li>
+          <li>Child over 20 dropout pages added and content tweaks on section start page</li>
+          <li>Updating contact information across Apply (contact number and opening hours) for when contact number changes</li>
+          <li>Updated the shared care overnight stays to align with the backend</li>
+          <li>Allow the user to select the frequency on which they want to make payments</li>
+          <li>Added content around when Deduction of Earnings payments will be made</li>
+          <li>Created Design Spike section of the prototype</li>
+          <li>Prototyped the 'Removal of Fee' design work</li>
+          <li>Equality questions moved to applicant info section</li>
+          
+        </ul>
+        <p><strong>Sections:</strong></p>
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" href="1-start-eligibility/welcome.html">Section 1: Start and Eligibility</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="2-fees/check-age.html">Section 2: Fees</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="3-applicant-info/pp-name.html">Section 3: Applicant (PP) info</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="4-pp-income/1-income-query.html">Section 4: PP Income</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="5-all-children/child-section-start.html">Section 5: All Children (QC/ROC/CIFBA)</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="6-service-types/direct-pay.html">Section 6: Service Types</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="7-other-parent/pp-name.html">Section 7: The Other Parent (RP)</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="8-existing-cases/previous-application.html">Section 8: Existing Cases</a>
+          </li>
+          <!--
+<li>
+            <a class="govuk-link" href="8-equality/extra-question">Section 8: Equality Questions</a>
+          </li>
+          -->
+          
+
+          <li>
+            <a class="govuk-link" href="9-confirmation/declaration-fee">Section 9: Confirmation</a>
+          </li>
+        </ul>
+
+        <p><strong>Spike work:</strong></p>
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" href="spike-removal-of-fee/domestic-abuse-under-19.html">Removal of fee</a> (specific section)
+          </li>
+          <li>
+            <a class="govuk-link" href="spike-removal-of-fee/check-ans.html">CYA </a> - Did not wish to answer equality questions
+          </li>
+          <li>
+            <a class="govuk-link" href="spike-removal-of-fee/check-ans-equality.html">CYA </a> - Did answer equality questions
+          </li>
+
+          <!-- <li>
+            <a class="govuk-link" href="spike-removal-of-fee/section-1/welcome.html">Removal of fee</a> (from service start then rejoin rest of flow)
+          </li> --> 
+        </ul>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+{% endblock %}

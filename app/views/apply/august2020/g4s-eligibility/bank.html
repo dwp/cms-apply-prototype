@@ -1,0 +1,63 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+                                      Do you have bank account or building society that your child maintenance can be paid into?
+                                </h1>
+                            </legend>
+                            </fieldset>
+                            </div>
+                            <div class="govuk-form-group">
+                        <details class="govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                If you are worried about sharing your bank details with the other parent
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                 You can ask your bank to set up a safe account that will not give away your location. If you do not want contact with the
+                                other parent, we can pass your bank or building society details on for you.
+
+                            </div>
+                        </details>
+                      
+                            <div class="govuk-radios govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="maintenance-liability-1" name="maintenance-liability" type="radio" value="yes~lac">
+                                    <label class="govuk-label govuk-radios__label" for="maintenance-liability-1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="maintenance-liability-2" name="maintenance-liability" type="radio" value="no~not-eligible-bank">
+                                    <label class="govuk-label govuk-radios__label" for="maintenance-liability-2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!--end-->
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

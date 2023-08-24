@@ -1,0 +1,85 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <form method="post" novalidate>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                          Do you share any of these benefits with your partner?
+                        </h1>
+                      </legend>
+                      <div id="countries-hint" class="govuk-hint">
+                        Select all that apply
+                      </div>
+                      <div class="govuk-inset-text">
+                        You may have a joint benefits claim if you live with your partner and you’re married, in a civil partnership or living together as a couple.
+                      </div>
+                      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
+
+
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="income" name="shared" type="checkbox"  value="income">
+        <label class="govuk-label govuk-checkboxes__label" for="universal">
+          Universal Credit
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="income" name="shared" type="checkbox"  value="income">
+        <label class="govuk-label govuk-checkboxes__label" for="income">
+          Income Support
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="pension-credit" name="shared" type="checkbox" value="pension-credit" >
+        <label class="govuk-label govuk-checkboxes__label" for="pension-credit">
+          Pension Credit
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="shared" type="checkbox" value="jobseekers-income-based">
+        <label class="govuk-label govuk-checkboxes__label" for="jobseekers-income-based">
+          Jobseeker’s Allowance - income-based
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="shared" type="checkbox" value="income-support-allowance" >
+        <label class="govuk-label govuk-checkboxes__label" for="income-support-allowance">
+          Income-related Employment and Support Allowance
+        </label>
+      </div>
+      <div class="govuk-checkboxes__divider">or</div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="no" name="shared" type="checkbox" value="none" data-behaviour="exclusive" >
+        <label class="govuk-label govuk-checkboxes__label" for="none">
+          No, I do not share any of these with my partner
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+                    </fieldset>
+                  </div>
+
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

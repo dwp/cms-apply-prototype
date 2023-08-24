@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <form method="post" novalidate>
+                    
+                    <div class="govuk-form-group">
+                        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="pension">
+                            What is the name of your private pension provider?
+                          </label>
+                        </h1>
+                        <div id="account-number-hint" class="govuk-hint">
+                        If you have more than one private pension provider, you will be asked about them later in this application.
+                        </div>
+                        <br>
+                        <input class="govuk-input govuk-input--width-10" id="pension-name" name="pension-name" type="text" spellcheck="false" >
+                      </div>
+
+                      <br>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}
