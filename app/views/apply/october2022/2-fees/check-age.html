@@ -1,4 +1,3 @@
-
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <!--Feedback banner start-->
 {% include "feedback-banner.html" %}
@@ -14,24 +13,25 @@
 
                         <div class="govuk-form-group">
                             <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-                            
+                                <h1 class="govuk-heading-xl">Check whether you need to pay the application fee </h1>
+
+
+
+                                <div class="govuk-inset-text">We will not share your answers with the other parent.
+                                </div>
+
 
                                 <form method="post" novalidate>
                                     <div class="govuk-form-group">
                                         <fieldset class="govuk-fieldset" aria-describedby="applicantDateOfBirthInformation" role="group">
-                                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                                                <h1 class="govuk-fieldset__heading">
+                                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                                <h2 class="govuk-fieldset__heading">
                                                     What is your date of birth?
-                                                </h1>
+                                                </h2>
                                             </legend>
                                             <span id="applicantDateOfBirthInformation" class="govuk-hint">
                                                 For example, 15 8 1985
                                             </span>
-
-
-                                            <div class="govuk-inset-text">We ask this so we can check whether you need to pay the application fee.</div>
-
-
                                             <div class="govuk-date-input" id="applicant-date-of-birth">
                                                 <div class="govuk-date-input__item">
                                                     <div class="govuk-form-group">
@@ -79,5 +79,5 @@
 
 </div>
 </main>
-</div>    
+</div>
 {% endblock %}

@@ -14,37 +14,35 @@
 
 
                     <div class="govuk-form-group">
-                        <h1 class="govuk-heading-xl">Confirm how often {{data['child-1-first-name'] }} stays over night with the other parent
+                        <h1 class="govuk-heading-l">Confirm how often {{data['child-1-first-name'] }} stays over night with the other parent
 <br><br/>
   </h1>
 <!-- Option 1  -->
 
 
     <h2 class="govuk-heading-m">
-      {% if data['shared-care-weekly'] === 'Weekly' %}
+      {% if data['arrangement'] === 'weekly' %}
         Weekly arrangement
-          {% elseif data['shared-care-fortnightly'] === 'Fortnightly' %}
+          {% elseif data['arrangement'] === 'fortnightly' %}
           Fortnightly arrangement
-          {% elseif data['shared-care-monthly'] === 'Monthly' %}
+          {% elseif data['arrangement'] === 'monthly' %}
           Monthly arrangement
-          {% elseif data['shared-care-none'] === 'No set arrangement' %}
+          {% elseif data['arrangement'] === 'no-arrangement' %}
           No set arrangement
-          {% elseif data['shared-care-never'] === 'Never' %}
-          Never
                             {% endif %}
                           </h2>
         <!-- weekly -->
-        {% if data['shared-care-weekly'] === 'Weekly' %}
-        <p>{{data['shared-care-days-amount'] }}   nights a week</p>
+        {% if data['arrangement'] === 'weekly' %}
+        <p>{{data['weekly-arrangement'] }}   nights a week{{data['how-regular']  }}</p>
         <!-- fortnightly -->
-        {% elseif data['shared-care-fortnightly'] === 'Fortnightly' %}
-        <p>{{data['shared-care-days-amount']}} nights in a fortnight<br/>
-    
+        {% elseif data['arrangement'] === 'fortnightly' %}
+        <p>{{data['fortnightly-arrangement']}} nights in the first week<br/>
+        {{data['fortnightly-arrangement-2']}} nights in the second week</p>
          <!-- monthly -->
-         {% elseif data['shared-care-monthlyt'] === 'Monthly' %}
-           <p>{{data['shared-care-days-amount']}} nights a month </p>
+         {% elseif data['arrangement'] === 'monthly' %}
+           <p>{{data['monthly-arrangement']}} nights a month </p>
           <!-- no arrangement -->
-           {% elseif data['shared-care-none'] === 'No set arrangement' %}
+           {% elseif data['arrangement'] === 'once' %}
         {% endif %}
 
 

@@ -4,115 +4,45 @@
 <!--Feedback banner stop-->
 <div class="govuk-width-container">
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 <form method="post" novalidate>
-
-                    <!--start-->
                     <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="otherParentKnowAddressInformation">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
-                                <h1 class="govuk-fieldset__heading" id="otherParentKnowAddressInformation">
-                                    Where do you live?
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                            <h1 class="govuk-fieldset__heading">
+                                Where do you live?
+                            </h1>
+                        </legend>
+                        <div class="govuk-inset-text">We ask this to confirm your identity. We will not share your answers with the other parent.</div>
 
-                                  
-                                </h1>
-                            </legend>
-                            <div class="govuk-inset-text">
-                                We ask this to confirm your identity. We will not share your answers with the other parent.</div>
-
-                            <div class="govuk-form-group">
-                                <label class="govuk-label" for="shared-address-line-1">
-                                     Address line 1
-                                    <span class="govuk-visually-hidden">Address line 1</span>
-                                </label>
-                                <input class="govuk-input" id="shared-address-line-1" name="shared-address-line-1" type="text">
-                            </div>
-
-                            <div class="govuk-form-group">
-                                <label class="govuk-label" for="shared-address-line-2">
-                                     Address line 2
-                                    <span class="govuk-visually-hidden">Address line 2</span>
-                                </label>
-                                <input class="govuk-input" id="shared-address-line-2" name="shared-address-line-2" type="text">
-                            </div>
-
-                            <div class="govuk-form-group">
-                                <label class="govuk-label" for="shared-address-town">
-                                    Town or city
-                                </label>
-                                <input class="govuk-input govuk-!-width-two-thirds" id="shared-address-town" name="shared-address-town" type="text">
-                            </div>
-
-                            <div class="govuk-form-group">
-                                <label class="govuk-label" for="shared-address-county">
-                                    County
-                                </label>
-                                <input class="govuk-input govuk-!-width-two-thirds" id="shared-address-county" name="shared-address-county" type="text">
-                            </div>
-
-
-                            <div class="govuk-form-group">
-                                <label class="govuk-label" for="shared-address-postcode">
-                                    Postcode
-                                </label>
-                                <input class="govuk-input govuk-input--width-10" id="shared-address-postcode" name="shared-address-postcode"
-                                    type="text">
-                            </div>
-
-                        </fieldset>
-                        <br> <br>
                         <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset">
-                                
-                                <label class="govuk-label" for="shared-address-postcode">
-                                    Country
-                                </label>
-                                <div class="govuk-radios govuk-radios--small">
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
-                                        <label class="govuk-label govuk-radios__label" for="changed-name">
-                                            England
-                                        </label>
-                                    </div>
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
-                                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                                            Scotland
-                                        </label>
-                                    </div>
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
-                                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                                            Wales
-                                        </label>
-                                    </div>
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
-                                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                                            Northern Ireland
-                                        </label>
-                                    </div>
-                                </div>
-                            </fieldset>
+                            <label class="govuk-label" for="mobile-number">
+                                <strong>House number or name</strong>
+                            </label>
+                            <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobile-number" type="tel" autocomplete="tel" value="10">
                         </div>
-                        </fieldset>
+                        <br/>
+                        <label class="govuk-label" for="home-address-postcode">
+                            <strong>Postcode</strong>
+                        </label>
+                        <input class="govuk-input govuk-!-width-one-quarter" value="NE34 7JL" id="home-address-postcode" name="home-address-postcode"
+                            type="text">
                     </div>
-                    <!--Stop-->
-
-
-
-
+                    <p class="govuk-body">
+                    <a href="pp-address-2.html" class="govuk-link">Enter address manually</a>
+                    </p>
                     <button type="submit" class="govuk-button">
-                        Continue
+                        Find address
                     </button>
-                </form>
             </div>
-                                                                             {% include "exit-button.html" %}
-
         </div>
-    </main>
+
+        </form>
+</div>
+
+
+</div>
+</main>
 </div>
 {% endblock %}

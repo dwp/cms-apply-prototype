@@ -1,4 +1,3 @@
-
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <!--Feedback banner start-->
 {% include "feedback-banner.html" %}
@@ -12,18 +11,21 @@
                     <div class="govuk-form-group">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
                             <h1 class="govuk-fieldset__heading">
-                                What is the best number to call you on?
+                                What&rsquo;s the best number to call you on if we have questions about your application?
                             </h1>
                         </legend>
-                       
+                        <!--  <label class="govuk-label" for="applicant-telephone-number" style="visibility:hidden">
+                UK telephone number
+              </label> -->
                         <div class="govuk-inset-text">We will not share your answers with the other parent.</div>
 
 
+
                         <div class="govuk-form-group">
-                            
+                            <label class="govuk-label" for="mobile-number">
+                                <strong>Phone number</strong>
+                            </label>
                             <span id="changed-name-hint" class="govuk-hint">If you do not have your own phone, give the phone number of someone you trust.</span>
-                            <br>
-                            <div class="govuk-!-padding-bottom-5"></div>
                             <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobile-number" type="tel" autocomplete="tel">
                         </div>
                     </div>
@@ -51,7 +53,6 @@
                                 <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-2">
                                     No
                                 </label>
-                                
                             </div>
 
                             <!--start-->
@@ -66,12 +67,12 @@
                                     <input class="govuk-input govuk-input--width-20" id="other-parent-contact-work-phone" name="other-parent-contact-work-phone"
                                         type="tel">
                                 </div>
-                     
-        
+                            </div>
+                        </div>
+            </div>
+
+        </div>
 </div>
-
-<div class="govuk-!-padding-bottom-3"></div>
-
 <button type="submit" class="govuk-button">
     Continue
 </button>

@@ -9,102 +9,23 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds-from-desktop">
 
-                <h1 class="govuk-heading-xl">Check your answers about the other parent</h1>
+                <h1 class="govuk-heading-xl">Check your answers</h1>
 
+
+
+
+                <h2 class="govuk-heading-m">About other parent</h2>
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
-
-
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key">
-                          Name
-                        </dt>
-                        <dd class="govuk-summary-list__value">
-
-                            {{data['other-parent-first-name']}} {{data['other-parent-middle-name']}} {{data['other-parent-last-name']}} 
-
-                        </dd>
-                        <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="">
-                                Change
-                                <span class="govuk-visually-hidden"> name</span>
-                            </a>
-                        </dd>
-                    </div>
-
-
-
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key">
-                          Date of birth
-                        </dt>
-                        <dd class="govuk-summary-list__value">
-
-                            {{data['other-parent-dob-day']}} {{data['other-parent-dob-month']}} {{data['other-parent-dob-year']}} 
-                            {{data['other-parent-dob-age']}} 
-
-                        </dd>
-                        <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="">
-                                Change
-                                <span class="govuk-visually-hidden"> name</span>
-                            </a>
-                        </dd>
-                    </div>
-
-
-
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key">
-                          National Insurance number
-                        </dt>
-                        <dd class="govuk-summary-list__value">
-
-                            {{data['pp-nino']}} 
-
-                        </dd>
-                        <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="">
-                                Change
-                                <span class="govuk-visually-hidden"> name</span>
-                            </a>
-                        </dd>
-                    </div>
-
-
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key">
-                          Phone number
-                        </dt>
-                        <dd class="govuk-summary-list__value">
-
-                            {{data['phone-number-pp']}} 
-
-                        </dd>
-                        <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="">
-                                Change
-                                <span class="govuk-visually-hidden"> name</span>
-                            </a>
-                        </dd>
-                    </div>
-
 
                   <!-- q1  -->
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
-                          Current address
+                          Do you know anything about the other parent's current address?
                         </dt>
                         <dd class="govuk-summary-list__value">
 
                           {% if data['op-address'] === 'yes' %}
-                          
-                          {{data['other-parent-address-line-1']}} <br/>
-                          {{data['other-parent-address-line-2']}} <br/>
-                          {{data['other-parent-address-town']}} <br/>
-                          {{data['other-parent-address-county']}} <br/>
-                          {{data['other-parent-address-postcode']}} <br/>
-
+                          Yes
                             {% elseif data['op-address'] === 'no' %}
                             No
 
@@ -119,16 +40,37 @@
                         </dd>
                     </div>
 
-                  
+                    {% if data['op-address'] === 'yes' %}
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          The other parent's current address
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+
+                          {{data['other-parent-address-line-1']}} <br/>
+                          {{data['other-parent-address-line-2']}} <br/>
+                          {{data['other-parent-address-town']}} <br/>
+                          {{data['other-parent-address-county']}} <br/>
+                          {{data['other-parent-address-postcode']}} <br/>
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="pp-address-2">
+                                Change
+                                <span class="govuk-visually-hidden"> address</span>
+                            </a>
+                        </dd>
+                    </div>
 
 
                     <!-- q3 -->
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
-                        Current town or city
+                        How do you know this is the other parent's current address
                         </dt>
                         <dd class="govuk-summary-list__value">
-                          
+                          {{data['dropped-month']}} /   {{data['dropped-year']}}
+
                         </dd>
                         <dd class="govuk-summary-list__actions">
                             <a class="govuk-link" href="pp-address-3">
@@ -140,10 +82,11 @@
 
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
-                        Current area of the UK
+                        How do you know this is the other parent's current address
                         </dt>
                         <dd class="govuk-summary-list__value">
-                          
+                          {{data['how-know-address']}}
+
                         </dd>
                         <dd class="govuk-summary-list__actions">
                             <a class="govuk-link" href="pp-address-3">
@@ -153,14 +96,16 @@
                         </dd>
                     </div>
 
+  {% endif %}
 
 
   <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
-    Verify current address
+    When was the last time you dropped your child off at this address?
       </dt>
       <dd class="govuk-summary-list__value">
-       
+        {{data['dropped-month']}} /   {{data['dropped-year']}}
+
       </dd>
       <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="pp-address-3">
@@ -173,11 +118,10 @@
 
   <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
-  Previous address
+  When are the court papers, letters or documents dated?
       </dt>
       <dd class="govuk-summary-list__value">
-        
-
+        {{data['court-day']}}/{{data['court-month']}}/{{data['court-year']}}
       </dd>
       <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="pp-address-3">
@@ -188,11 +132,10 @@
   </div>
   <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
-Previous town or city
+Do you know which town or city the other parent currently lives in or near?
       </dt>
       <dd class="govuk-summary-list__value">
-        
-
+        {{data['court-day']}}
       </dd>
       <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="pp-current-town">
@@ -201,71 +144,6 @@ Previous town or city
           </a>
       </dd>
   </div>
-
-
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-  Previous are of the UK
-    </dt>
-    <dd class="govuk-summary-list__value">
-     
-    </dd>
-    <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="pp-address-3">
-            Change
-            <span class="govuk-visually-hidden"> name</span>
-        </a>
-    </dd>
-</div>
-
-<div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-  Job or benefits
-    </dt>
-    <dd class="govuk-summary-list__value">
-     
-    </dd>
-    <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="pp-address-3">
-            Change
-            <span class="govuk-visually-hidden"> name</span>
-        </a>
-    </dd>
-</div>
-
-
-<div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-  Postal address
-    </dt>
-    <dd class="govuk-summary-list__value">
-     
-    </dd>
-    <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="pp-address-3">
-            Change
-            <span class="govuk-visually-hidden"> name</span>
-        </a>
-    </dd>
-</div>
-
-
-<div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-  Other contact information
-    </dt>
-    <dd class="govuk-summary-list__value">
-     
-    </dd>
-    <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="pp-address-3">
-            Change
-            <span class="govuk-visually-hidden"> name</span>
-        </a>
-    </dd>
-</div>
-
-
                   </dl>
 
 

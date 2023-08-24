@@ -12,15 +12,19 @@
             <div class="govuk-grid-column-two-thirds-from-desktop">
                 <form method="post" novalidate>
 
-                    <h1 class="govuk-heading-xl">Check your payment details</h1>
+                    <h1 class="govuk-heading-xl">Check your answers</h1>
 
+
+                    <h2 class="govuk-heading-m">
+                        Child maintenance payments
+                    </h2>
                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
-                                Payment type
+                                Could a Direct Pay arrangement work for you?
                             </dt>
                             <dd class="govuk-summary-list__value">
-                                {{ data['payment-type'] }}
+                            Yes
                             </dd>
                             <dd class="govuk-summary-list__actions">
                                 <a class="govuk-link" href="../about_other_parent/other_parent_name.html">
@@ -29,14 +33,12 @@
                                 </a>
                             </dd>
                         </div>
-
-
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
-                               Bank details
+                                Would you like us to pass your bank or building society account details on to the other parent?
                             </dt>
                             <dd class="govuk-summary-list__value">
-                                {{ data['account-details'] }}
+                                No
                             </dd>
                             <dd class="govuk-summary-list__actions">
                                 <a class="govuk-link" href="../about_other_parent/other_parent_name.html">
@@ -45,72 +47,9 @@
                                 </a>
                             </dd>
                         </div>
-
-
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key">
-                                Name on account
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                {{ data['account-holder'] }}
-                            </dd>
-                            <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="../about_other_parent/other_parent_name.html">
-                                    Change
-                                    <span class="govuk-visually-hidden"> name</span>
-                                </a>
-                            </dd>
-                        </div>
-
-
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key">
-                                 Sort code
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                {{ data['sort-code'] }}
-                            </dd>
-                            <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="../about_other_parent/other_parent_name.html">
-                                    Change
-                                    <span class="govuk-visually-hidden"> name</span>
-                                </a>
-                            </dd>
-                        </div>
-
-
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key">
-                                Account number
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                {{ data['account-number'] }}
-                            </dd>
-                            <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="../about_other_parent/other_parent_name.html">
-                                    Change
-                                    <span class="govuk-visually-hidden"> name</span>
-                                </a>
-                            </dd>
-                        </div>
-
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key">
-                                Building society roll number
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                {{ data['roll-number'] }}
-                            </dd>
-                            <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="../about_other_parent/other_parent_name.html">
-                                    Change
-                                    <span class="govuk-visually-hidden"> name</span>
-                                </a>
-                            </dd>
-                        </div>
-
-
                     </dl>
+
+                   
 
 
                     </dl>

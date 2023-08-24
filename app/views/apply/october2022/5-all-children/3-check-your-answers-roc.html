@@ -15,7 +15,7 @@
                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Name
+              What is {{data['child-3-first-name'] }}'s full name
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['child-3-first-name'] }} {{data['child-3-middle-name'] }} {{data['child-3-last-name'] }}
@@ -28,7 +28,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Date of birth
+              What is {{data['child-3-first-name'] }}'s date of birth?
             </dt>
             <dd class="govuk-summary-list__value">
               5 January 2007
@@ -41,7 +41,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-             Child benefit
+              Do you or someone you live with get Child Benefit for {{data['child-3-first-name'] }}?
             </dt>
             <dd class="govuk-summary-list__value">
               Yes
@@ -54,69 +54,34 @@
           </div>
 
 
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Does {{data['child-3-first-name'] }}'s other parent get Child Benefit?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">No</p>
+
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="3-child-benefit.html">
+                Change<span class="govuk-visually-hidden"> contact details</span>
+              </a>
+            </dd>
+          </div>
         </dl>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
 
-
-
-
-
-
-
-        <form method="post" novalidate>
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h1 class="govuk-fieldset__heading">
-                  Do you need to add another child to this arrangement?
-                </h1>
-              </legend>
-              <div id="changed-name-hint" class="govuk-hint">
-                This should be a child who lives with you most of the time, like your partner’s child.
-              </div>
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="add-another-named-child" name="add-another-named-child" type="radio" value="yes~3-name">
-                  <label class="govuk-label govuk-radios__label" for="add-another-named-child">
-                    Yes
-                  </label>
                 </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="add-another-named-child" name="add-another-named-child" type="radio" value="no~/apply/october2022/6-service-types/direct-pay.html">
-                  <label class="govuk-label govuk-radios__label" for="add-another-named-child">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-      
-
-       
-        </div>
-        <!--end of radio buttons-->
-
-        <button type="submit" class="govuk-button">
-            Continue
-        </button>
 
 
-    </form>
-</div>
-           {% include "exit-button.html" %}
 
-</div>
 </main>
 </div>
 
+
+
+
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-

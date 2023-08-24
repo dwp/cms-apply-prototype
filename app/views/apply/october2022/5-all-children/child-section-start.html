@@ -5,49 +5,31 @@
 <div class="govuk-width-container">
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
     <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">Tell us about your children</h1>
 
-                <main class="govuk-main-wrapper " id="main-content" role="main">
-                    <div class="govuk-grid-row">
-                      <div class="govuk-grid-column-two-thirds">
-                        <form method="post" novalidate>
-                          <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset">
-                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                                <h1 class="govuk-fieldset__heading">
-                                  Tell us about your children
-                                </h1>
-                              </legend>
+                <p>To calculate your maintenance properly, we need to get some information about your children. </p>
+                <p>First, we need to know about the child or children you’re applying to include in this maintenance arrangement. </p>
+
+               
+
+                <p>Then we also need to know if you have any other children who you pay maintenance for, if it’s a private arrangement (not using Child Maintenance Service). </p>
+                <p>Finally, we need to know if any other children live with you the majority of the time (like a partner’s children).</p>
+                <p>We’ll ask about one child at a time, and you can keep adding children to your application until you have added them all. </p>
+                <p>All children must be under the age of 20.</p>
+
                 
-                              <div class="govuk-inset-text">
-                                Your children must be under 16 or under 20 if they are in full-time education or training, up to and including A level or equivalent.
-                              </div>
-                
-                              <p class="govuk-body">To work out how much child maintenance you need to pay, we need to ask you:</p>
-                              <ul class="govuk-list govuk-list--bullet">
-                                <li>about the children you want to include in this application</li>
-                                <li>if you pay child maintenance for any other children in a private arrangement (not using the Child Maintenance Service)</li>
-                                <li>if any other children live with you (this can be your child or a partner’s child)</li>
-                              </ul>
 
-
-                        </details>
-                    </div>
+                <form method="post" novalidate>
                     <button type="submit" class="govuk-button">
                         Continue
                     </button>
                 </form>
             </div>
-
-                                                                         {% include "exit-button.html" %}
+                                                             {% include "exit-button.html" %}
 
         </div>
     </main>
 </div>
 {% endblock %}
-
-
-
-
-
-        
-

@@ -5,67 +5,86 @@
 <!--Feedback banner stop-->
 <div class="govuk-width-container">
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-    <main class="govuk-main-wrapper" id="main-content" role="main">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <form method="post" novalidate>
+
                 <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
                             <h1 class="govuk-fieldset__heading">
-                                How you pay child maintenance
+                              How you pay child maintenance
                             </h1>
                         </legend>
+
                     </fieldset>
                 </div>
-            
-                <p class="govuk-body">The Child Maintenance Service has two service types. After you submit your application, we will tell you which service type you’ll use and how much child maintenance you should pay.    </p>
-  
-                <div class="govuk-!-padding-bottom-5"></div>
-               
 
-<!-- Direct pay section -->
-              
-<h2 class="govuk-heading-m">Direct Pay</h2>
+                <p>Most separated parents who use the Child Maintenance Service start with a ‘Direct Pay’ arrangement. This is where you make payments direct to the other parent’s bank account. There are no fees if you use Direct Pay.
 
-<p>Direct Pay is a free service that you manage using your online child maintenance account.</p>
+                </p>
 
-<p>You will need the other parent’s bank or building society details to make payments to them.
-If you do not want to have any contact with the other parent, we can get their details for you.  </p>
+                <p>We will:
+                </p>
 
-<p>If you miss a payment or do not pay in full and on time, the other parent can:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>work out how much maintenance must be paid, and tell both parents
+                    </li>
+                    <li>give both parents a payment schedule
+                    </li>
+                    <li>review your calculation each year, or if either parent’s circumstances change
+                    </li>
+                </ul>
 
-<ul class="govuk-list govuk-list--bullet">
-  <li>report it in their online account </li>
-  <li>request to change to the Collect and Pay service</li>
-</ul>
+                <h3 class="govuk-heading-s">If you do not want contact with the other parent</h3>
 
+                <p>
+                  If you ask us to, we can get the other parent’s bank details so you can make payments to their account.
+                </p>
+                <h3 class="govuk-heading-s">If payments are not made</h3>
 
-<div class="govuk-!-padding-bottom-5"></div>
+                <p>If you miss a Direct Pay payment, we can change your arrangement to Collect and Pay and take enforcement action to get unpaid child maintenance from you, such as:
 
-
-<!-- Collect and pay section  -->
-
-<h2 class="govuk-heading-m">Collect and Pay</h2>
-
-<p> The Child Maintenance Service will:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>collect payment from you and pass it to the other parent
-  <li>manage payments for you
-  <li>take action if you miss a payment</li>
-</ul>
-
-<p>There are extra fees for this service:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>20% is added to the amount you pay
-  <li>4% is taken off the amount the other parent gets</li>
-</ul>
-
-<p>For example, if the payment amount was £100, you would pay £120 and the other parent would get £96.</p>
+                </p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>take money directly from your earnings
+                    </li>
+                    <li>take money from your bank account or building society
+                    </li>
+                    <li>take action through the courts
+                    </li>
+                </ul>
 
 
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset"  role="group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
+                                <h1 class="govuk-fieldset__heading" >
+                                    Could a Direct Pay arrangement work for you?
+
+                                </h1>
+                            </legend>
+                            <div class="govuk-radios--inline" data-module="radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="yes" name="direct-pay" type="radio" value="yes~direct-pay-stops-working"
+                                        aria-controls="conditional-other-parent-dob-1" aria-expanded="true">
+                                    <label class="govuk-label govuk-radios__label" for="yes">
+                                        Yes
+                                    </label>
+                                </div>
+
+
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="no" name="direct-pay" type="radio" value="no~collect-and-pay">
+                                    <label class="govuk-label govuk-radios__label" for="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
                     <button type="submit" class="govuk-button">
                         Continue
                     </button>

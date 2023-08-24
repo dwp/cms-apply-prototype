@@ -13,80 +13,57 @@
                         <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
                           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                             <h1 class="govuk-fieldset__heading">
-                              What is your gross income in pounds from {{data['employer-1']}}?
+                              Do you know your annual income from {{data['employer-1']}}?
                             </h1>
                           </legend>
 
-                          <div class="govuk-inset-text">
-                            We will share your income with the other parent.</div>
-    
-                          <p> This is your income before you pay tax or National Insurance. You can usually find this amount on your payslip.
-                            </p>
-                          <br/>
 
-                          <p class="govuk-body">We only base your child maintenance calculation on this amount if:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>your income is 25% more or less than the amount we get from HMRC</li>
-  <li>we cannot get your income from HMRC</li>
-</ul>
-                         
+
+
                           <div class="govuk-form-group">
-    
-          <label class="govuk-label" for="income-amount">
-    
-          </label>
-    
-          <div class="govuk-input__wrapper">
-             <div class="govuk-input__prefix" aria-hidden="true">£</div>
-             <input class="govuk-input govuk-input--width-5" id="income-amount-fixed" name="income-amount-fixed" type="text" spellcheck="false">
-           </div>
-    
-    </fieldset>
+
+
+
+
+
+  </fieldset>
+
+
+
                           </div>
                         </fieldset>
-    
-                        <br>
-                        <h1 class="govuk-heading-m">
-                    How often do you receive this amount?
-                          </h1>
-    
+
+
+
                           <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+
     <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="frequency" name="often-paid" type="radio" value="annually" data-aria-controls="conditional-contact">
-        <label class="govuk-label govuk-radios__label" for="weekly">
-          Annually
+        <input class="govuk-radios__input" id="yes" name="annual-income" type="radio" value="yes~annual-income-amount">
+        <label class="govuk-label govuk-radios__label" for="yes">
+        Yes
         </label>
       </div>
-    
+
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="frequency" name="often-paid" type="radio" value="month" data-aria-controls="conditional-contact-4">
-        <label class="govuk-label govuk-radios__label" for="monthly">
-        Monthly
+        <input class="govuk-radios__input" id="no" name="annual-income" type="radio" value="no~3-fixed-income" >
+        <label class="govuk-label govuk-radios__label" for="no">
+        No
         </label>
       </div>
-    
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="frequency" name="often-paid" type="radio" value="two weeks" data-aria-controls="conditional-contact-3">
-        <label class="govuk-label govuk-radios__label" for="2weeks">
-          Fortnightly
-        </label>
+
+
+
+
+
+
+
       </div>
-    
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="frequency" name="often-paid" type="radio" value="weekly" data-aria-controls="conditional-contact-2">
-        <label class="govuk-label govuk-radios__label" for="weekly">
-          Weekly
-        </label>
-      </div>
-    
-    
-      </div>
-    
-   
-    
+
+
+
+
   </fieldset>
 
                           </div>

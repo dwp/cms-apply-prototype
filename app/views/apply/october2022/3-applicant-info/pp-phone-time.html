@@ -21,17 +21,14 @@
                                         <span id="contact-time-hint" class="govuk-hint">
                                           We will try to contact you at your preferred time if we have any questions about your application.
                                         </span>
+
+                                        <span id="contact-time-hint" class="govuk-hint">
+                                        We can only contact you from Monday to Friday between 8am and 7:30pm, and Saturday between 9am and 4pm.
+                                        </span>
+
                             </div>
 
                             <div class="govuk-checkboxes">
-
-                                <div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" id="any" name="phone-time" type="checkbox" value="any">
-                                    <label class="govuk-label govuk-checkboxes__label" for="any">
-                                        Any time
-                                    </label>
-                                </div>
-
                                 <div class="govuk-checkboxes__item">
                                     <input class="govuk-checkboxes__input" id="eight" name="phone-time" type="checkbox" value="eight">
                                     <label class="govuk-label govuk-checkboxes__label" for="eight">
@@ -62,7 +59,18 @@
                                                                             Between 4pm and 6pm
                                                                         </label>
                                                                     </div>
-                                                                        
+                                                                        <div class="govuk-checkboxes__item">
+                                                                            <input class="govuk-checkboxes__input" id="six" name="phone-time" type="checkbox" value="six">
+                                                                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                                                                Between 6pm and 7:30pm
+                                                                            </label>
+                                                                        </div>
+                                                                                <div class="govuk-checkboxes__item">
+                                                                                    <input class="govuk-checkboxes__input" id="any" name="phone-time" type="checkbox" value="any">
+                                                                                    <label class="govuk-label govuk-checkboxes__label" for="any">
+                                                                                        Any time
+                                                                                    </label>
+                                                                                </div>
                                                                                      <p>or</p>
                                                                                         <div class="govuk-checkboxes__item">
                                                                                             <input class="govuk-checkboxes__input" id="none" name="phone-time" type="checkbox" value="none">
@@ -92,20 +100,21 @@
                                       </div>
                                       <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
                                               <p>
-                                    
+                                    <strong>
+                                               Can we leave a voicemail message if we cannot speak to you?
+                                                    </strong>
+                                                    <span id="contact-time-hint" class="govuk-hint">We will not mention any details about the Child Maintenance Service or your application.</span>
+                                                </p>
 
-
-                                                <h2 class="govuk-heading-m">Can we leave voicemails if we can not contact you?</h2>
-                    
                                                         <div class="govuk-radios govuk-radios--inline">
                                                         <div class="govuk-radios__item">
-                                                            <input class="govuk-radios__input" id="voicemail-yes" name="voicemail" type="radio" value="yes~contact-you">
+                                                            <input class="govuk-radios__input" id="voicemail-yes" name="voicemail" type="radio" value="yes~pp-text">
                                                             <label class="govuk-label govuk-radios__label" for="voicemail-yes">
                                                                 Yes
                                                             </label>
                                                         </div>
                                                         <div class="govuk-radios__item">
-                                                            <input class="govuk-radios__input" id="voicemail-no" name="voicemail" type="radio" value="no~contact-you">
+                                                            <input class="govuk-radios__input" id="voicemail-no" name="voicemail" type="radio" value="no~pp-text">
                                                             <label class="govuk-label govuk-radios__label" for="voicemail-no">
                                                                 No
                                                             </label>
@@ -162,5 +171,4 @@
             el.style.display = 'none';
         }
     }
-</script>
- {% endblock %}
+</script> {% endblock %}
