@@ -1932,9 +1932,12 @@ router.post('/apply/october2022/1-start-eligibility/urn', function (req, res) {
     res.redirect('/apply/october2022/2-fees/check-age')
 });
 
+
 router.post('/apply/october2022/1-start-eligibility/urn-rp', function (req, res) {
     res.redirect('/apply/october2022/3-applicant-info-RP/rp-name')
 });
+
+
 
 //Section 2: Fees
 //paying parent check age
@@ -2489,13 +2492,20 @@ router.post('/apply/october2022/7-other-parent/pp-other-info', function (req, re
 });
 
 router.post('/apply/october2022/7-other-parent/check-your-answers', function (req, res) {
-    res.redirect('../8-existing-cases/previous-application')
+    res.redirect('../9-confirmation/declaration-fee')
 });
 
 //Section 7: Other Parent RP
 router.post('/apply/october2022/6-service-types-RP/check-your-answers', function (req, res) {
     res.redirect('../7-other-parent-RP/pp-name')
 });
+
+//Section 7: Other Parent RP
+router.post('/apply/october2022/7-other-parent-rp/check-your-answers', function (req, res) {
+    res.redirect('../9-confirmation-RP/declaration-fee')
+});
+
+
 
 router.post('/apply/october2022/6-service-types-RP/check-your-answers-bank', function (req, res) {
     res.redirect('../7-other-parent-RP/pp-name')
