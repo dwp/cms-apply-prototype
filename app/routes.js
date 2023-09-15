@@ -16,7 +16,7 @@ router.use(radioButtonRedirect)
 
  router.post('/apply/october2022/mcmc-sign-up/do-you-know-your-pin-and-password', function(req, res) {
     if (req.body['know-pin'] === 'yes') {
-      res.redirect('/apply/october2022/1-start-eligibility/intro');
+      res.redirect('/apply/october2022/1-start-eligibility/urn-rp');
     } else if (req.body['know-pin'] === 'no'){
       res.redirect('/apply/october2022/mcmc-sign-up/reset-pin-and-password');
     } else {
