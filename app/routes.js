@@ -1967,7 +1967,7 @@ router.post('/apply/october2022/2-fees/tell-someone-under-19', function (req, re
 });
 
 router.post('/apply/october2022/2-fees/tell-someone', function (req, res) {
-    res.redirect('/apply/october2022/2-fees/told-someone')
+    res.redirect('/apply/october2022/2-fees/no-fee')
 });
 
 router.post('/apply/october2022/2-fees/no-fee', function (req, res) {
@@ -1984,7 +1984,7 @@ router.post('/apply/october2022/2-fees-rp/tell-someone-under-19', function (req,
 });
 
 router.post('/apply/october2022/2-fees-rp/tell-someone', function (req, res) {
-    res.redirect('/apply/october2022/3-applicant-info-RP/rp-nino')
+    res.redirect('/apply/october2022/2-fees-rp/no-fee')
 });
 
 router.post('/apply/october2022/2-fees-rp/no-fee', function (req, res) {
