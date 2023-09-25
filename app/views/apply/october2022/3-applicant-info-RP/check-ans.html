@@ -17,7 +17,7 @@
 
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-            What is your name?
+            Your name
         </dt>
         <dd class="govuk-summary-list__value">
             {{data['pp-title'] }} {{data['pp-first-name'] }} {{data['pp-middle-name'] }} {{data['pp-last-name']
@@ -33,7 +33,7 @@
 
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-         Does the other parent know you by a different name?
+            Name you were known by
         </dt>
         <dd class="govuk-summary-list__value">
             <p class="govuk-body">{{data['different-name'] }} </p>
@@ -48,7 +48,7 @@
 
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-         What is your National Insurance number?
+            National Insurance number
         </dt>
         <dd class="govuk-summary-list__value">
             <p class="govuk-body">{{data['applicant-national-insurance-number'] }}</p>
@@ -61,27 +61,75 @@
         </dd>
     </div>
 
+
+
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-            Will you answer the equality questions?
+            Different contact formats
         </dt>
         <dd class="govuk-summary-list__value">
-            <p class="govuk-body">no</p>
+            <p class="govuk-body"> </p>
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="">
+            <a class="govuk-link" href="pp-nino">
                 Change
                 <span class="govuk-visually-hidden"> name</span>
             </a>
         </dd>
     </div>
 
-    
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Types of contact
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body"> </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-nino">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
 
 
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-         What’s the best number to call you on?
+            Different contact formats for letters
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body"> </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-nino">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Different contact formats for phone calls
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body"> </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-nino">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+  
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+        Contact number
         </dt>
         <dd class="govuk-summary-list__value">
             {{data['mobile-number'] }}
@@ -98,9 +146,9 @@
 
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-Is this your own number?        </dt>
+Contact name       </dt>
         <dd class="govuk-summary-list__value">
-          {{data['phone-number']}}
+          John Smith
 
         </dd>
         <dd class="govuk-summary-list__actions">
@@ -113,7 +161,7 @@ Is this your own number?        </dt>
 
         <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-             When can we call you?</dt>
+            Preferred call time</dt>
             <dd class="govuk-summary-list__value">
               {{data['phone-time']}}
 
@@ -125,9 +173,12 @@ Is this your own number?        </dt>
                 </a>
             </dd>
         </div>
+
+
+
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-         Can we leave you a voicemail message?</dt>
+         Voicemails</dt>
         <dd class="govuk-summary-list__value">
           {{data['voicemail']}}
 
@@ -142,23 +193,7 @@ Is this your own number?        </dt>
 
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-            Do you want to receive email updates about Child Maintenance?</dt>
-        <dd class="govuk-summary-list__value">
-          Yes<br>
-          test@email.com
-
-        </dd>
-        <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="do-you-want-confirmation">
-                Change
-                <span class="govuk-visually-hidden"> contact details</span>
-            </a>
-        </dd>
-    </div>
-
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-         Can we send you text messages?</dt>
+         Text messages</dt>
         <dd class="govuk-summary-list__value">
             {{data['text']}}
 
@@ -173,43 +208,37 @@ Is this your own number?        </dt>
 
 
 
-
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-             Where can we send letters?
-
-        </dt>
+         Home address</dt>
         <dd class="govuk-summary-list__value">
-            10 Hilltop drive
-            <br>Ayton
-            <br>Cramlington
-            <br>NE32 2LB
+            {{data['text']}}
 
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="pp-postal-2">
+            <a class="govuk-link" href="pp-text">
                 Change
-                <span class="govuk-visually-hidden"> contact information</span>
+                <span class="govuk-visually-hidden"> contact details</span>
             </a>
         </dd>
     </div>
 
+
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-             Do you live at this address?
-
-        </dt>
+         Postal address</dt>
         <dd class="govuk-summary-list__value">
-            Yes
+            {{data['text']}}
 
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="../about_applicant/applicants_correspondence_address.html">
+            <a class="govuk-link" href="pp-text">
                 Change
-                <span class="govuk-visually-hidden"> contact information</span>
+                <span class="govuk-visually-hidden"> contact details</span>
             </a>
         </dd>
     </div>
+   
 
 </dl>
 
