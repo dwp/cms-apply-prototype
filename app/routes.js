@@ -2044,9 +2044,13 @@ router.post('/apply/october2022/3-applicant-info-RP/rp-name', function (req, res
 });
 
 router.post('/apply/october2022/3-applicant-info-RP/rp-nino', function (req, res) {
-    res.redirect('/apply/october2022/3-applicant-info-RP/rp-postal')
+    res.redirect('/apply/october2022/3-applicant-info-RP/rp-address-1')
 });
 
+
+// router.post('/apply/october2022/3-applicant-info-RP/rp-nino', function (req, res) {
+//     res.redirect('/apply/october2022/3-applicant-info-RP/rp-postal')
+// });
 
 router.post('/apply/october2022/3-applicant-info-RP/rp-confirm-nino', function (req, res) {
     res.redirect('/apply/october2022/3-applicant-info-RP/equality/extra-question')
@@ -2422,6 +2426,9 @@ router.post('/apply/october2022/6-service-types/direct-pay-stops-working', funct
     res.redirect('/apply/october2022/6-service-types/select-payment-frequency')
 });
 
+router.post('/apply/october2022/6-service-types-RP/collect-and-pay', function (req, res) {
+    res.redirect('/apply/october2022/6-service-types-RP/check-your-answers')
+});
 
 router.post('/apply/october2022/6-service-types/check-your-answers-collect-pay', function (req, res) {
     res.redirect('/apply/october2022/7-other-parent/pp-name')

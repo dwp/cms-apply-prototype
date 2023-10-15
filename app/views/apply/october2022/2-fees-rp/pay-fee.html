@@ -17,12 +17,32 @@
                                 </h1>
                             </legend>
 
+                            <div class="govuk-warning-text">
+                                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                                <strong class="govuk-warning-text__text">
+                                  <span class="govuk-warning-text__assistive">Warning</span>
+                                  From 1 November 2023 all new applications to the Child Maintenance Service will be free.
+                                </strong>
+                              </div>
+  
+                              {% if (data['pp-rp'] == "rp") %}
+                              <p class="govuk-body govuk-!-font-weight-bold">If you decide to delay your application, your child maintenance payments will not be backdated. </p> 
+                            
+                              
+                              <p class="govuk-body govuk-!-font-weight-bold">The £20 application fee may be less than the amount of maintenance you’ll get if you opened your case sooner.</p> 
+                            {% endif %}
+
+                            
+                             
+
                             <form method="post" novalidate>
                                 <div class="govuk-form-group">
                                     <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
                                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
                                             <h2 class="govuk-fieldset__heading" id="child1BenefitInformation">
                                                 Do you have a debit or credit card so you can pay the fee? </legend>
+
+                                         
 
 <span class="govuk-hint">You’ll need your card details ready to pay the fee so you can complete your application.
 

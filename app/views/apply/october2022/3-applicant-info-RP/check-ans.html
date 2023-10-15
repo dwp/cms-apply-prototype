@@ -36,7 +36,7 @@
             Name you were known by
         </dt>
         <dd class="govuk-summary-list__value">
-            <p class="govuk-body">{{data['different-name'] }} </p>
+            <p class="govuk-body">{{data['different-name'] }} <br> {{data['pp-different-first-name'] }} </p>
         </dd>
         <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="pp-name">
@@ -51,7 +51,7 @@
             National Insurance number
         </dt>
         <dd class="govuk-summary-list__value">
-            <p class="govuk-body">{{data['applicant-national-insurance-number'] }}</p>
+            <p class="govuk-body"> {{data['national-insurance-number'] }}</p>
         </dd>
         <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="pp-nino">
@@ -68,7 +68,7 @@
             Different contact formats
         </dt>
         <dd class="govuk-summary-list__value">
-            <p class="govuk-body"> </p>
+            <p class="govuk-body"> {{data['different-contact-format'] }} </p>
         </dd>
         <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="pp-nino">
@@ -212,8 +212,16 @@ Contact name       </dt>
         <dt class="govuk-summary-list__key">
          Home address</dt>
         <dd class="govuk-summary-list__value">
-            {{data['text']}}
-
+            {{data['shared-address-line-1'] }}
+            <br>
+            {{data['shared-address-line-2'] }}
+            <br>
+            {{data['shared-address-town'] }}
+            <br>
+            {{data['shared-address-county'] }}
+            <br>
+            {{data['shared-address-postcode'] }}
+            <br>
         </dd>
         <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="pp-text">
@@ -228,8 +236,16 @@ Contact name       </dt>
         <dt class="govuk-summary-list__key">
          Postal address</dt>
         <dd class="govuk-summary-list__value">
-            {{data['text']}}
-
+            {{data['shared-address-line-1'] }}
+            <br>
+            {{data['shared-address-line-2'] }}
+            <br>
+            {{data['shared-address-town'] }}
+            <br>
+            {{data['shared-address-county'] }}
+            <br>
+            {{data['shared-address-postcode'] }}
+            <br>
         </dd>
         <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="pp-text">
