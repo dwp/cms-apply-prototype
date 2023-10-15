@@ -16,10 +16,19 @@
                                     Do you live at this address?</h1>
                             </legend>
                             <div class="form-group">
-                                <p>10 Hilltop drive
-                                    <br> Ayton
-                                    <br> Cramlington
-                                    <br>NE32 2LB</p>
+                                <p class="govuk-body-m">
+
+                                {{data['shared-address-line-1'] }}
+                                <br>
+                                {{data['shared-address-line-2'] }}
+                                <br>
+                                {{data['shared-address-town'] }}
+                                <br>
+                                {{data['shared-address-county'] }}
+                                <br>
+                                {{data['shared-address-postcode'] }}
+                                <br>
+                            </p>
                             </div>
 
                             <p>
