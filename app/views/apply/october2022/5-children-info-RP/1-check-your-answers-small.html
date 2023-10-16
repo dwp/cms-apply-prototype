@@ -15,7 +15,7 @@
                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              What is {{data['child-1-first-name'] }}'s full name?
+              Name
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['child-1-first-name'] }} {{data['child-1-middle-name'] }} {{data['child-1-last-name'] }}
@@ -28,10 +28,10 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              What is {{data['child-1-first-name'] }}'s date of birth?
+              Date of birth
             </dt>
             <dd class="govuk-summary-list__value">
-              5 January 2007
+              {{data['child-1-date-of-birth-day'] }} {{data['child-1-date-of-birth-month'] }} {{data['child-1-date-of-birth-year'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="1-dob.html">
@@ -41,7 +41,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Are you named on {{data['child-1-first-name'] }}'s birth certificate?
+              Is the other parent named on {{data['child-1-first-name'] }}'s birth certificate?
             </dt>
             <dd class="govuk-summary-list__value">
               Yes
@@ -54,8 +54,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Does someone receive Child Benefit payments for 
-{{data['child-1-first-name'] }}?
+              Child benefit
             </dt>
             <dd class="govuk-summary-list__value">
               Yes
@@ -66,21 +65,89 @@
               </a>
             </dd>
           </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Overnight stays
+            </dt>
+            <dd class="govuk-summary-list__value">
+              3 Weekly
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="1-child-benefit-V3.html">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+          </div>  <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Additional nights
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="1-child-benefit-V3.html">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+          </div>
           
         </dl>
-                    <button type="submit" class="govuk-button">
-                        Continue
-                    </button>
-                </form>
+                 
 
-                </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                  Do you need to add another child?
+                </h1>
+              </legend>
+              <div id="changedName-hint" class="govuk-hint">
+                  Only include children you need this child maintenance arrangement for.
+              </div>
+
+              <div class="govuk-radios govuk-radios--inline">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="yes" name="addchild" type="radio" value="yes~1-name">
+                      <label class="govuk-label govuk-radios__label" for="yes">
+                          Yes
+                      </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="no" name="addchild" type="radio" value="no~/apply/october2022/6-service-types-RP/direct-pay.html">
+                      <label class="govuk-label govuk-radios__label" for="no">
+                          No
+                      </label>
+
+                  </div>
+              </div>
+          </fieldset>
+    
+  <!--end of radio buttons-->
+
+  
+
+     <br>
 
 
+  <button type="submit" class="govuk-button">
+    Continue
+  </button>
 
-</main>
+</form>
+
 </div>
 
 
 
+
+
+
+
+</div>
+
+{% include "exit-button.html" %}
+
+</main>
+</div>
 
 {% endblock %}

@@ -2081,7 +2081,7 @@ router.post('/apply/october2022/3-applicant-info-RP/rp-address-2', function (req
 });
 
 router.post('/apply/october2022/3-applicant-info-RP/check-ans', function (req, res) {
-    res.redirect('/apply/october2022/5-children-info-RP/1-name')
+    res.redirect('/apply/october2022/3-applicant-info-RP/equality/extra-question.html')
 });
 
 //Section 4: PP Income
