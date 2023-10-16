@@ -12,15 +12,24 @@
 
                     <div class="govuk-form-group">
 
-                        <h1 class="govuk-heading-l"> Do you need to add another child?</h1>
-                        <p>Only include children you need this child maintenance arrangement for.</p>
+                        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                                <h1 class="govuk-fieldset__heading">
+                                    Do you need to add another child?
+                                </h1>
+                            </legend>
+                            <span id="changed-name-hint" class="govuk-body">
+                                Only include children you need this child maintenance arrangement for.
+                            </span>
 
-                        <h1 class="govuk-heading-l">You have told us about:
-                            <span class="govuk-caption-xl">{{data['child-1-first-name'] }} {{data['child-1-last-name'] }}</span>
-                            <span class="govuk-caption-xl">{{data['child-2-first-name'] }} {{data['child-2-last-name'] }}</span>
-                        </h1>
+                            <div class="govuk-!-padding-bottom-9"></div>
 
 
+                        <span class="govuk-caption-xl">You have told us about:</span>
+                        <h1 class="govuk-heading-l">{{data['child-1-first-name'] }} {{data['child-1-last-name'] }}
+                        <br> {{data['child-2-first-name'] }} {{data['child-2-last-name'] }} </h1>
+                       
+                     
 
                           
                     </div>
