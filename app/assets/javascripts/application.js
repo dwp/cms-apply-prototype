@@ -18,6 +18,7 @@ if (window.console && window.console.info) {
 
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
+  window.MOJFrontend.initAll()
 })
 //post code lookup jquery
 $(document).ready(
