@@ -2530,6 +2530,10 @@ router.post('/apply/october2022/7-other-parent-RP/pp-address-5', function (req, 
     res.redirect('../7-other-parent-RP/pp-previous-address-3')
 });
 
+router.post('/apply/october2022/7-other-parent-RP/pp-previous-address-2', function (req, res) {
+    res.redirect('../7-other-parent-RP/pp-previous-replay')
+});
+
 router.post('/apply/october2022/7-other-parent-RP/pp-previous-address-3', function (req, res) {
     res.redirect('../7-other-parent-RP/pp-other-info')
 });
