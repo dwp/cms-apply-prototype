@@ -2454,7 +2454,7 @@ router.post('/apply/october2022/6-service-types-RP/direct-pay-stops-working', fu
 });
 
 router.post('/apply/october2022/6-service-types-RP/bank-info-direct-pay', function (req, res) {
-    res.redirect('/apply/october2022/6-service-types-RP/check-your-answers')
+    res.redirect('/apply/october2022/6-service-types-RP/check-your-answers-bank')
 });
 
 //Section 7: Other Parent
@@ -2541,6 +2541,19 @@ router.post('/apply/october2022/7-other-parent-RP/pp-previous-address-3', functi
 router.post('/apply/october2022/7-other-parent-RP/pp-other-info', function (req, res) {
     res.redirect('../7-other-parent-RP/check-your-answers')
 });
+
+
+
+
+router.post('/apply/october2022/6-service-types-RP/direct-pay', function (req, res) {
+    res.redirect('../6-service-types-RP/service-type')
+});
+
+router.post('/apply/october2022/6-service-types-RP/service-type', function (req, res) {
+    res.redirect('../6-service-types-RP/passing-bank-details')
+});
+
+
 
 
 //Section 8: Existing Questions
