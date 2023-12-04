@@ -1,0 +1,51 @@
+{% extends "layout.html" %} {% block pageTitle %} Could a Direct Pay arrangement work for you?
+{% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                            <h1 class="govuk-fieldset__heading">
+                                If you do not want to continue your application
+                            </h1>
+                        </legend>
+                    </fieldset>
+                </div>
+
+
+                <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                      <span class="govuk-warning-text__assistive">Warning</span>
+                      Your information will not be saved if you leave the application.
+                    </strong>
+                  </div>
+
+
+<p>If you want to make a child maintenance application but you do not want the other parent to have your bank or building society details, 
+    you can set up an account with a non-geographical sort code. </p>
+
+<p>This is an account that does not give away your location. You will need to contact your bank or building society to set up this account. </p>
+
+
+</div>
+
+{% include "exit-button.html" %}
+
+</div>
+</main>
+</div>
+
+
+{% endblock %}
+
+
+
+              
