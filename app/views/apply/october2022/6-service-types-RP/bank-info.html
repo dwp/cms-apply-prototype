@@ -12,8 +12,10 @@
                         Your bank or building society account details
                     </h1>
                 </legend>
-                <p class="govuk-body">We will share your bank details with the other parent. This is the account your child maintenance will be paid into.</p>
+                <p class="govuk-body">Your child maitnenance will be paid into this account if your service type is Collect and Pay.
+                     If we decide your service type will be Direct Pay, we will share these details with the other parent so they can pay child maintenance directly to you.</p>
 
+                
                 <form method="post" novalidate>
                     <div class="govuk-form-group">
                         <label class="govuk-label govuk-!-width-two-thirds" for="account-holder" id="accountHolderDescription">
@@ -21,6 +23,9 @@
                         </label>
                         <span class="govuk-hint">Must be 18 characters or fewer. If your name is more than 18 characters, you can enter your initials. For example, enter
                         S J Thompson instead of Samantha Jane Thompson.</span>
+
+                    <br> <br/>
+
                         <input class="govuk-input govuk-!-width-two-thirds" id="account-holder" name="account-holder" type="account-holder" aria-describedby="accountHolderDescription"
                             autocomplete="account-holder" spellcheck="false">
                     </div>
@@ -34,40 +39,6 @@
                         </div>
                         <input class="govuk-input govuk-input--width-5" id="sort-code" name="sort-code" type="text" spellcheck="false" aria-describedby="sort-code-hint" pattern="[0-9]*" inputmode="numeric">
                       </div>
-
-                    <!-- <div class="govuk-date-input" id="sort-code">
-                        <p class="govuk-label" for="width-5">
-                            Sort code
-                        </p>
-                        <spam class="govuk-hint"></spam>
-                        <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                                <label class="govuk-label" for="sort-code-number-1" style="display: none">
-                                    first two numbers
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sort-code-number-1" name="sort-code-number-1"
-                                    type="number" pattern="[0-9]*">
-                            </div>
-                        </div>
-                        <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                                <label class="govuk-label" for="sort-code-number-2" style="display: none">
-                                    second two numbers
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sort-code-number-2" name="sort-code-number-2"
-                                    type="number" pattern="[0-9]*">
-                            </div>
-                        </div>
-                        <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                                <label class="govuk-label" for="sort-code-number-3" style="display: none">
-                                    third two numbers
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sort-code-number-3" name="sort-code-number-3"
-                                    type="number" pattern="[0-9]*">
-                            </div>
-                        </div>
-                    </div> -->
 
                     <div class="govuk-form-group">
                         <label class="govuk-label" for="account-number">
@@ -87,6 +58,34 @@
                         <input class="govuk-input govuk-input--width-10" id="roll-number" name="roll-number" type="text" aria-describedby="roll-number-hint"
                             spellcheck="false">
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                     <button type="submit" class="govuk-button">
