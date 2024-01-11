@@ -2550,7 +2550,7 @@ router.post('/apply/october2022/6-service-types-RP/direct-pay', function (req, r
 });
 
 router.post('/apply/october2022/6-service-types-RP/service-type', function (req, res) {
-    res.redirect('../6-service-types-RP/passing-bank-details')
+    res.redirect('../6-service-types-RP/service-type-preference')
 });
 
 
