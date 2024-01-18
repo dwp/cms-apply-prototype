@@ -9,45 +9,51 @@
                 <form method="post" novalidate>
 
                     <div class="govuk-form-group">
-                        <h1 class="govuk-heading-l">You have told us your date of birth is:
+                        <span class="govuk-caption-xl">You have told us your date of birth is:</span>
+                        
+                        <h1 class="govuk-heading-xl">
+                                
+                               
+                                <!--Day-->{{data['applicant-date-of-birth-day'] }}
+                                <!--Month {{data['applicant-date-of-birth-month'] }} -->
+                                
+                                {% if data['applicant-date-of-birth-month'] === '1' %}
+                                January
+                                {% elseif data['applicant-date-of-birth-month'] === '2' %}
+                                February
+                                {% elseif data['applicant-date-of-birth-month'] === '3' %}
+                                March
+                                {% elseif data['applicant-date-of-birth-month'] === '4' %}
+                                April
+                                {% elseif data['applicant-date-of-birth-month'] === '5' %}
+                                May
+                                {% elseif data['applicant-date-of-birth-month'] === '6' %}
+                                June
+                                {% elseif data['applicant-date-of-birth-month'] === '7' %}
+                                July
+                                {% elseif data['applicant-date-of-birth-month'] === '8' %}
+                                August
+                                {% elseif data['applicant-date-of-birth-month'] === '9' %}
+                                September
+                                {% elseif data['applicant-date-of-birth-month'] === '10' %}
+                                October
+                                {% elseif data['applicant-date-of-birth-month'] === '11' %}
+                                November
+                                {% elseif data['applicant-date-of-birth-month'] === '12' %}
+                                December
+                                  {% endif %}
+                                
+                                <!-- {{data['applicant-date-of-birth-month'] }} -->
+  
+                                <!-- Year -->
+                                {{data['applicant-date-of-birth-year']
+                                  }}
+                             
 
-                            <span class="govuk-caption-xl">
-                              <!--Day-->{{data['applicant-date-of-birth-day'] }}
-                              <!--Month--> {{data['applicant-date-of-birth-month'] }}<!---->
-                              
-                              {% if data['applicant-date-of-birth-month'] === '1' %}
-                              January
-                              {% elseif data['applicant-date-of-birth-month'] === '2' %}
-                              February
-                              {% elseif data['applicant-date-of-birth-month'] === '3' %}
-                              March
-                              {% elseif data['applicant-date-of-birth-month'] === '4' %}
-                              April
-                              {% elseif data['applicant-date-of-birth-month'] === '5' %}
-                              May
-                              {% elseif data['applicant-date-of-birth-month'] === '6' %}
-                              June
-                              {% elseif data['applicant-date-of-birth-month'] === '7' %}
-                              July
-                              {% elseif data['applicant-date-of-birth-month'] === '8' %}
-                              August
-                              {% elseif data['applicant-date-of-birth-month'] === '9' %}
-                              September
-                              {% elseif data['applicant-date-of-birth-month'] === '10' %}
-                              October
-                              {% elseif data['applicant-date-of-birth-month'] === '11' %}
-                              November
-                              {% elseif data['applicant-date-of-birth-month'] === '12' %}
-                              December
-                                {% endif %}
-                              
-                              <!-- {{data['applicant-date-of-birth-month'] }} -->
+                                </h1>
 
-                              <!-- Year -->
-                              {{data['applicant-date-of-birth-year']
-                                }}
-                            </span>
-                        </h1>
+
+                        
                     </div>
                     <div class="govuk-form-group">
 
