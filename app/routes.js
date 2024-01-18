@@ -8,7 +8,7 @@ router.use(radioButtonRedirect)
 
 
 
-//////////////////////////Current journey///////////////////////////
+//////////////////////////MCMC SIGN UP ROUTES///////////////////////////
 
 // New routes start
 
@@ -25,7 +25,16 @@ router.use(radioButtonRedirect)
      });
   
 
-
+     router.post('/apply/october2022/mcmc-sign-up/do-you-know-your-pin-and-password-pp', function(req, res) {
+        if (req.body['know-pin-pp'] === 'yes') {
+          res.redirect('/apply/october2022/1-start-eligibility/urn');
+        } else if (req.body['know-pin-pp'] === 'no'){
+          res.redirect('/apply/october2022/mcmc-sign-up/reset-pin-and-password-pp');
+        } else {
+          res.redirect('/apply/october2022/mcmc-sign-up/do-you-know-your-pin-and-password-pp');
+        }
+         });
+      
 // Old routes end   
 
 
@@ -1926,10 +1935,20 @@ router.post('/apply/september2022/9-confirmation/declaration-no-fee', function (
     res.redirect('submitted-fee')
 });
 
+
+
+
+
+
+
+
+
 //October 2022 Prototype:
 //Section 1: Start Eligability
 router.post('/apply/october2022/1-start-eligibility/urn', function (req, res) {
-    res.redirect('/apply/october2022/2-fees/check-age')
+    res.redirect('/apply/october2022/3-applicant-info/pp-name.html')
+
+    
 });
 
 
@@ -1971,7 +1990,7 @@ router.post('/apply/october2022/2-fees/tell-someone', function (req, res) {
 });
 
 router.post('/apply/october2022/2-fees/no-fee', function (req, res) {
-    res.redirect('/apply/october2022/3-applicant-info/pp-name')
+    res.redirect('/apply/october2022/3-applicant-info/pp-nino')
 });
 
 //RP
@@ -2002,7 +2021,7 @@ router.post('/apply/october2022/3-applicant-info/pp-name', function (req, res) {
 });
 
 router.post('/apply/october2022/3-applicant-info/pp-nino', function (req, res) {
-    res.redirect('/apply/october2022/3-applicant-info/equality/extra-question')
+    res.redirect('/apply/october2022/3-applicant-info/pp-address-1')
 });
 
 
@@ -2023,7 +2042,7 @@ router.post('/apply/october2022/3-applicant-info/pp-address-1', function (req, r
 });
 
 router.post('/apply/october2022/3-applicant-info/pp-home-2', function (req, res) {
-    res.redirect('/apply/october2022/3-applicant-info/pp-home-3')
+    res.redirect('/apply/october2022/3-applicant-info/contact-you')
 });
 
 router.post('/apply/october2022/3-applicant-info/pp-home-3', function (req, res) {
@@ -2069,7 +2088,7 @@ router.post('/apply/october2022/3-applicant-info-RP/rp-address-1', function (req
 });
 
 router.post('/apply/october2022/3-applicant-info-RP/rp-home-2', function (req, res) {
-    res.redirect('/apply/october2022/3-applicant-info-RP/rp-home-3')
+    res.redirect('/apply/october2022/3-applicant-info-RP/contact-you')
 });
 
 router.post('/apply/october2022/3-applicant-info-RP/rp-home-3', function (req, res) {
@@ -2614,4 +2633,14 @@ router.post('/apply/october2022/9-confirmation-RP/declaration-fee', function (re
 
 
 
+
+
+//paying parent: switching route 
+router.post('/apply/october2022/3-applicant-info-RP/equality/extra-question', function(req, res) {
+    if (req.body[''] === 'no') {
+      res.redirect('email-sent-by-phone');
+    } else {
+      res.redirect('your-application-reference-number');
+    }
+  });
 

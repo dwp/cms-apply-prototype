@@ -26,9 +26,19 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-              <form action="/apply/october2022/1-start-eligibility/urn-rp" method="post" novalidate> 
-              <h1 class="govuk-heading-xl">Reset your PIN and memorable password
+              <form action=""  method="post" novalidate> 
+              <h1 class="govuk-heading-xl">Create an online account
               </h1>
+
+
+              <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-warning-text__assistive">Warning</span>
+                  Your account will not be created until your application is submitted.
+                </strong>
+              </div>
+
 
 <!-- H1 stop -->
 
@@ -47,7 +57,7 @@
 
 <div class="govuk-form-group">
   <label class="govuk-label" for="email">
-   Confirm email address
+    Confirm email address
   </label>
   <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
 </div>
@@ -55,26 +65,25 @@
 
 <div class="govuk-form-group">
   <label class="govuk-label" for="width-7">
-    Reset 7-digit personal identification number (PIN)
+    Create 7-digit personal identification number (PIN)
   </label>
   <div id="email-hint" class="govuk-hint">
-    You’ll need to reset this so you can sign in to your online account.
+    You’ll need to remember this so you can sign in to your online account.
   </div>
   <input class="govuk-input govuk-input--width-5" id="width-07" name="width-10" type="text">
 </div>
 
 <div class="govuk-!-padding-bottom-5"></div>
 
-<h2 class="govuk-heading-m">Reset memorable password</h2>
+<h2 class="govuk-heading-m">Create a memorable password</h2>
 
 <P>You’ll need this if you forget your PIN. 
   Try not to use an easily guessed password like your children's names or dates of birth.</P>
 
 
-  
   <div class="govuk-form-group">
     <label class="govuk-label" for="width-20">
-      Reset password
+      Create password
     </label>
     <div id="email-hint" class="govuk-hint">
       Your memorable password must have at least 8 characters.
@@ -93,9 +102,10 @@
   
   </div>
 
-  <button class="govuk-button" data-module="govuk-button">
-    Continue
-  </button>
+  <a href="/apply/october2022/1-start-eligibility/urn.html" role="button" draggable="false"
+  class="govuk-button">
+  Continue
+  </a>
   
   </form>
 </main>
