@@ -2050,7 +2050,7 @@ router.post('/apply/october2022/3-applicant-info/pp-home-3', function (req, res)
 });
 
 router.post('/apply/october2022/3-applicant-info/check-ans', function (req, res) {
-    res.redirect('/apply/october2022/4-pp-income/1-income-query')
+    res.redirect('/apply/october2022/3-applicant-info-RP/equality/extra-question-pp')
 });
 
 router.post('/apply/october2022/3-applicant-info/pp-address-2', function (req, res) {
