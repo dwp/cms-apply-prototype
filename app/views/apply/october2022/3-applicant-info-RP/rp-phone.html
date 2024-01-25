@@ -11,19 +11,26 @@
                     <div class="govuk-form-group">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
                             <h1 class="govuk-fieldset__heading">
-                                What is the best number to call you on?
+                                What is the best number to contact you on? 
                             </h1>
+                            <div class="govuk-!-padding-bottom-5"></div>
+                            <div id="heading-hint" class="govuk-hint">
+                                We will send you text message updates. The sender will appear in your phone as ChildMaint.
+                                We may need to call you if we have questions about your application.
+                              </div>
                         </legend>
                        
-                        <div class="govuk-inset-text">We will not share your answers with the other parent.</div>
-
+                        <div class="govuk-inset-text">We will not share your contact number with the other parent.</div>
 
                         <div class="govuk-form-group">
-                            
-                            <span id="changed-name-hint" class="govuk-hint">If you do not have your own phone, give the phone number of someone you trust.</span>
-                            <br>
-                            <div class="govuk-!-padding-bottom-5"></div>
-                            <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobile-number" type="tel" autocomplete="tel">
+                            <label class="govuk-label" for="number">
+                                <strong> Phone number</strong>
+                            </label>
+                            <div id="hint" class="govuk-hint">
+                                If you do not have your own phone, give the number of someone you trust.
+                            </div>
+                        <div class="govuk-!-padding-bottom-3"></div>
+                        <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobile-number" type="tel" autocomplete="tel">
                         </div>
                     </div>
 
@@ -46,7 +53,7 @@
 
                             <div class="govuk-radios__item">
                                 <input aria-controls="conditional-other-parent-phone-radio-1" class="govuk-radios__input" id="other-parent-phone-radio-2"
-                                    name="phone-number" type="radio" value="no~rp-phone-time">
+                                    name="phone-number" type="radio" value="no~rp-send-texts">
                                 <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-2">
                                     No
                                 </label>
