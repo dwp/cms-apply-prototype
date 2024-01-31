@@ -8,20 +8,36 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 <form method="post" novalidate>
-<h2 class="govuk-heading-xl">Check your answers about your income and pension</h2>
+<h2 class="govuk-heading-xl">Check your answers about your income</h2>
 
 <br>
-
-
-
 
 
 <h2 class="govuk-heading-m">Your employment details for {{data['employer-1'] }} </h2>
 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
+
+
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Your employer
+          Income Source
+        </dt>
+        <dd class="govuk-summary-list__value">
+            Employed
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="4-company-details">
+                Change
+                <span class="govuk-visually-hidden"> company name</span>
+            </a>
+        </dd>
+    </div>
+
+    
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Employer
         </dt>
         <dd class="govuk-summary-list__value">
             {{data['employer-1'] }}
@@ -38,25 +54,10 @@
 
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Your job title
+          Job title
         </dt>
         <dd class="govuk-summary-list__value">
-         {{data['job-title-1'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="4-company-details">
-                Change
-                <span class="govuk-visually-hidden"> company name</span>
-            </a>
-        </dd>
-    </div>
-
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Do you know your annual income?
-        </dt>
-        <dd class="govuk-summary-list__value">
-        Yes
+            {{data['job-title-1'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="annual-income">
@@ -66,75 +67,18 @@
         </dd>
     </div>
 
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-        Your annual income
-        </dt>
-        <dd class="govuk-summary-list__value">
-       £{{data['income-amount']}}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="annual-income-amount">
-                Change
-                <span class="govuk-visually-hidden"> company name</span>
-            </a>
-        </dd>
-    </div>
-
-    </dl>
 
 
-
-
-    <h2 class="govuk-heading-m">Your company details for {{data['company-1'] }} </h2>
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
-        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Company name
-            </dt>
-            <dd class="govuk-summary-list__value">
-                {{data['company-1'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="4-company-details">
-                    Change
-                    <span class="govuk-visually-hidden"> company name</span>
-                </a>
-            </dd>
-        </div>
-
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                    Occupation
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        {{data['occupation-1'] }}
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                        <a class="govuk-link" href="4-company-details">
-                            Change
-                            <span class="govuk-visually-hidden"> company name</span>
-                        </a>
-                    </dd>
-                </div>
-
-</dl>
-
-
-
-<h2 class="govuk-heading-m">Your pension details  </h2>
-<dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-        Do you pay into a pension
+          Income amount
         </dt>
         <dd class="govuk-summary-list__value">
-            {{data['pension'] }}
+        1500
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="4-company-details">
+            <a class="govuk-link" href="annual-income">
                 Change
                 <span class="govuk-visually-hidden"> company name</span>
             </a>
@@ -142,22 +86,28 @@
     </div>
 
 
+
+
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-        What type of pension do you pay into?
+          Income frequency
         </dt>
         <dd class="govuk-summary-list__value">
-        {{data['pensiontype'] }}
+        Monthly
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="5-pension-details">
+            <a class="govuk-link" href="annual-income">
                 Change
                 <span class="govuk-visually-hidden"> company name</span>
             </a>
         </dd>
     </div>
 
-    </dl>
+
+
+    <div class="govuk-!-padding-bottom-9"></div>
+ 
+
 
 <button type="submit" class="govuk-button">
     Continue
