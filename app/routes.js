@@ -2114,7 +2114,7 @@ router.post('/apply/october2022/4-pp-income/1-income-query', function (req, res)
     } else if (income.includes ('self-employment')){
      res.redirect('4-company-details')
   } else {
-    res.redirect('/apply/october2022/5-all-children/child-section-start')
+    res.redirect('/apply/october2022/5-all-children/1-name.html')
   }
   });
 
@@ -2212,6 +2212,11 @@ router.post('/apply/october2022/4-pp-income/3-fixed-income', function (req, res)
     res.redirect('3-add-job')
 });
 
+router.post('/apply/october2022/4-pp-income/annual-income', function (req, res) {
+    res.redirect('3-add-job')
+});
+
+
 router.post('/apply/october2022/4-pp-income/annual-income-amount', function (req, res) {
     res.redirect('3-add-job')
 });
@@ -2220,12 +2225,20 @@ router.post('/apply/october2022/4-pp-income/4-company-details', function (req, r
     res.redirect('4-add-company')
 });
 
+
+router.post('/apply/october2022/4-pp-income/overall-check-your-ans3', function (req, res) {
+    res.redirect('5-pension-query')
+});
+
+
+
+
 router.post('/apply/october2022/4-pp-income/5-pension-details', function (req, res) {
     var pensiontype = req.session.data['pensiontype']
     if (pensiontype.includes('private')){
       res.redirect('5-private-pension')
     } else if (pensiontype.includes ('workplace')){
-      res.redirect('overall-check-your-ans2')
+      res.redirect('/apply/october2022/5-all-children/1-name.html')
     }
     else {
       res.redirect('additional-income2')
@@ -2234,23 +2247,23 @@ router.post('/apply/october2022/4-pp-income/5-pension-details', function (req, r
 
 
 router.post('/apply/october2022/4-pp-income/5-private-pension', function (req, res) {
-    res.redirect('overall-check-your-ans2b')
+    res.redirect('/apply/october2022/5-all-children/1-name.html')
 });
 
 router.post('/apply/october2022/4-pp-income/overall-check-your-ans2', function (req, res) {
-    res.redirect('/apply/october2022/5-all-children/child-section-start')
+    res.redirect('/apply/october2022/4-pp-income/5-pension-query')
 });
 
 router.post('/apply/october2022/4-pp-income/overall-check-your-ans2b', function (req, res) {
-    res.redirect('/apply/october2022/5-all-children/child-section-start')
+    res.redirect('/apply/october2022/5-all-children/1-name.html')
 });
 
 router.post('/apply/october2022/4-pp-income/overall-check-your-ans', function (req, res) {
-    res.redirect('/apply/october2022/5-all-children/child-section-start')
+    res.redirect('/apply/october2022/5-all-children/1-name.html')
 });
 
 router.post('/apply/october2022/4-pp-income/solo-check-your-ans', function (req, res) {
-    res.redirect('/apply/october2022/5-all-children/child-section-start')
+    res.redirect('/apply/october2022/5-all-children/1-name.html')
 });
 
 //Section 5: All Children

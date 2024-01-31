@@ -8,20 +8,39 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 <form method="post" novalidate>
-<h2 class="govuk-heading-xl">Check your answers about your benefits</h2>
+<h2 class="govuk-heading-xl">Check your answers about your company</h2>
 
 <br>
 
-<h2 class="govuk-heading-m">Benefit details</h2>
+
+<h2 class="govuk-heading-m">Employment details for {{data['company-1'] }} </h2>
 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
 
+
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Income source
+          Income Source
         </dt>
         <dd class="govuk-summary-list__value">
-        Benefits or State Pension
+            Self employed
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="4-company-details">
+                Change
+                <span class="govuk-visually-hidden"> company name</span>
+            </a>
+        </dd>
+    </div>
+
+    
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Company name
+        </dt>
+        <dd class="govuk-summary-list__value">
+            {{data['company-1'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="4-company-details">
@@ -33,21 +52,15 @@
 
 
 
-
-
-
-
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Other benefits or State pension
+          Occupation
         </dt>
         <dd class="govuk-summary-list__value">
-            <p class="govuk-body">Income based jobseekers allowance</p>
-            <p class="govuk-body">Income related employment and support allowance</p>
-            <p class="govuk-body">State Pension credit</p>
+            {{data['job-title-1'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="4-company-details">
+            <a class="govuk-link" href="annual-income">
                 Change
                 <span class="govuk-visually-hidden"> company name</span>
             </a>
@@ -55,57 +68,13 @@
     </div>
 
 
-   
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Benefits shared
-        </dt>
-        <dd class="govuk-summary-list__value">
-         Income related employment
-        </dd>
-        <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="4-company-details">
-                Change
-                <span class="govuk-visually-hidden"> occupation</span>
-            </a>
-        </dd>
-    </div>
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-        Shared with
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{data['pp-partner-first-name'] }} {{data['pp-partner-middle-name']}} {{data['pp-partner-last-name']}}
-
-        </dd>
-        <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="4-company-details">
-                Change
-                <span class="govuk-visually-hidden"> occupation</span>
-            </a>
-        </dd>
-    </div>
-
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-       {{data['pp-partner-first-name'] }} {{data['pp-partner-middle-name']}} {{data['pp-partner-last-name']}}'s date of birth?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          3 March 1986
-
-        </dd>
-        <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="4-company-details">
-                Change
-                <span class="govuk-visually-hidden"> occupation</span>
-            </a>
-        </dd>
-    </div>
 
 
 
 
-</dl>
+    <div class="govuk-!-padding-bottom-9"></div>
+ 
+
 
 <button type="submit" class="govuk-button">
     Continue
