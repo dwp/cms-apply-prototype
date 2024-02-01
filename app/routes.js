@@ -2473,6 +2473,13 @@ router.post('/apply/october2022/6-service-types/check-your-answers-collect-pay-d
     res.redirect('/apply/october2022/7-other-parent/pp-name')
 });
 
+router.post('/apply/october2022/6-service-types/direct-pay', function (req, res) {
+    res.redirect('/apply/october2022/6-service-types/service-type-pp')
+});
+
+router.post('/apply/october2022/6-service-types/service-type-pp', function (req, res) {
+    res.redirect('/apply/october2022/6-service-types/service-type-preference-pp')
+});
 
 
 //RP Bank Info
