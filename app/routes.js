@@ -1166,6 +1166,8 @@ router.post('/apply/paying-parent/6-pp-qualifying-children/version2/3-check-your
 
 
 
+
+
 //Webchat
 router.post('/webchat/register', function (req, res) {
     res.redirect('chatrequested')
@@ -2414,6 +2416,12 @@ router.post('/apply/october2022/5-children-info-RP/2-confirm-overnight-stays', f
 router.post('/apply/october2022/5-children-info-RP/2-check-your-answers', function (req, res) {
     res.redirect('/apply/october2022/5-children-info-RP/1-overnight-more')
 });
+
+
+router.post('/apply/october2022/6-service-types/bank-collection', function (req, res) {
+    res.redirect('/apply/october2022/6-service-types/check-your-answers-direct-pay.html')
+});
+
 
 
 
