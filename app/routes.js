@@ -1965,17 +1965,17 @@ router.post('/apply/october2022/1-start-eligibility/urn-rp', function (req, res)
 
 router.post('/apply/october2022/2-fees/check-age', function(req, res) {
     if (req.body['applicant-date-of-birth-year'] > '2002') {``
-      res.redirect('/apply/october2022/2-fees/confirm-age-under-19');
+      res.redirect('/apply/october2022/3-applicant-info/pp-nino');
     } else {
-      res.redirect('confirm-age');
+      res.redirect('/apply/october2022/3-applicant-info/pp-nino');
     }
   });
 
   router.post('/apply/october2022/2-fees-rp/check-age', function(req, res) {
     if (req.body['applicant-date-of-birth-year'] > '2002') {``
-      res.redirect('/apply/october2022/2-fees-rp/confirm-age-under-19');
+      res.redirect('/apply/october2022/3-applicant-info-rp/rp-nino');
     } else {
-      res.redirect('confirm-age');
+      res.redirect('/apply/october2022/3-applicant-info-rp/rp-nino');
     }
   });
 
@@ -2005,7 +2005,7 @@ router.post('/apply/october2022/2-fees-rp/tell-someone-under-19', function (req,
 });
 
 router.post('/apply/october2022/2-fees-rp/tell-someone', function (req, res) {
-    res.redirect('/apply/october2022/2-fees-rp/no-fee')
+    res.redirect('/apply/october2022/3-applicant-info-RP/check-ans')
 });
 
 router.post('/apply/october2022/2-fees-rp/no-fee', function (req, res) {
@@ -2090,7 +2090,7 @@ router.post('/apply/october2022/3-applicant-info-RP/rp-address-1', function (req
 });
 
 router.post('/apply/october2022/3-applicant-info-RP/rp-home-2', function (req, res) {
-    res.redirect('/apply/october2022/3-applicant-info-RP/contact-you')
+    res.redirect('/apply/october2022/3-applicant-info-RP/rp-phone')
 });
 
 router.post('/apply/october2022/3-applicant-info-RP/rp-home-3', function (req, res) {
