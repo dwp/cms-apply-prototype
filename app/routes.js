@@ -1988,7 +1988,7 @@ router.post('/apply/october2022/2-fees/tell-someone-under-19', function (req, re
 });
 
 router.post('/apply/october2022/2-fees/tell-someone', function (req, res) {
-    res.redirect('/apply/october2022/2-fees/no-fee')
+    res.redirect('/apply/october2022/3-applicant-info/check-ans.html')
 });
 
 router.post('/apply/october2022/2-fees/no-fee', function (req, res) {
@@ -2005,7 +2005,7 @@ router.post('/apply/october2022/2-fees-rp/tell-someone-under-19', function (req,
 });
 
 router.post('/apply/october2022/2-fees-rp/tell-someone', function (req, res) {
-    res.redirect('/apply/october2022/3-applicant-info-RP/check-ans')
+    res.redirect('/apply/october2022/3-applicant-info-RP/')
 });
 
 router.post('/apply/october2022/2-fees-rp/no-fee', function (req, res) {
@@ -2044,7 +2044,7 @@ router.post('/apply/october2022/3-applicant-info/pp-address-1', function (req, r
 });
 
 router.post('/apply/october2022/3-applicant-info/pp-home-2', function (req, res) {
-    res.redirect('/apply/october2022/3-applicant-info/contact-you')
+    res.redirect('/apply/october2022/3-applicant-info/pp-phone')
 });
 
 router.post('/apply/october2022/3-applicant-info/pp-home-3', function (req, res) {
