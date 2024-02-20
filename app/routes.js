@@ -1971,13 +1971,18 @@ router.post('/apply/october2022/2-fees/check-age', function(req, res) {
     }
   });
 
-  router.post('/apply/october2022/2-fees-rp/check-age', function(req, res) {
-    if (req.body['applicant-date-of-birth-year'] > '2002') {``
-      res.redirect('/apply/october2022/3-applicant-info-rp/rp-nino');
-    } else {
-      res.redirect('/apply/october2022/3-applicant-info-rp/rp-nino');
-    }
-  });
+//   router.post('/apply/october2022/2-fees-rp/check-age', function(req, res) {
+//     if (req.body['applicant-date-of-birth-year'] > '2002') {``
+//       res.redirect('/apply/october2022/3-applicant-info-rp/rp-nino');
+//     } else {
+//       res.redirect('/apply/october2022/3-applicant-info-rp/rp-nino');
+//     }
+//   });
+
+  router.post('/apply/october2022/2-fees-rp/check-age', function (req, res) {
+    res.redirect('/apply/october2022/3-applicant-info-RP/rp-nino')
+});
+
 
 router.post('/apply/october2022/2-fees/no-fee-under-19', function (req, res) {
     res.redirect('/apply/october2022/2-fees/domestic-abuse-under-19')
