@@ -2010,7 +2010,7 @@ router.post('/apply/october2022/2-fees-rp/tell-someone-under-19', function (req,
 });
 
 router.post('/apply/october2022/2-fees-rp/tell-someone', function (req, res) {
-    res.redirect('/apply/october2022/3-applicant-info-RP/')
+    res.redirect('/apply/october2022/3-applicant-info-RP/check-ans')
 });
 
 router.post('/apply/october2022/2-fees-rp/no-fee', function (req, res) {
