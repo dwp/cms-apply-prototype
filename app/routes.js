@@ -2245,7 +2245,7 @@ router.post('/apply/october2022/4-pp-income/5-pension-details', function (req, r
     if (pensiontype.includes('private')){
       res.redirect('5-private-pension')
     } else if (pensiontype.includes ('workplace')){
-      res.redirect('/apply/october2022/5-all-children/1-name.html')
+      res.redirect('/apply/october2022/5-all-children/child-section-start.html')
     }
     else {
       res.redirect('additional-income2')
@@ -2254,7 +2254,7 @@ router.post('/apply/october2022/4-pp-income/5-pension-details', function (req, r
 
 
 router.post('/apply/october2022/4-pp-income/5-private-pension', function (req, res) {
-    res.redirect('/apply/october2022/5-all-children/1-name.html')
+    res.redirect('/apply/october2022/5-all-children/child-section-start.html')
 });
 
 router.post('/apply/october2022/4-pp-income/overall-check-your-ans2', function (req, res) {
