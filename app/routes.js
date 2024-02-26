@@ -2258,7 +2258,7 @@ router.post('/apply/october2022/4-pp-income/5-private-pension', function (req, r
 });
 
 router.post('/apply/october2022/4-pp-income/overall-check-your-ans2', function (req, res) {
-    res.redirect('/apply/october2022/4-pp-income/5-pension-query')
+    res.redirect('/apply/october2022/4-pp-income/5-pension-query.html')
 });
 
 router.post('/apply/october2022/4-pp-income/overall-check-your-ans2b', function (req, res) {
