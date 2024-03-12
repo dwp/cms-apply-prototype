@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block pageTitle %} What is the most recent address you lived at with the other parent? {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <!--Feedback banner start-->
 {% include "feedback-banner.html" %}
 <!--Feedback banner stop-->
@@ -7,42 +7,41 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <form method="post" novalidate>
-                    <div class="govuk-form-group">
+                <form action="" method="post" novalidate>
+                    <!--start-->
+                  
+
                         
-                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
-                            <h1 class="govuk-fieldset__heading">
-                                What is the most recent address you lived at with the other parent?
-                            </h1>
-                        </legend>
-
-
-
+                    <div class="govuk-width-container">
+                        <h1 class="govuk-heading-xl">Find an address</h1>
                         <div class="govuk-form-group">
-                            <label class="govuk-label" for="mobile-number">
-                                <strong>House number or name</strong>
-                            </label>
-                            <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobile-number" type="tel" autocomplete="tel" value="10">
-                        </div>
-                        <br/>
-                        <label class="govuk-label" for="home-address-postcode">
-                            <strong>Postcode</strong>
+                        <label class="govuk-label" for="postcode">
+                            Postcode
                         </label>
-                        <input class="govuk-input govuk-!-width-one-quarter" id="home-address-postcode" name="home-address-postcode" type="text"
-                            value="NE32 2LB">
-                    </div>
-                    <p class="govuk-body">
-                    <a href="pp-address-1" class="govuk-link">Enter address manually</a></p>
-                    <button type="submit" class="govuk-button" onclick="return myFunction()">
+                        <div id="postcode-hint" class="govuk-hint">
+                            For example, AA3 1AB.
+                        </div><input class="govuk-input govuk-!-width-two-thirds" id="postcode-parent" name="postcode" type="text" aria-describedby="postcode-hint">
+                        </div>
+                        <div class="govuk-form-group">
+                        <label class="govuk-label" for="searchString">
+                            Building number or name
+                        </label>
+                        <div id="searchString-hint" class="govuk-hint">
+                            For example, 15 or Prospect Cottage.
+                        </div><input class="govuk-input govuk-!-width-two-thirds" id="searchString-parent" name="searchString" type="text" aria-describedby="searchString-hint">
+                        </div><button type="submit" class="govuk-button" data-module="govuk-button">
                         Find address
-                    </button>
-                </form>
-                
+                        </button>
+                        </form>
+                        <p class="govuk-body govuk-!-margin-bottom-0"><a href="/apply/october2022/7-other-parent/pp-address-2" class="govuk-link">Enter address manually</a></p>
+                        </div> 
+
+
+
             </div>
-                                                 {% include "exit-button.html" %}
+                                                                               {% include "exit-button.html" %}
 
         </div>
-    </main>
+    </main>    
 </div>
-
 {% endblock %}

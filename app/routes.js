@@ -2523,7 +2523,7 @@ router.post('/apply/october2022/7-other-parent/pp-phone', function (req, res) {
 });
 
 router.post('/apply/october2022/7-other-parent/pp-postal', function (req, res) {
-    res.redirect('pp-postal-2')
+    res.redirect('pp-address-3')
 });
 
 router.post('/apply/october2022/7-other-parent/pp-postal-2', function (req, res) {
@@ -2537,6 +2537,12 @@ router.post('/apply/october2022/7-other-parent/pp-address-1', function (req, res
 router.post('/apply/october2022/7-other-parent/pp-address-2', function (req, res) {
     res.redirect('pp-address-3')
 });
+
+
+router.post('/apply/october2022/7-other-parent/pp-address-part-2', function (req, res) {
+    res.redirect('pp-address-previous-details')
+});
+
 
 router.post('/apply/october2022/7-other-parent/pp-address-3', function (req, res) {
     res.redirect('pp-other-info')
