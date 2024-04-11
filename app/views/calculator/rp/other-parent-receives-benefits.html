@@ -1,0 +1,33 @@
+{% extends "layout.html" %} {% set serviceName %} Calculate child maintenance {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+
+                    <div class="govuk-width-container">
+                        <form method="post" action="/calculator/rp/get-any-income" novalidate>
+                        {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+                        <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+                          <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-two-thirds">
+                              <h1 class="govuk-heading-xl">If the other parent gets benefits </h1>
+
+                              <p class="govuk-body">
+                                If the other parent gets benefits or state pension, the Child Maintenance Service calculates a 'Flat Rate' of £7 per week.
+                              </p>
+                            
+
+              <button type="submit" class="govuk-button">
+                Continue
+              </button>
+
+              </form>
+
+
+    </div>
+    {% include "exit-button.html" %}
+    </div>
+    </main>
+    </div>
+    
+    {% endblock %}
+    

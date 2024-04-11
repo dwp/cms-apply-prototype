@@ -1,0 +1,58 @@
+{% extends "layout.html" %} {% set serviceName %} Calculate child maintenance {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                            Will you be paying or receiving child maintenance payments?
+                        </h1>
+
+                        <div class="govuk-!-padding-bottom-5"></div>
+
+                        <div id="hint" class="govuk-hint">
+                          If you are receiving child maintenance, your child should live with you most of the time. You will not get child maintenance if the day-to-day care of your child is equal between parents. 
+                        </div>
+                          </legend>
+                          
+                          <div class="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="paying" name="paying" type="radio" value="paying~">
+                              <label class="govuk-label govuk-radios__label" for="receiving">
+                                Paying
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="receiving" name="receiving" type="radio" value="receiving~/calculator/rp/benefits-or-pension.html">
+                              <label class="govuk-label govuk-radios__label" for="receiving">
+                                Receiving
+                              </label>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+
+        <br>
+        <!--end-->
+        <button type="submit" class="govuk-button">
+            Continue
+        </button>
+    </form>
+
+</div>
+{% include "exit-button.html" %}
+
+</div>
+
+</main>
+</div>
+{% endblock %}
