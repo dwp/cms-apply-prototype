@@ -1,8 +1,14 @@
-const express = require('express')
-const router = express.Router()
+//
+// For guidance on how to create routes see:
+// https://prototype-kit.service.gov.uk/docs/create-routes
+//
+
+const govukPrototypeKit = require('govuk-prototype-kit')
+const router = govukPrototypeKit.requests.setupRouter()
 const radioButtonRedirect = require('radio-button-redirect')
 router.use(radioButtonRedirect)
-// Add your routes here - above the module.exports line
+// Add your routes here
+
 
 
 
@@ -384,7 +390,6 @@ router.post('/apply/august2020/confirmation-email/payment-details', function (re
 });
 
 
-module.exports = router
 
 ////////////////November2020/////////////////////////
 
