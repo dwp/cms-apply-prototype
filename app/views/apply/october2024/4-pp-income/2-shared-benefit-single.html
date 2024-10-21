@@ -1,0 +1,72 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <form method="post" novalidate>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                          Do you share
+
+                                                    {% if 'income-support' in data ['benefit'] %}
+                                                    Income support
+                                                    {% endif %}
+
+                                                    {% if 'pension-credit' in data ['benefit'] %}
+                                                    pension credit
+                                                    {% endif %}
+
+                                                    {% if 'jobseekers-allowance-2' in data ['benefit'] %}
+                                                    Jobseeker’s Allowance – income-based
+                                                    {% endif %}
+
+                                                    {% if 'income-related-employment' in data ['benefit'] %}
+                                                    Income-related Employment and Support Allowance
+                                                    {% endif %}
+
+                          with your partner?
+
+
+
+
+                        </h1>
+                      </legend>
+                      <div id="changed-name-hint" class="govuk-hint">
+                        You may have a joint benefits claim if you live with your partner and you’re married, in a civil partnership or living together as a couple.
+                      </div>
+                      <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="yes" name="shared" type="radio" value="yes~2-partner-name">
+                          <label class="govuk-label govuk-radios__label" for="yes">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="no" name="shared" type="radio" value="no~additional-income">
+                          <label class="govuk-label govuk-radios__label" for="no">
+                            No
+                          </label>
+                        </div>
+                      </div>
+
+                    </fieldset>
+                  </div>
+
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}

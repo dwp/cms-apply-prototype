@@ -1,0 +1,93 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                            <h1 class="govuk-fieldset__heading">
+                                Your language preferences
+                            </h1>
+                        </legend>
+                        <br>
+
+                        <p> If you live in Wales you can choose to communicate with us in Welsh. </p>
+                        
+                        
+                   
+                        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+                            <br> Which language should we use if we need to contact you by phone?
+                            </h1>
+                          </legend>
+                          
+                          <br>
+                          <div class="govuk-radios govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes~different-formats">
+                              <label class="govuk-label govuk-radios__label" for="changed-name">
+                                English
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no~pp-phone">
+                              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                Welsh
+                              </label>
+                            </div>
+                          </div>
+
+                        </fieldset>
+
+                        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+                            <br> Which language should we write to you in? 
+                            </h1>
+                          </legend>
+                          <div id="hint" class="govuk-hint">
+                            This includes letters and text messages.
+                          </div>
+                          
+                          <br>
+                          <div class="govuk-radios govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes~different-formats">
+                              <label class="govuk-label govuk-radios__label" for="changed-name">
+                                English
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no~pp-phone">
+                              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                Welsh
+                              </label>
+                            </div>
+                          </div>
+
+                        </fieldset>
+                      </div>
+                      <br>
+
+
+
+                        </div>
+            </div>
+
+<button type="submit" class="govuk-button">
+    Continue
+</button>
+</form>
+</div>
+
+</div>
+
+</main>
+</div>
+{% endblock %}

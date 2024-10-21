@@ -1,0 +1,90 @@
+{% extends "layout.html" %} {% block pageTitle %} Could a Direct Pay arrangement work for you?
+{% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                            <h1 class="govuk-fieldset__heading">
+                              How you get child maintenance 
+                            </h1>
+                        </legend>
+                    </fieldset>
+                </div>
+            
+                <p class="govuk-body">The Child Maintenance Service has two service types. After you submit your application, we will tell you which service type you’ll use and how much child maintenance you should get.  </p>
+  
+                <div class="govuk-!-padding-bottom-5"></div>
+               
+
+<!-- Direct pay section -->
+              
+<h2 class="govuk-heading-m">Direct Pay</h2>
+
+<p>Direct Pay is a free service that you manage using your online child maintenance account.</p>
+
+<p>The other parent will need your bank or building society details to make payments to you.
+   If you do not want to have any contact with the other parent, we can pass your details on for you. </p>
+
+<p>If the other parent does not pay, you can use your online child maintenance account to:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>tell us if payments are not made in full or on time </li>
+  <li>report missed payments</li>
+  <li>request to change to the Collect and Pay service</li>
+</ul>
+
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+
+<!-- Collect and pay section  -->
+
+<h2 class="govuk-heading-m">Collect and Pay</h2>
+
+<p> The Child Maintenance Service will:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>collect payment from the other parent and pass it to you
+  <li>manage payments for you
+  <li>take action to recover missed payments</li>
+</ul>
+
+<p>There are extra fees for this service:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>20% is added to the amount the other parent pays
+  <li>4% is taken off the amount you get</li>
+</ul>
+
+<p>For example, if the payment amount was £100, the other parent would pay £120 and you would get £96.</p>
+
+
+<form method="post" novalidate>
+
+                   
+    <button type="submit" class="govuk-button">
+        Continue
+    </button>
+</form>
+</div>
+
+{% include "exit-button.html" %}
+
+</div>
+</main>
+</div>
+
+
+{% endblock %}
+
+
+
+              
