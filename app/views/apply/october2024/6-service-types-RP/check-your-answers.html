@@ -1,0 +1,143 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <!--start of answers-->
+
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+                <form method="post" novalidate>
+
+                    <h1 class="govuk-heading-xl">Check your payment details</h1>
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Payment type
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ data['payment-type'] }}
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="../about_other_parent/other_parent_name.html">
+                                    Change
+                                    <span class="govuk-visually-hidden"> name</span>
+                                </a>
+                            </dd>
+                        </div>
+
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                               Bank details
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ data['account-details'] }}
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="../about_other_parent/other_parent_name.html">
+                                    Change
+                                    <span class="govuk-visually-hidden"> name</span>
+                                </a>
+                            </dd>
+                        </div>
+
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Name on account
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ data['account-holder'] }}
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="../about_other_parent/other_parent_name.html">
+                                    Change
+                                    <span class="govuk-visually-hidden"> name</span>
+                                </a>
+                            </dd>
+                        </div>
+
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                 Sort code
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ data['sort-code'] }}
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="../about_other_parent/other_parent_name.html">
+                                    Change
+                                    <span class="govuk-visually-hidden"> name</span>
+                                </a>
+                            </dd>
+                        </div>
+
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Account number
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ data['account-number'] }}
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="../about_other_parent/other_parent_name.html">
+                                    Change
+                                    <span class="govuk-visually-hidden"> name</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Building society roll number
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ data['roll-number'] }}
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="../about_other_parent/other_parent_name.html">
+                                    Change
+                                    <span class="govuk-visually-hidden"> name</span>
+                                </a>
+                            </dd>
+                        </div>
+
+
+                    </dl>
+
+
+                    </dl>
+
+                    <form action="/form-handler" method="post" novalidate>
+
+                        <input type="hidden" name="answers-checked" value="true">
+
+                        <button type="submit" class="govuk-button">
+                            Continue
+                        </button>
+
+                    </form>
+
+            </div>
+
+
+
+            {% include "exit-button.html" %}
+
+        </div>
+
+</div>
+</main>
+</div>
+
+
+
+
+{% endblock %}

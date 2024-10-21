@@ -1,0 +1,53 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                            Will you be paying or receiving child maintenance?
+                        </h1>
+                          </legend>
+                          <br>
+                          <div class="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="pp-rp-1" name="pp-rp" type="radio" value="pp~/apply/october2022/mcmc-sign-up/using-a-child-maintenance-account-pp.html">
+                              <label class="govuk-label govuk-radios__label" for="pp-rp-1">
+                                Paying
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="pp-rp-2" name="pp-rp" type="radio" value="rp~/apply/october2022/mcmc-sign-up/using-a-child-maintenance-account-rp.html">
+                              <label class="govuk-label govuk-radios__label" for="pp-rp-2">
+                                Receiving
+                              </label>
+                            </div>
+                          </div>
+
+                        </fieldset>
+                      </div>
+
+        <br>
+        <!--end-->
+        <button type="submit" class="govuk-button">
+            Continue
+        </button>
+    </form>
+
+</div>
+{% include "exit-button.html" %}
+
+</div>
+
+</main>
+</div>
+{% endblock %}

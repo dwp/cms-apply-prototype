@@ -1,0 +1,121 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <!--start-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="otherParentKnowAddressInformation">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading" id="otherParentKnowAddressInformation">
+                                    Do you know anything about where the other parent lives?
+                                </h1>
+                            </legend>
+
+                            <div class="govuk-!-padding-bottom-5"></div>
+
+                            <div class="govuk-radios govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="yes" name="op-address" type="radio" value="yes~pp-postcode">
+                                    <label class="govuk-label govuk-radios__label" for="yes">
+                                        I know the other parent's full address and postcode 
+                                    </label>
+                                </div>
+
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="no" name="op-address" type="radio" value="no~pp-address-2">
+                                    <label class="govuk-label govuk-radios__label" for="no">
+                                        I know part of the other parent's address  
+                                    </label>
+                                </div>
+
+
+
+     <!-- Conditional radios one -->
+
+
+
+                                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="how-contacted-conditional" name="phone" type="radio" value="yes~pp-previous-address"
+                                            data-aria-controls="conditional-how-contacted-conditional">
+                                        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+                                             I know the town or city the other parent lives in or near 
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+    
+    
+                                        <div class="govuk-form-group">
+                                            <div class="govuk-date-input__item">
+                                                <label class="govuk-label govuk-date-input__label" for="phone-number">
+                                                     Town or city
+                                                </label>
+    
+                                                <input class="govuk-input govuk-input govuk-input--width-10" id="phone-number" name="phone-number" type="number"
+                                                    spellcheck="false">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="yes~pp-previous-address" data-aria-controls="conditional-contact-3">
+                                    <label class="govuk-label govuk-radios__label" for="contact-3">
+                                        I know the area of the UK the other parent lives in
+                                    </label>
+                                  </div>
+          
+          
+                                  
+                                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+                                    <div class="govuk-form-group">
+                                      <label class="govuk-label" for="contact-by-text">
+                                    Area
+                                      </label>
+                                      <input class="govuk-input govuk-input--width-10" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+                                    </div>
+                                  </div>
+                                </div>
+                          
+
+                                <div class="govuk-radios__divider">or</div>
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="no" name="op-address" type="radio" value="yes~pp-previous-address">
+                                    <label class="govuk-label govuk-radios__label" for="no">
+                                        I do not know anything about where the other parent lives
+                                    </label>
+                                </div>
+
+
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!--Stop-->
+
+
+
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+                                                                             {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+
+{% endblock %}

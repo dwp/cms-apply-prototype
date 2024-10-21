@@ -1,0 +1,294 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+<h2 class="govuk-heading-xl">Check your answers</h2>
+
+
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+            {{data['pp-title'] }} {{data['pp-first-name'] }} {{data['pp-middle-name'] }} {{data['pp-last-name']
+            }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-name">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Previous name
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body">{{data['different-name'] }} <br> {{data['pp-different-first-name'] }} </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-name">
+                Change
+                <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+        </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body"> 14 July 1996 </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-name">
+                Change
+                <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+        </dd>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            National Insurance number
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body"> {{data['national-insurance-number'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-nino">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Different contact formats
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body"> {{data['different-contact-format'] }} </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-nino">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Types of contact
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body"> </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-nino">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Different contact formats for letters
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body"> </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-nino">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Different contact formats for phone calls
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <p class="govuk-body"> </p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-nino">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+  
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+        Contact number
+        </dt>
+        <dd class="govuk-summary-list__value">
+            {{data['mobile-number'] }}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-phone">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+Contact name       </dt>
+        <dd class="govuk-summary-list__value">
+          John Smith
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-phone">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Preferred call time</dt>
+            <dd class="govuk-summary-list__value">
+              {{data['phone-time']}}
+
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="pp-phone-time">
+                    Change
+                    <span class="govuk-visually-hidden"> contact details</span>
+                </a>
+            </dd>
+        </div>
+
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Voicemails</dt>
+        <dd class="govuk-summary-list__value">
+          {{data['voicemail']}}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-phone-time">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Text messages</dt>
+        <dd class="govuk-summary-list__value">
+            {{data['text']}}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-text">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Home address</dt>
+        <dd class="govuk-summary-list__value">
+            {{data['shared-address-line-1'] }}
+            <br>
+            {{data['shared-address-line-2'] }}
+            <br>
+            {{data['shared-address-town'] }}
+            <br>
+            {{data['shared-address-county'] }}
+            <br>
+            {{data['shared-address-postcode'] }}
+            <br>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-text">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Postal address</dt>
+        <dd class="govuk-summary-list__value">
+            {{data['shared-address-line-1'] }}
+            <br>
+            {{data['shared-address-line-2'] }}
+            <br>
+            {{data['shared-address-town'] }}
+            <br>
+            {{data['shared-address-county'] }}
+            <br>
+            {{data['shared-address-postcode'] }}
+            <br>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="pp-text">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+        </dd>
+    </div>
+   
+
+</dl>
+
+<button type="submit" class="govuk-button">
+    Continue
+</button>
+</form>
+</div>
+                                                 {% include "exit-button.html" %}
+
+</div>
+</main>
+</div>
+{% endblock %}

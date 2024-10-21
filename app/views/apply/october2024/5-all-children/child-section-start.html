@@ -1,0 +1,53 @@
+{% extends "layout.html" %} {% block pageTitle %} Tell us about your children {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+
+                <main class="govuk-main-wrapper " id="main-content" role="main">
+                    <div class="govuk-grid-row">
+                      <div class="govuk-grid-column-two-thirds">
+                        <form method="post" novalidate>
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                                <h1 class="govuk-fieldset__heading">
+                                  Tell us about your children
+                                </h1>
+                              </legend>
+                
+                              <div class="govuk-inset-text">
+                                Your children must be under 16 or under 20 if they are in full-time education or training, up to and including A level or equivalent.
+                              </div>
+                
+                              <p class="govuk-body">To work out how much child maintenance you need to pay, we need to ask you:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                <li>about the children you want to include in this application</li>
+                                <li>if you pay child maintenance for any other children in a private arrangement (not using the Child Maintenance Service)</li>
+                                <li>if any other children live with you (this can be your child or a partner’s child)</li>
+                              </ul>
+
+
+                        </details>
+                    </div>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+
+                                                                         {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}
+
+
+
+
+
+        
+

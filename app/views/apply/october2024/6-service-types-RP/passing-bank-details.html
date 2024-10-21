@@ -1,0 +1,76 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                    </div>
+
+
+
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset"  role="group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading" >
+                                    Sharing your bank or building society details with the other parent
+                                </h1>
+                            </legend>
+                            <p>
+                              We need to collect your bank or building society details. We may need to share these details with the other parent if you do not get your preferred service type. 
+                            </p>
+
+
+                            <h3 class="govuk-heading-s">If you do not want the other parent to know your location</h3>
+                           <p class="govuk-body">you can ask your bank to set up an account with a non-geographical sort code.  </p>
+
+
+                            <div class="govuk-!-padding-bottom-5"></div>
+
+                            <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                    <h1 class="govuk-fieldset__heading">
+                                        Do you want to continue with your application?
+                                    </h1>
+                                    <p class="govuk-hint">We cannot save your information if you leave the application. </p>
+                                  </legend>
+
+                                 
+                                  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="continueapp1" name="continueapp" type="radio" value="Yes~bank-info">
+                                      <label class="govuk-label govuk-radios__label" for="continueapp">
+                                        Yes
+                                      </label>
+                                    </div>
+
+
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="continueapp2" name="continueapp" type="radio" value="No~do-not-continue-application">
+                                      <label class="govuk-label govuk-radios__label" for="continueapp">
+                                        No
+                                      </label>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                              
+                    </div>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+</div>
+             {% include "exit-button.html" %}
+
+            </div>
+    </main>
+    </div>
+    {% endblock %}
