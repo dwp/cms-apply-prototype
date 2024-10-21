@@ -18,7 +18,7 @@ router.use(radioButtonRedirect)
 
 // New routes start
 
- // do-you-know-your-pin-and-password
+ // do-you-know-your-pin-and-password - october 2022
 
  router.post('/apply/october2022/mcmc-sign-up/do-you-know-your-pin-and-password', function(req, res) {
     if (req.body['know-pin'] === 'yes') {
@@ -40,6 +40,34 @@ router.use(radioButtonRedirect)
           res.redirect('/apply/october2022/mcmc-sign-up/do-you-know-your-pin-and-password-pp');
         }
          });
+
+
+// october 2022 routes end
+
+// october 2024 routes start
+
+router.post('/apply/october2024/mcmc-sign-up/do-you-know-your-pin-and-password', function(req, res) {
+    if (req.body['know-pin'] === 'yes') {
+      res.redirect('/apply/october2024/1-start-eligibility/urn-rp');
+    } else if (req.body['know-pin'] === 'no'){
+      res.redirect('/apply/october2024/mcmc-sign-up/reset-pin-and-password');
+    } else {
+      res.redirect('/apply/october2024/mcmc-sign-up/do-you-know-your-pin-and-password');
+    }
+     });
+  
+
+     router.post('/apply/october2024/mcmc-sign-up/do-you-know-your-pin-and-password-pp', function(req, res) {
+        if (req.body['know-pin-pp'] === 'yes') {
+          res.redirect('/apply/october2024/1-start-eligibility/urn');
+        } else if (req.body['know-pin-pp'] === 'no'){
+          res.redirect('/apply/october2024/mcmc-sign-up/reset-pin-and-password-pp');
+        } else {
+          res.redirect('/apply/october2024/mcmc-sign-up/do-you-know-your-pin-and-password-pp');
+        }
+         });
+
+
       
 // Old routes end   
 
