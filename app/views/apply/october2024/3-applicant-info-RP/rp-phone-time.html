@@ -14,133 +14,129 @@
                             </h1>
                         </legend>
 
-                            <div class="govuk-form-group">
-                                <label class="govuk-label" for="contact-time">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="contact-time">
 
-                                 </label>
-                                        <span id="contact-time-hint" class="govuk-hint">
-                                          We will try to contact you at your preferred time if we have any questions about your application.
-                                        </span>
+                            </label>
+                            <span id="contact-time-hint" class="govuk-hint">
+                                We will try to contact you at your preferred time if we have any questions about your
+                                application.
+                            </span>
+                        </div>
+
+                        <div class="govuk-checkboxes">
+
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="any" name="phone-time" type="checkbox"
+                                    value="any">
+                                <label class="govuk-label govuk-checkboxes__label" for="any">
+                                    Any time
+                                </label>
                             </div>
 
-                            <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="eight" name="phone-time" type="checkbox"
+                                    value="eight">
+                                <label class="govuk-label govuk-checkboxes__label" for="eight">
+                                    Between 8am and 10am
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="ten" name="phone-time" type="checkbox"
+                                    value="ten">
+                                <label class="govuk-label govuk-checkboxes__label" for="ten">
+                                    Between 10am and midday
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="midday" name="phone-time" type="checkbox"
+                                    value="midday">
+                                <label class="govuk-label govuk-checkboxes__label" for="midday">
+                                    Between midday and 2pm
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="two" name="phone-time" type="checkbox"
+                                    value="two">
+                                <label class="govuk-label govuk-checkboxes__label" for="two">
+                                    Between 2pm and 4pm
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="four" name="phone-time" type="checkbox"
+                                    value="four">
+                                <label class="govuk-label govuk-checkboxes__label" for="four">
+                                    Between 4pm and 6pm
+                                </label>
+                            </div>
 
-                                <div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" id="any" name="phone-time" type="checkbox" value="any">
-                                    <label class="govuk-label govuk-checkboxes__label" for="any">
-                                        Any time
-                                    </label>
-                                </div>
+                            <p>or</p>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="none" name="phone-time" type="checkbox"
+                                    value="none">
+                                <label class="govuk-label govuk-checkboxes__label" for="none">
+                                    None of these times work for me
+                                </label>
+                            </div>
 
-                                <div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" id="eight" name="phone-time" type="checkbox" value="eight">
-                                    <label class="govuk-label govuk-checkboxes__label" for="eight">
-                                        Between 8am and 10am
-                                    </label>
-                                 </div>
-                                         <div class="govuk-checkboxes__item">
-                                            <input class="govuk-checkboxes__input" id="ten" name="phone-time" type="checkbox" value="ten">
-                                                 <label class="govuk-label govuk-checkboxes__label" for="ten">
-                                                Between 10am and midday
-                                                 </label>
-                                            </div>
-                                                    <div class="govuk-checkboxes__item">
-                                                        <input class="govuk-checkboxes__input" id="midday" name="phone-time" type="checkbox" value="midday">
-                                                        <label class="govuk-label govuk-checkboxes__label" for="midday">
-                                                            Between midday and 2pm
-                                                        </label>
-                                                    </div>
-                                                            <div class="govuk-checkboxes__item">
-                                                                <input class="govuk-checkboxes__input" id="two" name="phone-time" type="checkbox" value="two">
-                                                                <label class="govuk-label govuk-checkboxes__label" for="two">
-                                                                    Between 2pm and 4pm
-                                                                </label>
-                                                            </div>
-                                                                    <div class="govuk-checkboxes__item">
-                                                                        <input class="govuk-checkboxes__input" id="four" name="phone-time" type="checkbox" value="four">
-                                                                        <label class="govuk-label govuk-checkboxes__label" for="four">
-                                                                            Between 4pm and 6pm
-                                                                        </label>
-                                                                    </div>
-                                                                        
-                                                                                     <p>or</p>
-                                                                                        <div class="govuk-checkboxes__item">
-                                                                                            <input class="govuk-checkboxes__input" id="none" name="phone-time" type="checkbox" value="none">
-                                                                                            <label class="govuk-label govuk-checkboxes__label" for="none">
-                                                                                                None of these times work for me
-                                                                                            </label>
-                                                                                        </div>
+                            <div class="govuk-form-group" id="text_reveal">
+                                <label class="govuk-label" for="more-detail" id="detail">
+                                    Can you provide more detail?
+                                </label>
+                                <span id="more-detail-hint" class="govuk-hint">
+                                    Do not include personal or financial information, like your National Insurance
+                                    number or credit card details.
+                                </span>
+                                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"
+                                    aria-describedby="more-detail-hint"></textarea>
+                            </div>
+                        </div> <!-- govuk-checkboxes -->
 
+                    </div> <!--govuk-form-group -->
 
+                    <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
+                        <p>
 
-                                                                                            <div class="govuk-form-group" id="text_reveal">
-                                                                                                <label class="govuk-label" for="more-detail" id="detail">
-                                                                                                    Can you provide more detail?
-                                                                                                </label>
-                                                                                                <span id="more-detail-hint" class="govuk-hint">
-                                                                                                    Do not include personal or financial information, like your National Insurance number or credit card details.
-                                                                                                </span>
-                                                                                                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-                                                                                            </div>
-                                                     </div>
-                                                     </fieldset>
-                                                      </div>
-                                                 </div>
+                        <h2 class="govuk-heading-m">Can we leave voicemails if we can not contact you?</h2>
 
-                                                         </div>
+                        <div class="govuk-radios govuk-radios--inline">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="voicemail-yes" name="voicemail" type="radio"
+                                    value="yes~contact-you">
+                                <label class="govuk-label govuk-radios__label" for="voicemail-yes">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="voicemail-no" name="voicemail" type="radio"
+                                    value="no~contact-you">
+                                <label class="govuk-label govuk-radios__label" for="voicemail-no">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
 
-                                      </div>
-                                      <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
-                                              <p>
-                                    
+                    <br>
+                    <br>
 
-
-                                                <h2 class="govuk-heading-m">Can we leave voicemails if we can not contact you?</h2>
-                    
-                                                        <div class="govuk-radios govuk-radios--inline">
-                                                        <div class="govuk-radios__item">
-                                                            <input class="govuk-radios__input" id="voicemail-yes" name="voicemail" type="radio" value="yes~contact-you">
-                                                            <label class="govuk-label govuk-radios__label" for="voicemail-yes">
-                                                                Yes
-                                                            </label>
-                                                        </div>
-                                                        <div class="govuk-radios__item">
-                                                            <input class="govuk-radios__input" id="voicemail-no" name="voicemail" type="radio" value="no~contact-you">
-                                                            <label class="govuk-label govuk-radios__label" for="voicemail-no">
-                                                                No
-                                                            </label>
-                                                        </div>
-                                                                        </div>
-                                                                        </fieldset>
-
-                                                                        <br>
-                                                                        <br>
-
-                                                                            <div class="form-group">
-                                                                                <button type="submit" class="govuk-button">
-                                                                                Continue
-                                                                                </button>
-                                                                             </div>
-                                    </form>
-
-
-
-
-
-
-
-
-
-
-                </div>
-            </main>
+                    <div class="form-group">
+                        <button type="submit" class="govuk-button">
+                            Continue
+                        </button>
+                    </div>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+        </div>
+    </main>
 
 </div>
 
 
 
 
-
+<!-- ///Routes script start -->
 
 <script>
 
@@ -162,4 +158,8 @@
             el.style.display = 'none';
         }
     }
-</script> {% endblock %}
+</script> 
+
+<!-- // Routes script end  -->
+
+{% endblock %}

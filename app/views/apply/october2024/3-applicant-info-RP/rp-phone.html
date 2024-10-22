@@ -15,11 +15,12 @@
                             </h1>
                             <div class="govuk-!-padding-bottom-5"></div>
                             <div id="heading-hint" class="govuk-hint">
-                                We will send you text message updates. The sender will appear in your phone as ChildMaint.
+                                We will send you text message updates. The sender will appear in your phone as
+                                ChildMaint.
                                 We may need to call you if we have questions about your application.
-                              </div>
+                            </div>
                         </legend>
-                       
+
                         <div class="govuk-inset-text">We will not share your contact number with the other parent.</div>
 
                         <div class="govuk-form-group">
@@ -29,63 +30,62 @@
                             <div id="hint" class="govuk-hint">
                                 If you do not have your own phone, give the number of someone you trust.
                             </div>
-                        <div class="govuk-!-padding-bottom-3"></div>
-                        <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobile-number" type="tel" autocomplete="tel">
+                            <div class="govuk-!-padding-bottom-3"></div>
+                            <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobile-number"
+                                type="tel" autocomplete="tel">
                         </div>
-                    </div>
+                    </div> <!-- govuk-form-group -->
 
                     <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
-                        <p>
-                            <strong>
-                                Is this your own number?
-                            </strong>
-                        </p>
+                        <p><strong>Is this your own number?</strong></p>
 
                         <div class="govuk-radios" data-module="radios">
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="other-parent-phone-radio-1" name="phone-number" type="radio" value="yes~rp-phone-time"
-                                    aria-expanded="true">
+                                <input class="govuk-radios__input" id="other-parent-phone-radio-1" name="phone-number"
+                                    type="radio" value="yes~rp-phone-time" aria-expanded="true">
                                 <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-1">
                                     Yes
                                 </label>
                             </div>
 
-
                             <div class="govuk-radios__item">
-                                <input aria-controls="conditional-other-parent-phone-radio-1" class="govuk-radios__input" id="other-parent-phone-radio-2"
-                                    name="phone-number" type="radio" value="no~rp-send-texts">
+                                <input aria-controls="conditional-other-parent-phone-radio-1"
+                                    class="govuk-radios__input" id="other-parent-phone-radio-2" name="phone-number"
+                                    type="radio" value="no~rp-send-texts">
                                 <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-2">
                                     No
                                 </label>
-                                
                             </div>
 
                             <!--start-->
-                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other-parent-phone-radio-1">
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                                id="conditional-other-parent-phone-radio-1">
 
                                 <label class="govuk-label" for="other-parent-contact-work-phone">
                                     Whose number is this?
                                 </label>
-                                <span id="changed-name-hint" class="govuk-hint">For example, a family member, friend or support worker.</span>
+                                <span id="changed-name-hint" class="govuk-hint">For example, a family member, friend or
+                                    support worker.</span>
 
                                 <div class="govuk-form-group">
-                                    <input class="govuk-input govuk-input--width-20" id="other-parent-contact-work-phone" name="other-parent-contact-work-phone"
+                                    <input class="govuk-input govuk-input--width-20"
+                                        id="other-parent-contact-work-phone" name="other-parent-contact-work-phone"
                                         type="tel">
                                 </div>
-                     
-        
-</div>
+                            </div> <!-- govuk-radios__conditional--hidden -->
+                        </div> <!-- govuk-radios -->
+                    </fieldset>
 
-<div class="govuk-!-padding-bottom-3"></div>
+                    <div class="govuk-!-padding-bottom-3"></div>
 
-<button type="submit" class="govuk-button">
-    Continue
-</button>
-</form>
-</div>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+        </div>
 
-</div>
-
-</main>
+    </main>
 </div>
 {% endblock %}

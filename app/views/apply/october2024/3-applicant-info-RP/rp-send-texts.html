@@ -13,41 +13,44 @@
                             <h1 class="govuk-fieldset__heading">
                                 Can we send text messages to {{data['mobile-number'] }}?
                             </h1>
+                        </legend>
+                        <div class="govuk-!-padding-bottom-5"></div>
 
-                            <div class="govuk-!-padding-bottom-5"></div>
-
-                            <p class="govuk-hint">You can change your contact number in your online child maintenance account after you submit your application. </p>
+                        <p class="govuk-hint">You can change your contact number in your online child maintenance
+                            account after you submit your application. </p>
 
                         <div class="govuk-radios" data-module="radios">
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="other-parent-phone-radio-1" name="phone-number" type="radio" value="yes~rp-phone-time"
-                                    aria-expanded="true">
+                                <input class="govuk-radios__input" id="other-parent-phone-radio-1" name="phone-number"
+                                    type="radio" value="yes~rp-phone-time" aria-expanded="true">
                                 <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-1">
                                     Yes
                                 </label>
                             </div>
 
-
                             <div class="govuk-radios__item">
-                                <input aria-controls="conditional-other-parent-phone-radio-1" class="govuk-radios__input" id="other-parent-phone-radio-2"
-                                    name="phone-number" type="radio" value="no~rp-email-confirmation">
+                                <input aria-controls="conditional-other-parent-phone-radio-1"
+                                    class="govuk-radios__input" id="other-parent-phone-radio-2" name="phone-number"
+                                    type="radio" value="no~rp-email-confirmation">
                                 <label class="govuk-label govuk-radios__label" for="other-parent-phone-radio-2">
                                     No
                                 </label>
-                                
                             </div>
+                        </div> <!-- govuk-radios -->
 
+                        <div class="govuk-!-padding-bottom-3"></div>
 
-<div class="govuk-!-padding-bottom-3"></div>
+                        <button type="submit" class="govuk-button">
+                            Continue
+                        </button>
+                    </div> <!-- govuk-form-group -->
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+        </div>
 
-<button type="submit" class="govuk-button">
-    Continue
-</button>
-</form>
+    </main>
 </div>
 
-</div>
 
-</main>
-</div>
 {% endblock %}
