@@ -1,4 +1,5 @@
-{% extends "layout.html" %} {% block pageTitle %} You will not be able to apply if you cannot pay the fee {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block pageTitle %} You will not be able to apply if you cannot pay the fee {% endblock %}
+{% block content %}
 <!--Feedback banner start-->
 {% include "feedback-banner.html" %}
 <!--Feedback banner stop-->
@@ -8,10 +9,11 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 <form method="post" novalidate>
-               
+
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                            <legend
+                                class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
                                 <h1 class="govuk-fieldset__heading">
                                     You will not be able to apply if you cannot pay the fee </h1>
                             </legend>
@@ -19,22 +21,26 @@
                             <div class="govuk-warning-text">
                                 <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                                 <strong class="govuk-warning-text__text">
-                                  <span class="govuk-warning-text__assistive">Warning</span>
-                                  From 31 December 2023 all new applications to the Child Maintenance Service will be free.
+                                    <span class="govuk-warning-text__assistive">Warning</span>
+                                    From 31 December 2023 all new applications to the Child Maintenance Service will be
+                                    free.
                                 </strong>
-                              </div>
-        
-
-                            <p>When you are able to pay, you can start your application at <a href="https://child-maintenance.service.gov.uk/apply/">Apply for help arranging child maintenance</a>.</p>
-                            <p>You will need your unique reference number, so be sure to keep a copy of the text, email, or your written down note of it.</p>
+                            </div>
 
 
+                            <p>When you are able to pay, you can start your application at <a
+                                    href="https://child-maintenance.service.gov.uk/apply/">Apply for help arranging
+                                    child maintenance</a>.</p>
+                            <p>You will need your unique reference number, so be sure to keep a copy of the text, email,
+                                or your written down note of it.</p>
+                        </fieldset>
+                    </div>
                 </form>
-                </div>
-
             </div>
-                                                                                                     {% include "exit-button.html" %}
+
+        </div>
+        {% include "exit-button.html" %}
 
     </main>
-    </div>
-    {% endblock %}
+</div>
+{% endblock %}

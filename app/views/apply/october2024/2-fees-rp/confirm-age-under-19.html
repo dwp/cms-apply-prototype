@@ -10,51 +10,50 @@
 
                     <div class="govuk-form-group">
                         <span class="govuk-caption-xl">You have told us your date of birth is:</span>
-                        
+
                         <h1 class="govuk-heading-xl">
 
-                                <!--Day-->{{data['applicant-date-of-birth-day'] }}
-                                <!--Month {{data['applicant-date-of-birth-month'] }} -->
-                                
-                                {% if data['applicant-date-of-birth-month'] === '1' %}
-                                January
-                                {% elseif data['applicant-date-of-birth-month'] === '2' %}
-                                February
-                                {% elseif data['applicant-date-of-birth-month'] === '3' %}
-                                March
-                                {% elseif data['applicant-date-of-birth-month'] === '4' %}
-                                April
-                                {% elseif data['applicant-date-of-birth-month'] === '5' %}
-                                May
-                                {% elseif data['applicant-date-of-birth-month'] === '6' %}
-                                June
-                                {% elseif data['applicant-date-of-birth-month'] === '7' %}
-                                July
-                                {% elseif data['applicant-date-of-birth-month'] === '8' %}
-                                August
-                                {% elseif data['applicant-date-of-birth-month'] === '9' %}
-                                September
-                                {% elseif data['applicant-date-of-birth-month'] === '10' %}
-                                October
-                                {% elseif data['applicant-date-of-birth-month'] === '11' %}
-                                November
-                                {% elseif data['applicant-date-of-birth-month'] === '12' %}
-                                December
-                                  {% endif %}
-                                
-                                <!-- {{data['applicant-date-of-birth-month'] }} -->
-  
-                                <!-- Year -->
-                                {{data['applicant-date-of-birth-year']
-                                  }}
-                             
+                            <!--Day-->{{data['applicant-date-of-birth-day'] }}
+                            <!--Month {{data['applicant-date-of-birth-month'] }} -->
+
+                            {% if data['applicant-date-of-birth-month'] === '1' %}
+                            January
+                            {% elseif data['applicant-date-of-birth-month'] === '2' %}
+                            February
+                            {% elseif data['applicant-date-of-birth-month'] === '3' %}
+                            March
+                            {% elseif data['applicant-date-of-birth-month'] === '4' %}
+                            April
+                            {% elseif data['applicant-date-of-birth-month'] === '5' %}
+                            May
+                            {% elseif data['applicant-date-of-birth-month'] === '6' %}
+                            June
+                            {% elseif data['applicant-date-of-birth-month'] === '7' %}
+                            July
+                            {% elseif data['applicant-date-of-birth-month'] === '8' %}
+                            August
+                            {% elseif data['applicant-date-of-birth-month'] === '9' %}
+                            September
+                            {% elseif data['applicant-date-of-birth-month'] === '10' %}
+                            October
+                            {% elseif data['applicant-date-of-birth-month'] === '11' %}
+                            November
+                            {% elseif data['applicant-date-of-birth-month'] === '12' %}
+                            December
+                            {% endif %}
+
+                            <!-- {{data['applicant-date-of-birth-month'] }} -->
+
+                            <!-- Year -->
+                            {{data['applicant-date-of-birth-year']
+                            }}
+
                         </h1>
                     </div>
+
                     <div class="govuk-form-group">
-
                         <h1 class="govuk-heading-m">
-                            Is this correct?</h1>   
-
+                            Is this correct?</h1>
 
                         <!--start of list-->
 
@@ -64,13 +63,15 @@
 
                                 <div class="govuk-radios govuk-radios--inline">
                                     <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="add-another-child-1-yes" name="add-another-child-1" type="radio" value="yes~no-fee-under-19">
+                                        <input class="govuk-radios__input" id="add-another-child-1-yes"
+                                            name="add-another-child-1" type="radio" value="yes~no-fee-under-19">
                                         <label class="govuk-label govuk-radios__label" for="add-another-child-1-yes">
                                             Yes
                                         </label>
                                     </div>
                                     <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="add-another-child-1-no" name="add-another-child-1" type="radio" value="no~check-age">
+                                        <input class="govuk-radios__input" id="add-another-child-1-no"
+                                            name="add-another-child-1" type="radio" value="no~check-age">
                                         <label class="govuk-label govuk-radios__label" for="add-another-child-1-no">
                                             No
                                         </label>
@@ -86,15 +87,15 @@
                         Continue
                     </button>
 
-
                 </form>
             </div>
-                                                 {% include "exit-button.html" %}
+            {% include "exit-button.html" %}
 
         </div>
     </main>
 </div>
 
+<!-- // Styles start  -->
 
 <style>
     .app-task-list__item:first-child {
@@ -121,5 +122,7 @@
         text-transform: capitalize;
     }
 </style>
+
+<!-- //Styles end -->
 
 {% endblock %}
