@@ -7,7 +7,7 @@ endblock %} {% block content %}
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form class=“form” action='declaration' method=“post”>
+        <form class=“form” action='contact-you' method=“post”>
           <div class="govuk-form-group">
             <!-- <fieldset class="govuk-fielfset"> -->
             <fieldset class="govuk-fieldset" aria-describedby="doorway-hint">
@@ -82,13 +82,10 @@ endblock %} {% block content %}
               </div> <!-- govuk-checkboxes -->
             </fieldset>
           </div>
-
-
-          <div class="form-group">
-            <button <a href="../contact-you.html"  type="submit" class="govuk-button">
-              Continue
-            </a></button> 
-          </div>
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+       
         </form>
       </div>
       {% include "exit-button.html" %}
