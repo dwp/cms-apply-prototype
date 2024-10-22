@@ -12,46 +12,50 @@
                     <!--start of radio-->
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl ">
+                            <legend
+                                class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl ">
                                 <h1 class="govuk-fieldset__heading">
                                     Do you and the other parent live in England, Scotland, Wales or Northern Ireland?
                                 </h1>
                             </legend>
-<br>
+                            <br>
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="live-uk-1" name="live-uk" type="radio" value="yes~court-order">
+                                <input class="govuk-radios__input" id="live-uk-1" name="live-uk" type="radio"
+                                    value="yes~court-order">
                                 <label class="govuk-label govuk-radios__label" for="live-uk-1">
                                     Yes
                                 </label>
                             </div>
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="live-uk-2" name="live-uk" type="radio" value="no~not-eligible-uk">
+                                <input class="govuk-radios__input" id="live-uk-2" name="live-uk" type="radio"
+                                    value="no~not-eligible-uk">
                                 <label class="govuk-label govuk-radios__label" for="live-uk-2">
                                     No
                                 </label>
                             </div>
                             <div class="govuk-radios__divider">or</div>
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="live-uk-2" name="live-uk" type="radio" value="no~dont-know-where-parent-lives">
+                                <input class="govuk-radios__input" id="live-uk-2" name="live-uk" type="radio"
+                                    value="no~dont-know-where-parent-lives">
                                 <label class="govuk-label govuk-radios__label" for="live-uk-2">
                                     I do not know which country the other parent lives in
                                 </label>
                             </div>
-                   </fieldset>
-                        </div>
+                        </fieldset>
+                    </div>
 
-        <br>
-        <!--end-->
-        <button type="submit" class="govuk-button">
-            Continue
-        </button>
-    </form>
+                    <br>
+                    <!--end-->
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
 
-</div>
-{% include "exit-button.html" %}
+            </div>
+            {% include "exit-button.html" %}
 
-</div>
+        </div>
 
-</main>
+    </main>
 </div>
 {% endblock %}
