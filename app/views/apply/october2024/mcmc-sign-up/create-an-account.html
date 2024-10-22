@@ -14,7 +14,6 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
   </p>
 </div>
 
-
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
@@ -31,7 +30,6 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
             <h1 class="govuk-heading-xl">Create an online account
             </h1>
 
-
             <div class="govuk-warning-text">
               <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
               <strong class="govuk-warning-text__text">
@@ -40,9 +38,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
               </strong>
             </div>
 
-
             <!-- H1 stop -->
-
 
             <!--Detail collection-->
 
@@ -65,7 +61,6 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                 aria-describedby="email-hint" autocomplete="email">
             </div>
 
-
             <div class="govuk-form-group">
               <label class="govuk-label" for="width-7">
                 Create 7-digit personal identification number (PIN)
@@ -81,8 +76,8 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
             <h2 class="govuk-heading-m">Create a memorable password</h2>
 
             <P>You’ll need this if you forget your PIN.
-              Try not to use an easily guessed password like your children's names or dates of birth.</P>
-
+              Try not to use an easily guessed password like your children's names or dates of birth.
+            </P>
 
             <div class="govuk-form-group">
               <label class="govuk-label" for="width-20">
@@ -91,29 +86,28 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
               <div id="email-hint" class="govuk-hint">
                 Your memorable password must have at least 8 characters.
               </div>
-
               <input class="govuk-input govuk-input--width-20" id="password" name="password" type="password"
                 value="1234ABC!" data-module="moj-password-reveal">
-
-
-
               <div class="govuk-form-group">
                 <label class="govuk-label" for="width-20">
                   Confirm password
                 </label>
-
                 <input class="govuk-input govuk-input--width-20" id="password" name="password" type="password"
                   value="1234ABC!" data-module="moj-password-reveal">
-
               </div>
-
-              <a href="/apply/october2024/1-start-eligibility/urn-rp.html" role="button" draggable="false"
-                class="govuk-button">
-                Continue
-              </a>
+            </div>
+            <a href="/apply/october2024/1-start-eligibility/urn-rp.html" role="button" draggable="false"
+              class="govuk-button">
+              Continue
+            </a>
 
           </form>
+        </div>
+        {% include "exit-button.html" %}
+      </div>
+      
     </main>
+   
   </div>
 
 
