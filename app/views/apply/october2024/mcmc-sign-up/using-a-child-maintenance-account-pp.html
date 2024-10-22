@@ -14,79 +14,78 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
   </p>
 </div>
 
-
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-
 
   <!--Phase banner stop-->
 
   <!-- H1 start -->
 
-  <div class="govuk-width-container">
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-      <div class="govuk-grid-row">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
         <form action="/apply/october2024/mcmc-sign-up/create-an-account-pp" method="post" novalidate>
           <div class="govuk-form-group">
-            <div class="govuk-grid-column-two-thirds">
-              <h1 class="govuk-heading-xl">Using a child maintenance account
-              </h1>
 
-              <!-- H1 stop -->
+            <h1 class="govuk-heading-xl">Using a child maintenance account
+            </h1>
 
-              <!-- Supporting content start -->
+            <!-- H1 stop -->
 
-              <p>The online child maintenance account is a secure way to get updates about this application.
-                Nobody else can access your account. </p>
+            <!-- Supporting content start -->
 
+            <p>The online child maintenance account is a secure way to get updates about this application.
+              Nobody else can access your account.
+            </p>
 
+            <p>You can:</p>
 
-              <p>You can:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>see how much you need to pay and when you need to pay it</li>
+              <li>see your payment history</li>
+              <li>make child maintenance payments if you use Collect and Pay</li>
+              <li>track the progress of changes you’ve reported</li>
+              <li>update your contact details</li>
+              <li>tell us about changes to your circumstances</li>
+            </ul>
 
-              <ul class="govuk-list govuk-list--bullet">
-                <li>see how much you need to pay and when you need to pay it</li>
-                <li>see your payment history</li>
-                <li>make child maintenance payments if you use Collect and Pay</li>
-                <li>track the progress of changes you’ve reported</li>
-                <li>update your contact details</li>
-                <li>tell us about changes to your circumstances</li>
-              </ul>
+            <h3 class="govuk-heading-m">If you have another child maintenance case</h3>
 
+            <p>You may have a child maintenance account if you already pay or receive child maintenance.
+              You can use the same account to manage all your cases and applications in one place.
+            </p>
 
+            <!-- Supporting content stop -->
 
+            <div class="govuk-!-padding-bottom-5"></div>
 
+            <!-- Buttons -->
 
+            <div class="govuk-button-group">
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
 
-              <h3 class="govuk-heading-m">If you have another child maintenance case</h2>
+              <a class="govuk-link" href="/apply/october2024/mcmc-sign-up/do-you-know-your-pin-and-password-pp">Already
+                have an
+                account?</a>
+            </div>
 
-                <p>You may have a child maintenance account if you already pay or receive child maintenance.
-                  You can use the same account to manage all your cases and applications in one place.</p>
+          </div>
 
-                <!-- Supporting content stop -->
-
-                <div class="govuk-!-padding-bottom-5"></div>
-
-                <!-- Buttons -->
-
-                <div class="govuk-button-group">
-                  <button class="govuk-button" data-module="govuk-button">
-                    Continue
-                  </button>
-
-                  <a class="govuk-link"
-                    href="/apply/october2024/mcmc-sign-up/do-you-know-your-pin-and-password-pp">Already have an
-                    account?</a>
         </form>
 
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+
+  </main>
+</div>
 
 
-    </main>
-  </div>
 
 
 
 
 
-
-
-  {% endblock %}
+{% endblock %}
