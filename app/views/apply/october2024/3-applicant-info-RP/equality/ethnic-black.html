@@ -1,74 +1,83 @@
-{% extends "layout.html" %} {% block pageTitle %} Which of the following best describes your Black, African, Caribbean or Black British background?  {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block pageTitle %} Which of the following best describes your Black, African, Caribbean
+or Black British background? {% endblock %} {% block content %}
 <!--Feedback banner start-->
 {% include "feedback-banner.html" %}
 <!--Feedback banner stop-->
 <div class="govuk-width-container">
-    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-                <form method="post" novalidate>
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
 
-                    <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset">
-                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                            <h1 class="govuk-fieldset__heading">
-Which of the following best describes your Black, African, Caribbean or Black British background?                            </h1>
-                          </legend>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Which of the following best describes your Black, African, Caribbean or Black British background?
+                </h1>
+              </legend>
 
-                          <br>
+              <br>
 
-                          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                            <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="ethnic-group" name="ethnic-group" type="radio" value="african~religion">
-                              <label class="govuk-label govuk-radios__label" for="ethnic-group">
-                                African
-                              </label>
-                            </div>
-                            <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="ethnic-group-2" name="ethnic-group" type="radio" value="caribbean~religion">
-                              <label class="govuk-label govuk-radios__label" for="ethnic-group-2">
-                                Caribbean
-                              </label>
-                            </div>
-                            <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="ethnic-group-3" name="ethnic-group" type="radio" value="another-black-background~religion" data-aria-controls="conditional-ethnic-group-3">
-                              <label class="govuk-label govuk-radios__label" for="ethnic-group-3">
-                                Any other Black, African or Caribbean background
-                              </label>
-                            </div>
-                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-ethnic-group-3">
-                              <div class="govuk-form-group">
-                                <label class="govuk-label" for="ethnicity-mixed-other">
-                                  Your Black background (optional)
-                                </label>
-                                <input class="govuk-input govuk-!-width-two-thirds" id="ethnicity-mixed-other" name="ethnicity-mixed-other" type="text"></div>
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="ethnic-group" name="ethnic-group" type="radio"
+                    value="african~religion">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                    African
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="ethnic-group-2" name="ethnic-group" type="radio"
+                    value="caribbean~religion">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-group-2">
+                    Caribbean
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="ethnic-group-3" name="ethnic-group" type="radio"
+                    value="another-black-background~religion" data-aria-controls="conditional-ethnic-group-3">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-group-3">
+                    Any other Black, African or Caribbean background
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                  id="conditional-ethnic-group-3">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="ethnicity-mixed-other">
+                      Your Black background (optional)
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="ethnicity-mixed-other"
+                      name="ethnicity-mixed-other" type="text">
+                  </div>
 
-                            </div>
-                            <div class="govuk-radios__divider">or</div>
-                            <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="ethnic-group-5" name="ethnic-group" type="radio" value="prefer-not-to-say~religion">
-                              <label class="govuk-label govuk-radios__label govuk-label" for="ethnic-group-5">
-                                Prefer not to say
-                              </label>
-                            </div>
-                          </div>
+                </div>
+                <div class="govuk-radios__divider">or</div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="ethnic-group-5" name="ethnic-group" type="radio"
+                    value="prefer-not-to-say~religion">
+                  <label class="govuk-label govuk-radios__label govuk-label" for="ethnic-group-5">
+                    Prefer not to say
+                  </label>
+                </div>
+              </div>
 
-                        </fieldset>
-                      </div>
+            </fieldset>
+          </div>
 
-                      <br>
+          <br>
 
-                    <button id="personalDetailsBtn" type="submit" class="govuk-button">
-                        Continue
-                    </button>
-                </form>
-            </div>
-                         {% include "exit-button.html" %}
+          <button id="personalDetailsBtn" type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+      {% include "exit-button.html" %}
 
-        </div>
-    </main>
+    </div>
+  </main>
 </div>
 
 {% endblock %}
