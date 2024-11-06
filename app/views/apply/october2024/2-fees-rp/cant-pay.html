@@ -17,7 +17,6 @@
                                 <h1 class="govuk-fieldset__heading">
                                     You will not be able to apply if you cannot pay the fee </h1>
                             </legend>
-
                             <div class="govuk-warning-text">
                                 <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                                 <strong class="govuk-warning-text__text">
@@ -26,21 +25,20 @@
                                     free.
                                 </strong>
                             </div>
-
-
                             <p>When you are able to pay, you can start your application at <a
                                     href="https://child-maintenance.service.gov.uk/apply/">Apply for help arranging
-                                    child maintenance</a>.</p>
+                                    child maintenance</a>.
+                            </p>
                             <p>You will need your unique reference number, so be sure to keep a copy of the text, email,
-                                or your written down note of it.</p>
+                                or your written down note of it.
+                            </p>
                         </fieldset>
                     </div>
+
                 </form>
             </div>
-
+            {% include "exit-button.html" %}
         </div>
-        {% include "exit-button.html" %}
-
     </main>
 </div>
 {% endblock %}

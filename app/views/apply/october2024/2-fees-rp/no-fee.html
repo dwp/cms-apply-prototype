@@ -10,7 +10,6 @@
                 <form method="post" novalidate>
                     <!--start of radio-->
                     <div class="govuk-form-group">
-
                         <legend
                             class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
                             <h1 class="govuk-fieldset__heading">
@@ -20,18 +19,17 @@
                         <p class="govuk-body"> Based on your answers, you will not have to pay a fee to complete
                             your application.
                         </p>
-
-                        <!--end-->
-                        <button type="submit" class="govuk-button">
-                            Continue
-                        </button>
                     </div>
+                    <!--end-->
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
                 </form>
 
             </div>
+            {% include "exit-button.html" %}
         </div>
-        {% include "exit-button.html" %}
-
     </main>
 </div>
 {% endblock %}
