@@ -1,18 +1,20 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+
 <div class="govuk-width-container">
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 
-                <!--start of new code-->
                 <form method="post" novalidate>
 
                     <div class="govuk-form-group">
                         <span class="govuk-caption-xl">You have told us your date of birth is:</span>
 
                         <h1 class="govuk-heading-xl">
-
                             <!--Day-->{{data['applicant-date-of-birth-day'] }}
                             <!--Month {{data['applicant-date-of-birth-month'] }} -->
 
@@ -52,35 +54,26 @@
                     </div>
 
                     <div class="govuk-form-group">
-                        <h1 class="govuk-heading-m">
-                            Is this correct?</h1>
-
-                        <!--start of list-->
-
-                        <!--Start of radio buttons-->
-                        <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-
-                                <div class="govuk-radios govuk-radios--inline">
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="add-another-child-1-yes"
-                                            name="add-another-child-1" type="radio" value="yes~no-fee-under-19">
-                                        <label class="govuk-label govuk-radios__label" for="add-another-child-1-yes">
-                                            Yes
-                                        </label>
-                                    </div>
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="add-another-child-1-no"
-                                            name="add-another-child-1" type="radio" value="no~check-age">
-                                        <label class="govuk-label govuk-radios__label" for="add-another-child-1-no">
-                                            No
-                                        </label>
-                                    </div>
+                        <h1 class="govuk-heading-m">Is this correct?</h1>
+                        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                            <div class="govuk-radios govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="add-another-child-1-yes"
+                                        name="add-another-child-1" type="radio" value="yes~no-fee-under-19">
+                                    <label class="govuk-label govuk-radios__label" for="add-another-child-1-yes">
+                                        Yes
+                                    </label>
                                 </div>
-                            </fieldset>
-                        </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="add-another-child-1-no"
+                                        name="add-another-child-1" type="radio" value="no~check-age">
+                                    <label class="govuk-label govuk-radios__label" for="add-another-child-1-no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
                     </div>
-                    <!--end of radio buttons-->
                     <br>
 
                     <button type="submit" class="govuk-button">
@@ -90,12 +83,11 @@
                 </form>
             </div>
             {% include "exit-button.html" %}
-
         </div>
     </main>
 </div>
 
-<!-- // Styles start  -->
+<!-- In page Styles start  -->
 
 <style>
     .app-task-list__item:first-child {
@@ -123,6 +115,6 @@
     }
 </style>
 
-<!-- //Styles end -->
+<!-- In page Styles end -->
 
 {% endblock %}
