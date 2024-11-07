@@ -7,6 +7,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <form class=“form” action='/apply/october2024/2-fees/domestic-abuse.html' method=“post”>
+
           <div class="govuk-form-group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
               <h1 class="govuk-fieldset__heading">
@@ -20,9 +21,6 @@
               </span>
             </div>
 
-
-
-            <br>
             <div class="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="communication" name="communication" type="checkbox"
@@ -30,7 +28,6 @@
                 <label class="govuk-label govuk-checkboxes__label" for="communication">
                   Communication support
                 </label>
-
               </div>
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="induction" name="induction" type="checkbox"
@@ -44,7 +41,6 @@
                   value="minicom~phone-number">
                 <label class="govuk-label govuk-checkboxes__label" for="minicom">
                   Sign language
-
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
@@ -59,57 +55,34 @@
                     <label class="govuk-label" for="with-hint">
                       How can we help when we contact you by phone?
                     </label>
-
                     <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5"
                       aria-describedby="with-hint-info with-hint-hint"></textarea>
                   </div>
-
                   <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
                     You can enter up to 700 characters
                   </div>
-
-
-
-
-
-
-
                 </div>
-                </fieldset>
               </div>
-            </div>
+            </div> <!-- govuk-checkboxes -->
 
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
           </div>
 
+        </form>
       </div>
+      {% include "exit-button.html" %}
     </div>
-
-    <div class="form-group">
-      <button type="submit" class="govuk-button">
-        Continue
-      </button>
-    </div>
-    </form>
-
-
-
-
-
-
-
-
-
-
-</div>
-</main>
-
+  </main>
 </div>
 
 
 
 
 
-
+<!-- in page script start -->
 <script>
 
   document.getElementById("text_reveal").style.display = "none";
@@ -130,4 +103,7 @@
       el.style.display = 'none';
     }
   }
-</script> {% endblock %}
+</script>
+<!-- In page script end -->
+
+{% endblock %}

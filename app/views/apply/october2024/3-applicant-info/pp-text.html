@@ -16,11 +16,11 @@
                                     Can we send you text messages?
                                 </h1>
                             </legend>
-                            <span id="changed-name-hint" class="govuk-hint">
+                            <p id="changed-name-hint" class="govuk-hint">
                                 We will only send you text messages about your child maintenance application and case.
                                 The senders name will be ChildMaint.
-                            </span>
-                            <div class="govuk-!-padding-bottom-3"></div>
+                            </p>
+
                             <div class="govuk-radios govuk-radios--inline">
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="yes" name="text" type="radio"
@@ -40,15 +40,14 @@
                         </fieldset>
                     </div>
 
-
-
                     <button type="submit" class="govuk-button" data-module="govuk-button">
                         Continue
                     </button>
+                </form>
             </div>
             {% include "exit-button.html" %}
-
         </div>
     </main>
 </div>
+
 {% endblock %}
