@@ -15,29 +15,24 @@
                                 application?
                             </h1>
                         </legend>
-                        <!--  <label class="govuk-label" for="applicant-telephone-number" style="visibility:hidden">
-                UK telephone number
-              </label> -->
+
                         <div class="govuk-inset-text">We will not share your answers with the other parent.</div>
+                    </div>
 
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="mobile-number">
+                            <strong><br>Phone number</strong>
+                        </label>
 
-
-                        <div class="govuk-form-group">
-                            <label class="govuk-label" for="mobile-number">
-                                <strong><br>Phone number</strong>
-                            </label>
-                            <span id="changed-name-hint" class="govuk-hint">If you do not have your own phone, give the
-                                phone number of someone you trust.</span>
-                            <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobile-number"
-                                type="tel" autocomplete="tel">
+                        <div id="event-name-hint" class="govuk-hint">
+                            If you do not have your own phone, give the phone number of someone you trust.
                         </div>
+                        <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobile-number"
+                            type="tel" autocomplete="tel">
                     </div>
 
                     <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
-                        <p>
-                            <strong>
-                                Is this your own number?
-                            </strong>
+                        <p><strong>Is this your own number?</strong>
                         </p>
 
                         <div class="govuk-radios" data-module="radios">
@@ -49,8 +44,6 @@
                                     Yes
                                 </label>
                             </div>
-
-
                             <div class="govuk-radios__item">
                                 <input aria-controls="conditional-other-parent-phone-radio-1"
                                     class="govuk-radios__input" id="other-parent-phone-radio-2"
@@ -59,17 +52,15 @@
                                     No
                                 </label>
                             </div>
-
                             <!--start-->
                             <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
                                 id="conditional-other-parent-phone-radio-1">
-
                                 <label class="govuk-label" for="other-parent-contact-work-phone">
                                     Whose number is this?
                                 </label>
                                 <span id="changed-name-hint" class="govuk-hint">For example, a family member, friend or
-                                    support worker.</span>
-
+                                    support worker.
+                                </span>
                                 <div class="govuk-form-group">
                                     <input class="govuk-input govuk-input--width-20"
                                         id="other-parent-contact-work-phone" name="other-parent-contact-work-phone"
@@ -77,18 +68,16 @@
                                 </div>
                             </div>
                         </div>
+                    </fieldset>
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
             </div>
-
+            {% include "exit-button.html" %}
         </div>
-</div>
-<button type="submit" class="govuk-button">
-    Continue
-</button>
-</form>
-</div>
 
-</div>
-
-</main>
+    </main>
 </div>
 {% endblock %}

@@ -20,9 +20,6 @@
               </span>
             </div>
 
-
-
-            <br>
             <div class="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="lift" name="lift" type="checkbox" value="lift">
@@ -40,9 +37,6 @@
                 <input class="govuk-checkboxes__input" id="doorway" name="doorway" type="checkbox" value="doorway">
                 <label class="govuk-label govuk-checkboxes__label" for="doorway">
                   Communications support
-
-
-
               </div>
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="doorway" name="doorway" type="checkbox" value="doorway">
@@ -80,57 +74,36 @@
                     <label class="govuk-label" for="with-hint">
                       How can we help when we send you letters?
                     </label>
-
                     <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5"
                       aria-describedby="with-hint-info with-hint-hint"></textarea>
                   </div>
-
                   <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
                     You can enter up to 700 characters
                   </div>
-
-
-
-
-
-
-
                 </div>
-                </fieldset>
               </div>
-            </div>
+            </div> <!-- govuk-checkboxes -->
 
           </div>
 
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+
+        </form>
+
       </div>
+      {% include "exit-button.html" %}
     </div>
-
-    <div class="form-group">
-      <button type="submit" class="govuk-button">
-        Continue
-      </button>
-    </div>
-    </form>
-
-
-
-
-
-
-
-
-
-
-</div>
-</main>
-
+  </main>
 </div>
 
 
 
 
 
-
+<!-- In page scripts start -->
 <script>
 
   document.getElementById("text_reveal").style.display = "none";
@@ -151,4 +124,8 @@
       el.style.display = 'none';
     }
   }
-</script> {% endblock %}
+</script> 
+
+<!-- In page script end -->
+
+{% endblock %}

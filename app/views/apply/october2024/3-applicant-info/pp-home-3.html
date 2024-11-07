@@ -7,15 +7,13 @@
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Select your address</h1>
-
-        <div class="govuk-inset-text">We ask this to confirm your identity. We will not share your answers with the
-          other parent.</div>
-
         <form method="post" novalidate>
+          <h1 class="govuk-heading-xl">Select your address</h1>
+          <div class="govuk-inset-text">We ask this to confirm your identity. We will not share your answers with the
+            other parent.
+          </div>
+
           <div class="govuk-form-group">
-
-
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
@@ -24,8 +22,8 @@
                 </label>
               </div>
             </div>
-            </fieldset>
           </div>
+
           <p class="govuk-body">
             <a href="pp-address-2" class="govuk-link">Enter address manually</a>
           </p>
@@ -33,16 +31,12 @@
           <button type="submit" class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+
+        </form>
+        
       </div>
+      {% include "exit-button.html" %}
     </div>
-
-
-
-</div>
-</form>
-</div>
-
-</div>
-</main>
+  </main>
 </div>
 {% endblock %}

@@ -7,25 +7,18 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 <form method="post" novalidate>
+
                     <div class="govuk-form-group">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
-                            <h1 class="govuk-fieldset__heading">
-                                When can we call you, if we need to?
-                            </h1>
+                            <h1 class="govuk-fieldset__heading"> When can we call you, if we need to?</h1>
                         </legend>
 
-                        <div class="govuk-form-group">
-                            <label class="govuk-label" for="contact-time">
-
-                            </label>
-                            <span id="contact-time-hint" class="govuk-hint">
-                                We will try to contact you at your preferred time if we have any questions about your
-                                application.
-                            </span>
-                        </div>
+                        <p id="contact-time-hint" class="govuk-hint">
+                            We will try to contact you at your preferred time if we have any questions about your
+                            application.
+                        </p>
 
                         <div class="govuk-checkboxes">
-
                             <div class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" id="any" name="phone-time" type="checkbox"
                                     value="any">
@@ -33,7 +26,6 @@
                                     Any time
                                 </label>
                             </div>
-
                             <div class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" id="eight" name="phone-time" type="checkbox"
                                     value="eight">
@@ -71,6 +63,7 @@
                             </div>
 
                             <p>or</p>
+
                             <div class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" id="none" name="phone-time" type="checkbox"
                                     value="none">
@@ -78,9 +71,6 @@
                                     None of these times work for me
                                 </label>
                             </div>
-
-
-
                             <div class="govuk-form-group" id="text_reveal">
                                 <label class="govuk-label" for="more-detail" id="detail">
                                     Can you provide more detail?
@@ -93,64 +83,46 @@
                                     aria-describedby="more-detail-hint"></textarea>
                             </div>
                         </div>
+
+                        <br>
+
+                        <fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
+                            <h2 class="govuk-heading-m">Can we leave voicemails if we can not contact you?</h2>
+                            <div class="govuk-radios govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="voicemail-yes" name="voicemail" type="radio"
+                                        value="yes~contact-you">
+                                    <label class="govuk-label govuk-radios__label" for="voicemail-yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="voicemail-no" name="voicemail" type="radio"
+                                        value="no~contact-you">
+                                    <label class="govuk-label govuk-radios__label" for="voicemail-no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
                         </fieldset>
+
+                        <br>
+                        <br>
+
+                        <button type="submit" class="govuk-button">
+                            Continue
+                        </button>
                     </div>
+                </form>
+
             </div>
-
+            {% include "exit-button.html" %}
         </div>
-
-</div>
-<fieldset class="govuk-fieldset" aria-describedby="child1BenefitInformation">
-    <p>
-
-
-
-    <h2 class="govuk-heading-m">Can we leave voicemails if we can not contact you?</h2>
-
-    <div class="govuk-radios govuk-radios--inline">
-        <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="voicemail-yes" name="voicemail" type="radio" value="yes~contact-you">
-            <label class="govuk-label govuk-radios__label" for="voicemail-yes">
-                Yes
-            </label>
-        </div>
-        <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="voicemail-no" name="voicemail" type="radio" value="no~contact-you">
-            <label class="govuk-label govuk-radios__label" for="voicemail-no">
-                No
-            </label>
-        </div>
-    </div>
-</fieldset>
-
-<br>
-<br>
-
-<div class="form-group">
-    <button type="submit" class="govuk-button">
-        Continue
-    </button>
-</div>
-</form>
-
-
-
-
-
-
-
-
-
-
-</div>
-</main>
-
+    </main>
 </div>
 
 
-
-
-
+<!-- In page scripts start-->
 
 <script>
 
@@ -173,4 +145,6 @@
         }
     }
 </script>
+
+<!-- In page scripts end -->
 {% endblock %}

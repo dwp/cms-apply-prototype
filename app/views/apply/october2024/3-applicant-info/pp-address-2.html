@@ -9,20 +9,16 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 <form method="post" novalidate>
-
-                    <!--start-->
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="otherParentKnowAddressInformation">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
                                 <h1 class="govuk-fieldset__heading" id="otherParentKnowAddressInformation">
                                     Where do you live?
-
-
                                 </h1>
                             </legend>
                             <div class="govuk-inset-text">
-                                We will not share your answers with the other parent. </div>
-
+                                We will not share your answers with the other parent.
+                            </div>
                             <div class="govuk-form-group">
                                 <label class="govuk-label" for="shared-address-line-1">
                                     Address line 1
@@ -57,7 +53,6 @@
                                     name="shared-address-county" type="text">
                             </div>
 
-
                             <div class="govuk-form-group">
                                 <label class="govuk-label" for="shared-address-postcode">
                                     Postcode
@@ -67,51 +62,45 @@
                             </div>
 
                         </fieldset>
-                        <br> <br>
-                        <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset">
+                    </div>
 
-                                <label class="govuk-label" for="shared-address-postcode">
-                                    Country
-                                </label>
-                                <div class="govuk-radios govuk-radios--small">
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="changed-name" name="changed-name"
-                                            type="radio" value="month">
-                                        <label class="govuk-label govuk-radios__label" for="changed-name">
-                                            England
-                                        </label>
-                                    </div>
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name"
-                                            type="radio" value="year">
-                                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                                            Scotland
-                                        </label>
-                                    </div>
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name"
-                                            type="radio" value="year">
-                                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                                            Wales
-                                        </label>
-                                    </div>
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name"
-                                            type="radio" value="year">
-                                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                                            Northern Ireland
-                                        </label>
-                                    </div>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <label class="govuk-label" for="shared-address-postcode">
+                                Country
+                            </label>
+                            <div class="govuk-radios govuk-radios--small">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="changed-name" name="changed-name"
+                                        type="radio" value="month">
+                                    <label class="govuk-label govuk-radios__label" for="changed-name">
+                                        England
+                                    </label>
                                 </div>
-                            </fieldset>
-                        </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name"
+                                        type="radio" value="year">
+                                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                        Scotland
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name"
+                                        type="radio" value="year">
+                                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                        Wales
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name"
+                                        type="radio" value="year">
+                                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                        Northern Ireland
+                                    </label>
+                                </div>
+                            </div>
                         </fieldset>
                     </div>
-                    <!--Stop-->
-
-
-
 
                     <button type="submit" class="govuk-button">
                         Continue
@@ -119,7 +108,6 @@
                 </form>
             </div>
             {% include "exit-button.html" %}
-
         </div>
     </main>
 </div>
