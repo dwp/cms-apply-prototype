@@ -7,6 +7,7 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 <form method="post" novalidate>
+
                     <div class="govuk-form-group">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
                             <h1 class="govuk-fieldset__heading">
@@ -18,7 +19,6 @@
                                 For example, if you need wheelchair access for appointments or services in person.
                             </span>
                         </div>
-
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="waste-3" name="waste" type="radio"
                                 value="none~access">
@@ -41,13 +41,12 @@
                                 Prefer not to say
                             </label>
                         </div>
+                    </div>
 
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="govuk-button">
-                            Continue
-                        </button>
-                    </div>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
                 </form>
             </div>
             {% include "exit-button.html" %}
@@ -78,8 +77,8 @@
             el.style.display = 'none';
         }
     }
-</script> 
+</script>
 
 <!-- // Script end -->
- 
+
 {% endblock %}

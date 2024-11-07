@@ -6,8 +6,6 @@ content %}
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-
-
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -22,11 +20,9 @@ content %}
                   Will you answer the equality questions?
                 </h1>
               </legend>
-
               <div class="govuk-inset-text">
                 These questions are optional and will not affect the outcome of your application.
               </div>
-
               <p>If you choose to answer these questions, we will ask you about your ethnicity, religion, sexual
                 orientation
                 and access needs. We use this information to help provide better, fairer services for everyone.
@@ -50,9 +46,11 @@ content %}
               </div>
             </fieldset>
           </div>
+
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+
         </form>
       </div>
       {% include "exit-button.html" %}
