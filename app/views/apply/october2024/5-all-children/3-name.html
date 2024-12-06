@@ -7,48 +7,48 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <h1 class="govuk-heading-xl">What is this child&rsquo;s full name?</h1>
+
                 <form method="post" novalidate>
-                  
-                  <div class="govuk-inset-text">
-  If there is more than one child who lives with you most of the time, we’ll ask about them in the next steps.  </div>
+                    <h1 class="govuk-heading-xl">What is this child&rsquo;s full name?</h1>
 
-
-
+                    <div class="govuk-inset-text">
+                        If there is more than one child who lives with you most of the time, we’ll ask about them in the
+                        next steps.
+                    </div>
 
                     <div class="govuk-form-group">
                         <label class="govuk-label govuk-!-width-two-thirds" for="child-3-first-name">
                             First name
                         </label>
-                        <input class="govuk-input govuk-!-width-two-thirds" id="child-3-first-name" name="child-3-first-name" type="text" autocomplete="name"
-                            spellcheck="false">
+                        <input class="govuk-input govuk-!-width-two-thirds" id="child-3-first-name"
+                            name="child-3-first-name" type="text" autocomplete="name" spellcheck="false">
                     </div>
                     <div class="govuk-form-group">
                         <label class="govuk-label govuk-!-width-two-thirds" for="child-3-middle-name">
                             Middle names (if they have any)
                         </label>
-                        <input class="govuk-input govuk-!-width-two-thirds" id="child-3-middle-name" name="child-3-middle-name" type="text" autocomplete="name"
-                            spellcheck="false">
+                        <input class="govuk-input govuk-!-width-two-thirds" id="child-3-middle-name"
+                            name="child-3-middle-name" type="text" autocomplete="name" spellcheck="false">
                     </div>
                     <div class="govuk-form-group">
                         <label class="govuk-label govuk-!-width-two-thirds" for="child-3-last-name">
                             Last name
                         </label>
-                        <input class="govuk-input govuk-!-width-two-thirds" id="child-3-last-name" name="child-3-last-name" type="text" autocomplete="name"
-                            spellcheck="false">
+                        <input class="govuk-input govuk-!-width-two-thirds" id="child-3-last-name"
+                            name="child-3-last-name" type="text" autocomplete="name" spellcheck="false">
                     </div>
 
 
                     <button type="submit" class="govuk-button">
                         Continue
-                    </button></a>
+                    </button>
+
                 </form>
 
-
-
-              </div>                                               {% include "exit-button.html" %}
-
+            </div> 
+            {% include "exit-button.html" %}
         </div>
     </main>
 </div>
+
 {% endblock %}

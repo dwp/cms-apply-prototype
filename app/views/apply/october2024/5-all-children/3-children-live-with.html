@@ -8,24 +8,19 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 
-                <!--start of new code-->
                 <form method="post" novalidate>
-
                     <div class="govuk-form-group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                                Do any other children live with you most of the time?
+                            </h1>
+                        </legend>
+                        <div id="dob-hint" class="govuk-hint">
+                            For example, your child or a partner's child.   
+                        </div>
 
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-        <h1 class="govuk-fieldset__heading">
-            Do any other children live with you most of the time?
-        </h1>
-      </legend>
-      <div id="dob-hint" class="govuk-hint">
-        For example, your child or a partner's child.   
-      </div>
-                   
-                        <!--Start of radio buttons-->
                         <div class="govuk-form-group">
                             <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-
                                 <div class="govuk-radios govuk-radios--inline">
                                     <div class="govuk-radios__item">
                                         <input class="govuk-radios__input" id="yes" name="addchild" type="radio"
@@ -45,21 +40,21 @@
                             </fieldset>
                         </div>
                     </div>
-                    <!--end of radio buttons-->
 
                     <button type="submit" class="govuk-button">
                         Continue
                     </button>
 
-
                 </form>
+
             </div>
             {% include "exit-button.html" %}
-
         </div>
     </main>
 </div>
 
+
+<!-- inpage styles start -->
 
 <style>
     .app-task-list__item:first-child {
@@ -86,5 +81,7 @@
         text-transform: capitalize;
     }
 </style>
+
+<!-- inoage styles end -->
 
 {% endblock %}

@@ -1,4 +1,5 @@
-{% extends "layout.html" %} {% block pageTitle %} Do you have any other children who you pay maintenance for in a private arrangement? {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block pageTitle %} Do you have any other children who you pay maintenance for in a
+private arrangement? {% endblock %} {% block content %}
 {% include "feedback-banner.html" %}
 
 <div class="govuk-width-container">
@@ -7,29 +8,24 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 
-                <!--start of new code-->
                 <form method="post" novalidate>
-
                     <div class="govuk-form-group">
-
-                        <h1 class="govuk-heading-xl">Do you have any other children who you pay maintenance for in a private arrangement?
+                        <h1 class="govuk-heading-xl">Do you have any other children who you pay maintenance for in a
+                            private arrangement?
                         </h1>
-
-                       
-
-                        <!--Start of radio buttons-->
                         <div class="govuk-form-group">
                             <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-
                                 <div class="govuk-radios govuk-radios--inline">
                                     <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="yes" name="addchild" type="radio" value="yes~2-name">
+                                        <input class="govuk-radios__input" id="yes" name="addchild" type="radio"
+                                            value="yes~2-name">
                                         <label class="govuk-label govuk-radios__label" for="yes">
                                             Yes
                                         </label>
                                     </div>
                                     <div class="govuk-radios__item">
-                                      <input class="govuk-radios__input" id="no" name="addchild" type="radio" value="no~3-children-live-with">
+                                        <input class="govuk-radios__input" id="no" name="addchild" type="radio"
+                                            value="no~3-children-live-with">
                                         <label class="govuk-label govuk-radios__label" for="no">
                                             No
                                         </label>
@@ -38,21 +34,20 @@
                             </fieldset>
                         </div>
                     </div>
-                    <!--end of radio buttons-->
 
                     <button type="submit" class="govuk-button">
                         Continue
                     </button>
 
-
                 </form>
             </div>
-                       {% include "exit-button.html" %}
-
+            {% include "exit-button.html" %}
         </div>
     </main>
 </div>
 
+
+<!-- inpage styles start -->
 
 <style>
     .app-task-list__item:first-child {
@@ -79,5 +74,7 @@
         text-transform: capitalize;
     }
 </style>
+
+<!-- inpage styles end -->
 
 {% endblock %}
