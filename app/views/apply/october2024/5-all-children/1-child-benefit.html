@@ -8,6 +8,7 @@ this child? {% endblock %} {% block content %}
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+
         <form method="post" novalidate>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="cifba-benefit-hint">
@@ -17,11 +18,13 @@ this child? {% endblock %} {% block content %}
                 </h1>
               </legend>
               <p>If your child is receiving child benefit, it helps us to process your Child Maintenance application
-                more quickly. It does not matter which adult receives the child benefit.</p>
+                more quickly. It does not matter which adult receives the child benefit.
+              </p>
               <div class="govuk-inset-text">
                 If you are not a UK national and your visa says "no recourse to public funds" - do not apply for child
-                benefit. You will be unsuccessful and this will slow your application. </div>
-              <div class="govuk-radios">
+                benefit. You will be unsuccessful and this will slow your application.
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item" id="cifba-benefit">
                   <input class="govuk-radios__input" id="cifba-benefit-1" name="cifba-benefit" type="radio"
                     value="yes~3-check-your-answers-roc">
@@ -43,56 +46,60 @@ this child? {% endblock %} {% block content %}
                     Yes, someone else does
                   </label>
                 </div>
-                <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email"
-                      data-aria-controls="conditional-contact">
-                    <label class="govuk-label govuk-radios__label" for="contact">
-                      No
-                    </label>
-                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                      You may want to apply for child benefit before you make this application.
-                      If you go ahead before you've applied for child benefit, we will need to contact you to process
-                      your application - please save the following number to your phone now: [contact number]
-                    </div>
-                  </div>
-                  <div class="govuk-radios__divider">or</div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="cifba-benefit-3" name="cifba-benefit" type="radio"
-                      value="I don't know~3-check-your-answers-roc">
-                    <label class="govuk-label govuk-radios__label" for="cifba-benefit-3">
-                      I am not eligible to apply for child benefit
-                    </label>
-                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                      We will need to contact you to process your application - please save the following number to your
-                      phone now: [contact number]
-                    </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email"
+                    data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    No
+                  </label>
+                  <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                    You may want to apply for child benefit before you make this application.
+                    If you go ahead before you've applied for child benefit, we will need to contact you to process
+                    your application - please save the following number to your phone now: [contact number]
                   </div>
                 </div>
-            </fieldset>
-            <details class="govuk-details" data-module="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  How do I apply to receive child benefit for my child?
-                </span>
-              </summary>
-              <div class="govuk-details__text">
-                You can <a href="" class="govuk-link">
-                  apply for child benefit online
-              </a>(link opens in a new tab).
+
+                <div class="govuk-radios__divider">or</div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="cifba-benefit-3" name="cifba-benefit" type="radio"
+                    value="I don't know~3-check-your-answers-roc">
+                  <label class="govuk-label govuk-radios__label" for="cifba-benefit-3">
+                    I am not eligible to apply for child benefit
+                  </label>
+                  <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                    We will need to contact you to process your application - please save the following number to your
+                    phone now: [contact number]
+                  </div>
+                </div>
               </div>
-            </details>
+            </fieldset>
           </div>
+
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                How do I apply to receive child benefit for my child?
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              You can <a href="" class="govuk-link">
+                apply for child benefit online
+              </a>(link opens in a new tab).
+            </div>
+          </details>
+
           <br>
           <button type="submit" class="govuk-button">
             Continue
           </button>
 
         </form>
+
       </div>
       {% include "exit-button.html" %}
-
     </div>
   </main>
 </div>
+
 {% endblock %}
