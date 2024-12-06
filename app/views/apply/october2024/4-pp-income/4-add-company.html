@@ -7,57 +7,50 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 
-                <!--start of new code-->
                 <form method="post" novalidate>
-
                     <div class="govuk-form-group">
                         <h2 class="govuk-caption-xl">
                             You have told us about the following company:</h2>
-                            <p class="govuk-heading-xl">{{data['company-1']}}</p>
+                        <p class="govuk-heading-xl">{{data['company-1']}}</p>
                     </div>
 
+                    <h1 class="govuk-heading-m">Do you need to add another company?</h1>
 
-                    <h1 class="govuk-heading-m">
-                        Do you need to add another company?</h1>
                     <div class="govuk-form-group">
-
-
-                        <!--Start of radio buttons-->
-                        <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-
-                                <div class="govuk-radios--inline">
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="add-job-yes" name="add-job" type="radio" value="yes~4-company-details">
-                                        <label class="govuk-label govuk-radios__label" for="add-job-yes">
-                                            Yes
-                                        </label>
-                                    </div>
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="add-job-no" name="add-job" type="radio" value="no~/apply/october2024/4-pp-income/overall-check-your-ans3.html">
-                                        <label class="govuk-label govuk-radios__label" for="add-job-no">
-                                            No
-                                        </label>
-                                    </div>
+                        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                            <div class="govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="add-job-yes" name="add-job" type="radio"
+                                        value="yes~4-company-details">
+                                    <label class="govuk-label govuk-radios__label" for="add-job-yes">
+                                        Yes
+                                    </label>
                                 </div>
-                            </fieldset>
-                        </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="add-job-no" name="add-job" type="radio"
+                                        value="no~/apply/october2024/4-pp-income/overall-check-your-ans3.html">
+                                    <label class="govuk-label govuk-radios__label" for="add-job-no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
                     </div>
-                    <!--end of radio buttons-->
+
                     <br>
                     <button type="submit" class="govuk-button">
                         Continue
                     </button>
-
-
                 </form>
-            </div>
-                       {% include "exit-button.html" %}
 
+            </div>
+            {% include "exit-button.html" %}
         </div>
     </main>
 </div>
 
+
+<!-- inpage styles start -->
 
 <style>
     .app-task-list__item:first-child {
@@ -84,5 +77,7 @@
         text-transform: capitalize;
     }
 </style>
+
+<!-- Inpage styles end -->
 
 {% endblock %}

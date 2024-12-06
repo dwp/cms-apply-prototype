@@ -7,11 +7,10 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
+
                 <form method="post" novalidate>
                     <h1 class="govuk-heading-xl">Who do you share the benefits with? </h1>
 
-                    <!--title-->
-                
                     <input type="hidden" id="deduction" name="deduction" type="number" value="{{data['deduction']}}">
                     <!--first name-->
                     <div class="govuk-form-group">
@@ -40,14 +39,14 @@
                     <br>
                     <br>
 
-            <button type="submit" class="govuk-button">
-                Continue
-            </button>
-        </form>
-    </div>
-    {% include "exit-button.html" %}
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
 
-</div>
-</main>
+            </div>
+            {% include "exit-button.html" %}
+        </div>
+    </main>
 </div>
 {% endblock %}

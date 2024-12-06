@@ -3,60 +3,55 @@
 {% include "feedback-banner.html" %}
 <!--Feedback banner stop-->
 <div class="govuk-width-container">
-    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-                <form method="post" novalidate>
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
 
-                    <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="shared-benefit-hint">
-                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                            <h1 class="govuk-fieldset__heading">
-                              Your employer’s details
-                            </h1>
-                          </legend>
-                          <div id="shared-benefit-hint" class="govuk-hint">
-                            If you have more than one employer, you will be asked about your other employers later in the application.
-                          </div>
-
-                            <br>
-
-                                   <!--employer name-->
-                                   <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-!-width-two-thirds" for="employer-1">
-                                        Employer name
-                                    </label>
-                                    <input class="govuk-input govuk-!-width-two-thirds" id="employer-1" name="employer-1" type="text" autocomplete="name"
-                                        spellcheck="false">
-                                </div>
-<br/>
-                          <!--job title-->
-                         <div class="govuk-form-group">
-                            <label class="govuk-label govuk-!-width-two-thirds" for="job-title-1">
-                                Job title
-                            </label>
-                            <input class="govuk-input govuk-!-width-two-thirds" id="job-title-1" name="job-title-1" type="text" autocomplete="name"
-                                spellcheck="false">
-                        </div>
-
-                        <br>
-                            <br>
-
-                        </fieldset>
-                      </div>
-                    <br>
-                    <br>
-
-                    <button type="submit" class="govuk-button">
-                        Continue
-                    </button>
-
-                </form>
+        <form method="post" novalidate>
+          <fieldset class="govuk-fieldset" aria-describedby="shared-benefit-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Your employer’s details
+              </h1>
+            </legend>
+            <div id="shared-benefit-hint" class="govuk-hint">
+              If you have more than one employer, you will be asked about your other employers later in the
+              application.
             </div>
-                                                                         {% include "exit-button.html" %}
 
-        </div>
-    </main>
+            <br>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-width-two-thirds" for="employer-1">
+                Employer name
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="employer-1" name="employer-1" type="text"
+                autocomplete="name" spellcheck="false">
+            </div>
+
+            <br />
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-width-two-thirds" for="job-title-1">
+                Job title
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="job-title-1" name="job-title-1" type="text"
+                autocomplete="name" spellcheck="false">
+            </div>
+          </fieldset>
+
+          <br>
+          <br>
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+
+        </form>
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
 </div>
 {% endblock %}

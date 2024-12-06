@@ -4,16 +4,16 @@
 <!--Feedback banner stop-->
 <div class="govuk-width-container">
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
+
                 <form method="post" novalidate>
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="child1DateBirthInformation" role="group">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
                                 <h1 class="govuk-fieldset__heading">
-                                What is {{data['pp-partner-first-name'] }}&rsquo;s date of birth?
+                                    What is {{data['pp-partner-first-name'] }}&rsquo;s date of birth?
                                 </h1>
                             </legend>
                             <span id="child1DateBirthInformation" class="govuk-hint">
@@ -28,8 +28,9 @@
                                         <label class="govuk-label govuk-date-input__label" for="pp-partner-dob-day">
                                             Day
                                         </label>
-                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="pp-partner-dob-day" name="pp-partner-dob-day"
-                                            type="number" pattern="[0-9]*">
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                            id="pp-partner-dob-day" name="pp-partner-dob-day" type="number"
+                                            pattern="[0-9]*">
                                     </div>
                                 </div>
                                 <div class="govuk-date-input__item">
@@ -37,8 +38,9 @@
                                         <label class="govuk-label govuk-date-input__label" for="pp-partner-dob-month">
                                             Month
                                         </label>
-                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="pp-partner-dob-month" name="pp-partner-dob-month"
-                                            type="number" pattern="[0-9]*">
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                            id="pp-partner-dob-month" name="pp-partner-dob-month" type="number"
+                                            pattern="[0-9]*">
                                     </div>
                                 </div>
                                 <div class="govuk-date-input__item">
@@ -46,8 +48,9 @@
                                         <label class="govuk-label govuk-date-input__label" for="pp-partner-dob-year">
                                             Year
                                         </label>
-                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="pp-partner-dob-year" name="pp-partner-dob-year"
-                                             type="number" pattern="[0-9]*">
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                            id="pp-partner-dob-year" name="pp-partner-dob-year" type="number"
+                                            pattern="[0-9]*">
                                     </div>
                                 </div>
                             </div>
@@ -57,10 +60,9 @@
                         Continue
                     </button>
                 </form>
+
             </div>
-
             {% include "exit-button.html" %}
-
         </div>
     </main>
 </div>
