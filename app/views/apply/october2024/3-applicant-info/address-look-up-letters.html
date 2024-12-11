@@ -1,8 +1,9 @@
 {% extends "layout.html" %} {% set serviceName %} Apply for help arranging child maintenance {% endset%} {% block
 pageTitle %} GOV.UK Prototype Kit {% endblock %}
-{% block content %}
-{% include "feedback-banner.html" %}
 
+{% block content %}
+
+{% include "feedback-banner.html" %}
 
 <div class="govuk-width-container">
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
@@ -10,8 +11,8 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %}
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 
-                <form action="select-your-address.html" method="get" novalidate>
-                    <h1 class="govuk-heading-xl">Where do you live?</h1>
+                <form action="select-your-address-letters.html" method="get" novalidate>
+                    <h1 class="govuk-heading-xl">Where can we send letters?</h1>
                     <div class="govuk-form-group">
                         <label class="govuk-label" for="postcode">
                             Postcode
@@ -22,7 +23,6 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %}
                         <input class="govuk-input govuk-!-width-two-thirds" id="postcode-parent" name="postcode"
                             type="text" aria-describedby="postcode-hint">
                     </div>
-
                     <div class="govuk-form-group">
                         <label class="govuk-label" for="searchString">
                             Building number or name
@@ -38,11 +38,9 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %}
                         Find address
                     </button>
 
-                    <p class="govuk-body govuk-!-margin-bottom-0"><a href="where-do-you-live.html"
-                            class="govuk-link">Enter
-                            address manually</a>
+                    <p class="govuk-body govuk-!-margin-bottom-0">
+                        <a href="letters-address.html" class="govuk-link">Enter address manually</a>
                     </p>
-
                 </form>
 
             </div>
