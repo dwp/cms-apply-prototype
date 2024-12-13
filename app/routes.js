@@ -2797,9 +2797,9 @@ router.post('/apply/october2024/2-fees-rp/no-fee', function (req, res) {
 
 
 //Section 3: Applicant Info
-router.post('/apply/october2024/3-applicant-info/pp-name', function (req, res) {
-    res.redirect('/apply/october2024/3-applicant-info/pp-nino')
-});
+// router.post('/apply/october2024/3-applicant-info/pp-name', function (req, res) {
+//     res.redirect('/apply/october2024/3-applicant-info/pp-nino')
+// });
 
 router.post('/apply/october2024/3-applicant-info/pp-nino', function (req, res) {
     res.redirect('/apply/october2024/3-applicant-info/pp-address-1')
