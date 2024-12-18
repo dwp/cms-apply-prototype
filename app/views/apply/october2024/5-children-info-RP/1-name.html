@@ -7,16 +7,13 @@
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">What is your child’s name?
-        </h1>
-        <p>
-          Only include your biological or legal children who you want to include in this child maintenance arrangement.
-          </p>
+
         <form method="post" novalidate>
-          
-
-
-         
+          <h1 class="govuk-heading-xl">What is your child’s name?</h1>
+          <p>
+            Only include your biological or legal children who you want to include in this child maintenance
+            arrangement.
+          </p>
           <div class="govuk-form-group">
             <label class="govuk-label govuk-!-width-two-thirds" for="child-1-first-name">
               First name
@@ -39,20 +36,14 @@
               type="text" autocomplete="name" spellcheck="false">
           </div>
 
-          </details>
-
-          
-
           <button type="submit" class="govuk-button">
             Continue
-        </button>
-          
+          </button>
+
         </form>
-        
 
-
-      </div> {% include "exit-button.html" %}
-
+      </div>
+      {% include "exit-button.html" %}
     </div>
   </main>
 </div>

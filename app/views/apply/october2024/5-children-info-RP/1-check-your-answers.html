@@ -6,12 +6,11 @@
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
-
-      <!--start of answers-->
-
       <div class="govuk-grid-column-two-thirds-from-desktop">
+
         <form method="post" novalidate>
           <h1 class="govuk-heading-xl">Check your child's [children's] details</h1>
+
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
@@ -26,6 +25,7 @@
                 </a>
               </dd>
             </div>
+
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 What is {{data['child-1-first-name'] }}'s date of birth?
@@ -39,6 +39,7 @@
                 </a>
               </dd>
             </div>
+
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Are you named on {{data['child-1-first-name'] }}'s birth certificate?
@@ -52,6 +53,7 @@
                 </a>
               </dd>
             </div>
+
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Does someone receive Child Benefit payments for
@@ -66,7 +68,6 @@
                 </a>
               </dd>
             </div>
-
           </dl>
 
 
@@ -124,17 +125,16 @@
                 </a>
               </dd>
             </div>
-
           </dl>
+
           <button type="submit" class="govuk-button">
             Continue
           </button>
         </form>
 
       </div>
-
-
-
+      {% include "exit-button.html" %}
+    </div>
   </main>
 </div>
 
