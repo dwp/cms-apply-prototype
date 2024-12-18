@@ -6,19 +6,15 @@
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
-
-            <!--start of answers-->
-
             <div class="govuk-grid-column-two-thirds-from-desktop">
+
                 <form method="post" novalidate>
                     <h1 class="govuk-heading-xl">Check how often your children stay over night with the other parent
-                        
-                        
-                    
-                </h1>
-                <h2 class="govuk-heading-m">Check how often {{data['child-1-first-name'] }}
-                    stays overnight with the other parent</h2>
-                        
+                    </h1>
+                    <h2 class="govuk-heading-m">Check how often {{data['child-1-first-name'] }}
+                        stays overnight with the other parent
+                    </h2>
+
                     <dl class="govuk-summary-list ">
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
@@ -34,8 +30,6 @@
                             </dd>
                         </div>
 
-
-
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
                                 How often does {{data['child-1-first-name'] }} stay overnight with the other parent?
@@ -46,7 +40,6 @@
                                     <!-- {{data['weekly-arrangement'] }} nights a week</p> -->
                                     {{data['fortnightly-arrangement'] }} nights in the first week<br />
                                     {{data['fortnightly-arrangement-2'] }} nights in the second week
-
                             </dd>
                             <dd class="govuk-summary-list__actions">
                                 <a class="govuk-link" href="../about_qualifying_child/new_shared_care2.html">
@@ -55,7 +48,6 @@
                                 </a>
                             </dd>
                         </div>
-
 
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
@@ -71,7 +63,6 @@
                                 </a>
                             </dd>
                         </div>
-
 
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
@@ -89,7 +80,6 @@
                             </dd>
                         </div>
 
-
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
                                 Is there anything else you want to tell us about the additional nights?
@@ -104,12 +94,12 @@
                                 </a>
                             </dd>
                         </div>
-
                     </dl>
 
 
                     <h2 class="govuk-heading-m">Check how often {{data['child-2-first-name'] }}
-                       stays overnight with the other parent</h2>
+                        stays overnight with the other parent
+                    </h2>
                     <dl class="govuk-summary-list ">
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
@@ -124,8 +114,6 @@
                                 </a>
                             </dd>
                         </div>
-
-
 
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
@@ -147,7 +135,6 @@
                             </dd>
                         </div>
 
-
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
                                 Does {{data['child-2-first-name'] }}3 spend any additional nights with the other parent?
@@ -162,7 +149,6 @@
                                 </a>
                             </dd>
                         </div>
-
 
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
@@ -180,7 +166,6 @@
                             </dd>
                         </div>
 
-
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
                                 Is there anything else you want to tell us about the additional nights?
@@ -195,36 +180,19 @@
                                 </a>
                             </dd>
                         </div>
-
                     </dl>
 
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
 
-
-
-                    <form action="/form-handler" method="post" novalidate>
-
-                        <input type="hidden" name="answers-checked" value="true">
-
-                        <button type="submit" class="govuk-button">
-                            Continue
-                        </button>
-
-                    </form>
+                </form>
 
             </div>
             {% include "exit-button.html" %}
-
         </div>
     </main>
 </div>
-
-<!--end of answers-->
-</div>
-</div>
-</main>
-</div>
-
-
 
 
 {% endblock %}

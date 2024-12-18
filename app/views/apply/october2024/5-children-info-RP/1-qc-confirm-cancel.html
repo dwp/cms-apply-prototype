@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block pageTitle %}  Application cancelled {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block pageTitle %} Application cancelled {% endblock %} {% block content %}
 <!--Feedback banner start-->
 {% include "feedback-banner.html" %}
 <!--Feedback banner stop-->
@@ -7,14 +7,19 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
+
                 <h1 class="govuk-heading-xl">Application cancelled</h1>
 
-                <p>We cannot continue with your application for Child Maintenance Service because all of your children are 20 or older.</p>
-                <p>Some separated parents make their own arrangements to support older children. You can find guidance on private child maintenance agreements on <a href="1-help-making-your-own-arrangement.html">Get help making your own child maintenance arrangement</a>.</p>
+                <p>We cannot continue with your application for Child Maintenance Service because all of your children
+                    are 20 or older.
+                </p>
+                <p>Some separated parents make their own arrangements to support older children. You can find guidance
+                    on private child maintenance agreements on <a href="1-help-making-your-own-arrangement.html">Get
+                        help making your own child maintenance arrangement</a>.
+                </p>
                 
             </div>
-                {% include "exit-button.html" %}
-
+            {% include "exit-button.html" %}
         </div>
     </main>
 </div>

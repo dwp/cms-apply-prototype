@@ -7,64 +7,45 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-
                 <!--start of new code-->
                 <form method="post" novalidate>
-
                     <div class="govuk-form-group">
-
-                        <h1 class="govuk-heading-xl">Does {{data['child-1-first-name'] }} ever stay overnight with the other parent?
+                        <h1 class="govuk-heading-xl">Does {{data['child-1-first-name'] }} ever stay overnight with the
+                            other parent?
                         </h1>
-
-
-
-                         
-                    <div class="govuk-form-group">
-
-
-
-                        <!--start of list-->
-
-                        <!--Start of radio buttons-->
-                        <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-
-                                <div class="govuk-radios govuk-radios--inline">
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="yes" name="addchild" type="radio" value="yes~1-overnight-frequency">
-                                        <label class="govuk-label govuk-radios__label" for="yes">
-                                            Yes
-                                        </label>
-                                    </div>
-                                    <div class="govuk-radios__item">
-                                      <input class="govuk-radios__input" id="no" name="addchild" type="radio" value="no~1-check-your-answers-small">
-                                        <label class="govuk-label govuk-radios__label" for="no">
-                                            No
-                                        </label>
-
-                                    </div>
+                        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                            <div class="govuk-radios govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="yes" name="addchild" type="radio"
+                                        value="yes~1-overnight-frequency">
+                                    <label class="govuk-label govuk-radios__label" for="yes">
+                                        Yes
+                                    </label>
                                 </div>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <!--end of radio buttons-->
-<br><br>
-                   
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="no" name="addchild" type="radio"
+                                        value="no~1-check-your-answers-small">
+                                    <label class="govuk-label govuk-radios__label" for="no">
+                                        No
+                                    </label>
 
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
 
                 </form>
-                <button type="submit" class="govuk-button">
-                  Continue
-              </button>
-
             </div>
-                       
-
+            {% include "exit-button.html" %}
         </div>
-        {% include "exit-button.html" %}
     </main>
 </div>
 
+<!-- inpage styles start -->
 
 <style>
     .app-task-list__item:first-child {
@@ -91,5 +72,7 @@
         text-transform: capitalize;
     }
 </style>
+
+<!-- inpage styles end -->
 
 {% endblock %}
