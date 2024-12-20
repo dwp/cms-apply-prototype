@@ -6,12 +6,9 @@
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
-
-            <!--start of answers-->
-
             <div class="govuk-grid-column-two-thirds-from-desktop">
-                <form method="post" novalidate>
 
+                <form method="post" novalidate>
                     <h1 class="govuk-heading-xl">Check your answers about your child maintenance payments</h1>
 
                     <h2 class="govuk-heading-m">
@@ -32,6 +29,7 @@
                                 </a>
                             </dd>
                         </div>
+
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
                                 Do you want to request a Collect and Pay arrangement?
@@ -46,6 +44,7 @@
                                 </a>
                             </dd>
                         </div>
+
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
                                 How would you prefer to make Collect and Pay payments?
@@ -60,6 +59,7 @@
                                 </a>
                             </dd>
                         </div>
+
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
                                 What day of the month would you like to make payments?
@@ -75,24 +75,17 @@
                             </dd>
                         </div>
                     </dl>
-                    </dl>
 
-                    <form action="/form-handler" method="post" novalidate>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
 
-                        <input type="hidden" name="answers-checked" value="true">
+                </form>
 
-                        <button type="submit" class="govuk-button">
-                            Continue
-                        </button>
-
-                    </form>
             </div>
             {% include "exit-button.html" %}
-
         </div>
-
-</div>
-</main>
+    </main>
 </div>
 
 

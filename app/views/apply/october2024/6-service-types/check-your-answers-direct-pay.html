@@ -6,12 +6,9 @@
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
-
-            <!--start of answers-->
-
             <div class="govuk-grid-column-two-thirds-from-desktop">
-                <form method="post" novalidate>
 
+                <form method="post" novalidate>
                     <h1 class="govuk-heading-xl">Check your answers about service types</h1>
 
                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -30,14 +27,11 @@
                             </dd>
                         </div>
 
-
-
-
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
                                 Payment preference
                             </dt>
-                           Collect and pay only (do not use)
+                            Collect and pay only (do not use)
                             <dd class="govuk-summary-list__actions">
                                 <a class="govuk-link" href="select-payment-frequency.html">
                                     Change
@@ -45,8 +39,6 @@
                                 </a>
                             </dd>
                         </div>
-
-
 
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
@@ -63,8 +55,6 @@
                             </dd>
                         </div>
 
-
-
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
                                 Day of payments
@@ -80,7 +70,6 @@
                             </dd>
                         </div>
 
-
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
                                 Request other parent's payment details
@@ -95,28 +84,18 @@
                                 </a>
                             </dd>
                         </div>
-
-
-
-                    </dl>
                     </dl>
 
-                    <form action="/form-handler" method="post" novalidate>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
 
-                        <input type="hidden" name="answers-checked" value="true">
+                </form>
 
-                        <button type="submit" class="govuk-button">
-                            Continue
-                        </button>
-
-                    </form>
             </div>
             {% include "exit-button.html" %}
-
         </div>
-
-</div>
-</main>
+    </main>
 </div>
 
 

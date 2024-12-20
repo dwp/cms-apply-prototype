@@ -1,4 +1,5 @@
-{% extends "layout.html" %} {% block pageTitle %} Would you like us to ask the other parent for their bank or building society details? {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block pageTitle %} Would you like us to ask the other parent for their bank or building
+society details? {% endblock %} {% block content %}
 <!--Feedback banner start-->
 {% include "feedback-banner.html" %}
 <!--Feedback banner stop-->
@@ -8,66 +9,67 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
-                            <h1 class="govuk-fieldset__heading">
-                            Would you like us to ask the other parent for their bank or building society details?
-                            </h1>
-                        </legend>
-
-                    </fieldset>
-                </div>
-
-
-
-
-
                 <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+                                    Would you like us to ask the other parent for their bank or building society
+                                    details?
+                                </h1>
+                            </legend>
+
+                        </fieldset>
+                    </div>
 
                     <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset"  role="group">
+                        <fieldset class="govuk-fieldset" role="group">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
-                              <span id="maintenance-liability-hint" class="govuk-hint">You’ll need the other parent’s bank or building society details so you can make Direct Pay payments into their account.</span>
-
-
-
+                                <span id="maintenance-liability-hint" class="govuk-hint">You’ll need the other parent’s
+                                    bank or building society details so you can make Direct Pay payments into their
+                                    account.</span>
                             </legend>
                             <div class="govuk-radios" data-module="radios">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="yes" name="bank-details" type="radio" value="yes~check-your-answers-direct-pay">
+                                    <input class="govuk-radios__input" id="yes" name="bank-details" type="radio"
+                                        value="yes~check-your-answers-direct-pay">
                                     <label class="govuk-label govuk-radios__label" for="yes">
                                         Yes
                                     </label>
                                 </div>
 
-
-
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="no" name="bank-details" type="radio" value="no~check-your-answers-direct-pay">
+                                    <input class="govuk-radios__input" id="no" name="bank-details" type="radio"
+                                        value="no~check-your-answers-direct-pay">
                                     <label class="govuk-label govuk-radios__label" for="no">
                                         No
                                     </label>
                                 </div>
 
-                                <p> or </p>
+                                <div class="govuk-radios__divider">or</div>
+
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="already-have" name="bank-details" type="radio" value="already-have~check-your-answers-direct-pay">
+                                    <input class="govuk-radios__input" id="already-have" name="bank-details"
+                                        type="radio" value="already-have~check-your-answers-direct-pay">
                                     <label class="govuk-label govuk-radios__label" for="already-have">
                                         I already have the other parent’s bank or building society details
                                     </label>
                                 </div>
                             </div>
+                        </fieldset>
                     </div>
+
                     <button type="submit" class="govuk-button">
                         Continue
                     </button>
-                </form>
-                </div>
 
-                                 {% include "exit-button.html" %}
+                </form>
 
             </div>
+            {% include "exit-button.html" %}
+        </div>
     </main>
-    </div>
-    {% endblock %}
+</div>
+
+
+{% endblock %}
