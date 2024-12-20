@@ -1,4 +1,5 @@
-{% extends "layout.html" %} {% block pageTitle %} How often would you like to make payments? {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block pageTitle %} How often would you like to make payments? {% endblock %} {% block
+content %}
 <!--Feedback banner start-->
 {% include "feedback-banner.html" %}
 <!--Feedback banner stop-->
@@ -8,52 +9,51 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
-                            <h1 class="govuk-fieldset__heading">
-                            How often would you like to make payments?
-                            </h1>
-                        </legend>
-
-                    </fieldset>
-                </div>
-
                 <form method="post" novalidate>
                     <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset"  role="group">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
-                              
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+                                    How often would you like to make payments?
+                                </h1>
                             </legend>
+
+                        </fieldset>
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group">
                             <div class="govuk-radios" data-module="radios">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="yes" name="bank-details" type="radio" value="yes~weekly-payment-frequency">
+                                    <input class="govuk-radios__input" id="yes" name="bank-details" type="radio"
+                                        value="yes~weekly-payment-frequency">
                                     <label class="govuk-label govuk-radios__label" for="yes">
                                         Weekly
                                     </label>
                                 </div>
 
-
-
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="no" name="bank-details" type="radio" value="no~monthly-payment-frequency">
+                                    <input class="govuk-radios__input" id="no" name="bank-details" type="radio"
+                                        value="no~monthly-payment-frequency">
                                     <label class="govuk-label govuk-radios__label" for="no">
                                         Monthly
                                     </label>
                                 </div>
-
-                               
                             </div>
+                        </fieldset>
                     </div>
+
                     <button type="submit" class="govuk-button">
                         Continue
                     </button>
-                </form>
-                </div>
 
-                                 {% include "exit-button.html" %}
+                </form>
 
             </div>
+            {% include "exit-button.html" %}
+        </div>
     </main>
-    </div>
-    {% endblock %}
+</div>
+
+
+{% endblock %}
