@@ -1,0 +1,70 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+                                    Would you like us to pass your bank or building society account details on to the
+                                    other parent?
+                                </h1>
+                            </legend>
+                            <p>
+                                The other parent will need your bank or building society details so they can make Direct
+                                Pay payments into your account. You might have to use Collect and Pay if the other
+                                parent has a history of missing payments using the service.
+                            </p>
+
+                            <div class="govuk-radios" data-module="radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="account-details-1" name="account-details"
+                                        type="radio" value="Yes~bank-info-direct-pay" aria-expanded="true">
+                                    <label class="govuk-label govuk-radios__label" for="account-details-1">
+                                        Yes
+                                    </label>
+                                </div>
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="account-details-2" name="account-details"
+                                        type="radio" value="No~check-your-answers-bank">
+                                    <label class="govuk-label govuk-radios__label" for="account-details-2">
+                                        No
+                                    </label>
+                                </div>
+
+                                <div class="govuk-radios__divider">or</div>
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="account-details-3" name="account-details"
+                                        type="radio"
+                                        value="The other parent already has my bank or building society details~check-your-answers-bank">
+                                    <label class="govuk-label govuk-radios__label" for="account-details-3">
+                                        The other parent already has my bank or building society details
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+
+            </div>
+            {% include "exit-button.html" %}
+        </div>
+    </main>
+</div>
+
+
+{% endblock %}

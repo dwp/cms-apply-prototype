@@ -1,0 +1,37 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+
+                            <h1 class="govuk-fieldset__heading">
+                                We will send you updates about your application by email 
+                            </h1>
+
+                            <div class="govuk-!-padding-bottom-5"></div>
+
+                            <p class="govuk-body">We will use the email address you gave at the start of this
+                                application.</p>
+
+
+                            <div class="govuk-!-padding-bottom-3"></div>
+
+                            <a href="/apply/october2024/3-applicant-info-RP/rp-phone-time" role="button"
+                                draggable="false" class="govuk-button">
+                                Continue
+                            </a>
+                </form>
+            </div>
+            
+        </div>
+        {% include "exit-button.html" %}
+    </main>
+</div>
+{% endblock %}

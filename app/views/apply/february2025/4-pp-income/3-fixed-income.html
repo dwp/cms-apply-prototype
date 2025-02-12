@@ -1,0 +1,91 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  What is your income before tax and National Insurance from {{data['employer']}}, in pounds?
+                </h1>
+              </legend>
+              <div class="govuk-inset-text">We will share your income with the other parent.</div>
+
+              <p>This can be weekly, every 2 weeks, every 4 weeks, or monthly. We will only base your child maintenance
+                calculation on this amount if HMRC does not have up to date records.
+              </p>
+
+              <br>
+
+              <div class="govuk-form-group">
+                <div class="govuk-input__wrapper">
+                  <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                  <input class="govuk-input govuk-input--width-5" id="income-amount" name="income-amount" type="text"
+                    spellcheck="false">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <br>
+
+          <h1 class="govuk-heading-m">How regularly do you receive this income? </h1>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="weekly" name="often-paid" type="radio" value="week"
+                    data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="weekly">
+                    Weekly
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="2weeks" name="often-paid" type="radio" value="two weeks"
+                    data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="2weeks">
+                    Every 2 weeks
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="4weeks" name="often-paid" type="radio" value="four weeks"
+                    data-aria-controls="conditional-contact-3">
+                  <label class="govuk-label govuk-radios__label" for="4weeks">
+                    Every 4 weeks
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="monthly" name="often-paid" type="radio" value="month"
+                    data-aria-controls="conditional-contact-4">
+                  <label class="govuk-label govuk-radios__label" for="monthly">
+                    Monthly
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}

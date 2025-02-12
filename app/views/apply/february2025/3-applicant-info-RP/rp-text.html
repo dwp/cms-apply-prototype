@@ -1,0 +1,55 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                                <h1 class="govuk-fieldset__heading">
+                                    Can we send you text messages?
+                                </h1>
+                            </legend>
+                            <span id="changed-name-hint" class="govuk-hint">
+                                We will only send you text messages about your child maintenance application and case.
+                                The senders name will be ChildMaint.
+                            </span>
+                            <div class="govuk-!-padding-bottom-3"></div>
+                            <div class="govuk-radios govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="yes" name="text" type="radio"
+                                        value="yes~/apply/october2024/3-applicant-info-RP/check-ans">
+                                    <label class="govuk-label govuk-radios__label" for="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="no" name="text" type="radio"
+                                        value="no~/apply/october2024/3-applicant-info-RP/check-ans">
+                                    <label class="govuk-label govuk-radios__label" for="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div> <!-- govuk-form-group -->
+
+
+
+                    <button type="submit" class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+{% endblock %}
