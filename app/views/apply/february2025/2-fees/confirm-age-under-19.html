@@ -1,0 +1,124 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <!--start of new code-->
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <h1 class="govuk-heading-l">You have told us your date of birth is:
+
+                            <span class="govuk-caption-xl">
+                                <!--Day-->{{data['applicant-date-of-birth-day'] }}
+                                <!--Month {{data['applicant-date-of-birth-month'] }} -->
+
+                                {% if data['applicant-date-of-birth-month'] === '1' %}
+                                January
+                                {% elseif data['applicant-date-of-birth-month'] === '2' %}
+                                February
+                                {% elseif data['applicant-date-of-birth-month'] === '3' %}
+                                March
+                                {% elseif data['applicant-date-of-birth-month'] === '4' %}
+                                April
+                                {% elseif data['applicant-date-of-birth-month'] === '5' %}
+                                May
+                                {% elseif data['applicant-date-of-birth-month'] === '6' %}
+                                June
+                                {% elseif data['applicant-date-of-birth-month'] === '7' %}
+                                July
+                                {% elseif data['applicant-date-of-birth-month'] === '8' %}
+                                August
+                                {% elseif data['applicant-date-of-birth-month'] === '9' %}
+                                September
+                                {% elseif data['applicant-date-of-birth-month'] === '10' %}
+                                October
+                                {% elseif data['applicant-date-of-birth-month'] === '11' %}
+                                November
+                                {% elseif data['applicant-date-of-birth-month'] === '12' %}
+                                December
+                                {% endif %}
+
+                                <!-- {{data['applicant-date-of-birth-month'] }} -->
+
+                                <!-- Year -->
+                                {{data['applicant-date-of-birth-year']
+                                }}
+                            </span>
+                        </h1>
+                    </div>
+                    <div class="govuk-form-group">
+                        <h1 class="govuk-heading-m">Is this correct?</h1>
+                        <!--Start of radio buttons-->
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                <div class="govuk-radios govuk-radios--inline">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="add-another-child-1-yes"
+                                            name="add-another-child-1" type="radio" value="yes~no-fee-under-19">
+                                        <label class="govuk-label govuk-radios__label" for="add-another-child-1-yes">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="add-another-child-1-no"
+                                            name="add-another-child-1" type="radio"
+                                            value="no~/apply/february2022PP/2-fees/check-age">
+                                        <label class="govuk-label govuk-radios__label" for="add-another-child-1-no">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <!--end of radio buttons-->
+                    <br>
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+        </div>
+    </main>
+</div>
+
+
+<!-- In page styles start -->
+<style>
+    .app-task-list__item:first-child {
+        border-top: 0px solid #bfc1c3 !important;
+    }
+
+
+    .tasklist_float_60 {
+        float: left;
+        width: 60%;
+    }
+
+    .tasklist_float_20 {
+        float: left;
+        width: 20%;
+        text-align: right;
+    }
+
+    .app-task-list__items {
+        padding-left: 0px;
+    }
+
+    .govuk-caption-xl {
+        text-transform: capitalize;
+    }
+</style>
+
+<!-- In page styles end -->
+
+{% endblock %}

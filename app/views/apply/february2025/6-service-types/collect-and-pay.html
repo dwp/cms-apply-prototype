@@ -1,0 +1,100 @@
+{% extends "layout.html" %} {% block pageTitle %} Do you want to request a Collect and Pay arrangement? {% endblock %}
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+                                    If you do not think Direct Pay will work
+                                </h1>
+                            </legend>
+
+                        </fieldset>
+                    </div>
+
+                    <p>We can collect payments from you and pass them on to the other parent. This is called ‘Collect
+                        and
+                        Pay’. Both parents will be charged if you use Collect and Pay.
+                    </p>
+
+                    <h3 class="govuk-heading-s">When you can use Collect and Pay</h3>
+                    <p>You can only choose to start with a Collect and Pay arrangement if the other parent agrees to it.
+                        <br /><br />
+                        Collect and Pay can also be enforced if you:
+                    </p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>stop paying using Direct Pay</li>
+                        <li>do not respond to us</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s">If you use Collect and Pay</h3>
+                    <p>We will: <br /></p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>work out how much the payment will be and tell both parents
+                        </li>
+                        <li>collect payments from you and pass them on to the other parent – there are charges for this
+                        </li>
+                        <li>review your calculation each year, or if either parent’s circumstances change
+                        </li>
+
+                    </ul>
+
+                    <h3 class="govuk-heading-s">Charges for using Collect and Pay</h3>
+                    <p>You and the other parent will both be charged fees if you use Collect and Pay. <br /> <br />
+                        When you pay child maintenance, 20% is added to each payment. When the other parent gets paid
+                        child
+                        maintenance, 4% will be taken from each payment. <br /> <br />
+                        If the payment amount was £100, you would pay £120 and the other parent would get £96. <br />
+                        <br />
+                    </p>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
+                                <h1 class="govuk-fieldset__heading">Do you want to request a Collect and Pay
+                                    arrangement?
+                                </h1>
+                            </legend>
+                            <div class="govuk-radios--inline" data-module="radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="collect-and-pay-1" name="collect-and-pay"
+                                        type="radio" value="yes~collect-pay-self-employed"
+                                        aria-controls="conditional-other-parent-dob-1" aria-expanded="true">
+                                    <label class="govuk-label govuk-radios__label" for="collect-and-pay-1">
+                                        Yes, I would prefer Collect and Pay
+                                    </label>
+                                </div>
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="collect-and-pay-2" name="collect-and-pay"
+                                        type="radio" value="no~direct-pay">
+                                    <label class="govuk-label govuk-radios__label" for="collect-and-pay-2">
+                                        No, I want to use Direct Pay
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+
+            </div>
+            {% include "exit-button.html" %}
+        </div>
+    </main>
+</div>
+{% endblock %}

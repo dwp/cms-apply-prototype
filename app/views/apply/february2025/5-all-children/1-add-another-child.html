@@ -1,0 +1,145 @@
+{% extends "layout.html" %} {% block pageTitle %} Do you need to add another child to this arrangement? {% endblock %}
+{% block content %}
+{% include "feedback-banner.html" %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+
+          <h1 class="govuk-heading-xl">Check your answers for {{data['child-1-first-name'] }} {{
+            data['child-1-last-name'] }}</h1>
+          <h2 class="govuk-heading-m">{{data['child-1-first-name'] }}'s details</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['child-1-first-name'] }} {{ data['child-1-last-name'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Date of birth
+              </dt>
+              <dd class="govuk-summary-list__value">
+                3 10 2012
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> date of birth</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Are you the biological or legal parent?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> address</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Overnight stays
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Weekly <br>
+                3
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> contact details</span>
+                </a>
+              </dd>
+            </div>
+          </dl>
+
+          <form method="post" novalidate>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you need to add another child to this arrangement?
+                  </h1>
+                </legend>
+                <div id="changed-name-hint" class="govuk-hint">
+                  Only add the children named on the letter you received from the Child Maintenance Service. We’ll ask
+                  about other children in the next steps.
+                </div>
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="add-another-named-child" name="add-another-named-child"
+                      type="radio" value="yes~1-name">
+                    <label class="govuk-label govuk-radios__label" for="add-another-named-child">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="add-another-named-child" name="add-another-named-child"
+                      type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="add-another-named-child">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+
+          </form>
+
+        </div>
+        {% include "exit-button.html" %}
+      </div>
+    </main>
+  </div>
+
+
+<!-- inpage styles start -->
+
+  <style>
+    .app-task-list__item:first-child {
+      border-top: 0px solid #bfc1c3 !important;
+    }
+
+
+    .tasklist_float_60 {
+      float: left;
+      width: 60%;
+    }
+
+    .tasklist_float_20 {
+      float: left;
+      width: 20%;
+      text-align: right;
+    }
+
+    .app-task-list__items {
+      padding-left: 0px;
+    }
+
+    .govuk-caption-xl {
+      text-transform: capitalize;
+    }
+  </style>
+
+  <!-- inpage styles end -->
+
+  {% endblock %}

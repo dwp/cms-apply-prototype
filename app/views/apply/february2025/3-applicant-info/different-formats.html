@@ -1,0 +1,49 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% include "feedback-banner.html" %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form class=“form” action='letter-format' method=“post”>
+
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+              <h1 class="govuk-fieldset__heading">
+                What type of contact do you need in a different format?
+              </h1>
+            </legend>
+
+            <div class="govuk-form-group">
+              <span id="contact-time-hint" class="govuk-hint">
+                Select all that apply
+              </span>
+            </div>
+            <br>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="lift" name="lift" type="checkbox" value="lift">
+                <label class="govuk-label govuk-checkboxes__label" for="lift">
+                  Letters
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="ramp" name="ramp" type="checkbox" value="ramp">
+                <label class="govuk-label govuk-checkboxes__label" for="ramp">
+                  Phone calls
+                </label>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+        
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+{% endblock %}

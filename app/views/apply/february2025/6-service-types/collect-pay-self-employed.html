@@ -1,0 +1,92 @@
+{% extends "layout.html" %} {% block pageTitle %} How would you prefer to make Collect and Pay payments? {% endblock %}
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+                                    How you make Collect and Pay payments
+                                </h1>
+                            </legend>
+
+                        </fieldset>
+                    </div>
+
+                    <p>If we decide your service type will be Collect and Pay, there are 2 ways you can make payments.
+                        They
+                        are: 
+                    </p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Direct debit - this is where you send payments to the Child Maintenance Service and we pass
+                            them
+                            on to the other parent
+                        </li>
+                        <li>Deduction of earnings - this is where we take your child maintenance payments directly from
+                            your
+                            wage
+                        </li>
+                    </ul>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                <h1 class="govuk-heading-m">How would you prefer to make Collect and Pay
+                                    payments?
+                                </h1>
+                            </legend>
+                            <div class="govuk-radios" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="paymentMethod" name="paymentMethod"
+                                        type="radio" value="Direct debit~monthly-payment-frequency-collect-and-pay">
+                                    <label class="govuk-label govuk-radios__label" for="paymentMethod">
+                                        Direct debit
+                                    </label>
+                                </div>
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="paymentMethod-2" name="paymentMethod"
+                                        type="radio" value="Deduction of earnings~check-your-answers-collect-pay-doe"
+                                        data-aria-controls="conditional-paymentMethod-2">
+                                    <label class="govuk-label govuk-radios__label" for="paymentMethod-2">
+                                        Deduction of earnings
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                                    id="conditional-paymentMethod-2">
+                                    <div class="govuk-form-group">
+                                        <p>Your child maintenance payments will be taken directly from
+                                            your salary by your employer. If you have more than one
+                                            employer, we may need to collect payments from all of them.
+                                            <br> <br>
+                                            We’ll contact you to get the information we need to arrange
+                                            the payments, and let you know when the payments will be
+                                            taken.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+        </div>
+    </main>
+</div>
+
+
+{% endblock %}

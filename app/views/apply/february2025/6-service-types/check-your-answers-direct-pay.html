@@ -1,0 +1,104 @@
+{% extends "layout.html" %} {% block pageTitle %} Check your answers {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <form method="post" novalidate>
+                    <h1 class="govuk-heading-xl">Check your answers about service types</h1>
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Service type preference
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Direct pay
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="direct-pay">
+                                    Change
+                                    <span class="govuk-visually-hidden"> name</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Payment preference
+                            </dt>
+                            Collect and pay only (do not use)
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="select-payment-frequency.html">
+                                    Change
+                                    <span class="govuk-visually-hidden"> name</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Payment frequency
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Weekly
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="bank-details">
+                                    Change
+                                    <span class="govuk-visually-hidden"> name</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Day of payments
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Monday
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="bank-details">
+                                    Change
+                                    <span class="govuk-visually-hidden"> name</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Request other parent's payment details
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="bank-details">
+                                    Change
+                                    <span class="govuk-visually-hidden"> name</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+
+            </div>
+            {% include "exit-button.html" %}
+        </div>
+    </main>
+</div>
+
+
+
+
+{% endblock %}

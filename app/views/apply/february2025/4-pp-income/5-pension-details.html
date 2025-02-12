@@ -1,0 +1,57 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+              <h1 class="govuk-heading-xl">Which type of pension do you pay into?</h1>
+
+              <div id="waste-hint" class="govuk-hint">Select all that apply.</div>
+
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="workplace" name="pensiontype" type="checkbox"
+                    value="workplace">
+                  <label class="govuk-label govuk-checkboxes__label" for="workplace">
+                    Workplace pension
+                  </label>
+                  <div id="event-name-hint" class="govuk-hint" style="margin-left:15px"> This is usually paid directly
+                    from your wage.</div>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="private" name="pensiontype" type="checkbox"
+                    value="private">
+                  <label class="govuk-label govuk-checkboxes__label" for="private">
+                    Private pension
+                  </label>
+                  <div id="event-name-hint" class="govuk-hint" style="margin-left:15px"> This is seperate from your
+                    employer pension. </div>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <br>
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
+                            <legend
+                                class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                                <h1 class="govuk-fieldset__heading">
+                                    You need to call
+                                </h1>
+                            </legend>
+
+                            <p>You need to call the Child Maintenance Service to complete your application as a paying
+                                parent in Northern Ireland.
+                            </p>
+
+
+                            <p>
+                                Find out how to
+                                <a href="https://www.nidirect.gov.uk/contacts/child-maintenance-service"
+                                    class="govuk-link" rel="noreferrer noopener" target="_blank"> contact the Child
+                                    Maintenance Service in Northern Ireland (opens in new tab)</a>.
+
+                            </p>
+
+                            <!--end-->
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% include "exit-button.html" %}
+
+    </main>
+</div>
+{% endblock %}

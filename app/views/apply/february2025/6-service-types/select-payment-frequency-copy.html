@@ -1,0 +1,58 @@
+{% extends "layout.html" %} {% block pageTitle %} How often would you like to make payments? {% endblock %} {% block
+content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                                <h1 class="govuk-fieldset__heading">
+                                    How often would you like to make payments?
+                                </h1>
+                            </legend>
+                        </fieldset>
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group">
+                            <div class="govuk-radios" data-module="radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="payFrequency" name="payFrequency" type="radio"
+                                        value="yes~weekly-payment-frequency-copy">
+                                    <label class="govuk-label govuk-radios__label" for="payFrequency">
+                                        Weekly
+                                    </label>
+                                </div>
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="payFrequency-2" name="payFrequency" type="radio"
+                                        value="no~monthly-payment-frequency">
+                                    <label class="govuk-label govuk-radios__label" for="payFrequency-2">
+                                        Monthly
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+
+            </div>
+            {% include "exit-button.html" %}
+        </div>
+    </main>
+</div>
+
+
+{% endblock %}
