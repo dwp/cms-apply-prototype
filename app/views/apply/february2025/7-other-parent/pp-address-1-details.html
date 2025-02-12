@@ -1,0 +1,79 @@
+{% extends "layout.html" %} {% block pageTitle %} Does the other parent still live at this address? {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start-->
+                    <fieldset class="govuk-fieldset">
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                              <h1 class="govuk-fieldset__heading">
+                    You have told us the address you lived at with the other parent is:
+                              </h1>
+                          </legend>
+
+                            <span class="govuk-caption-l">
+                              {{data['shared-address-line-1'] }}<br/>
+                              {{data['shared-address-line-2'] }}<br/>
+                              {{data['shared-address-town'] }}<br/>
+                              {{data['shared-address-county'] }}<br/>
+                              {{data['shared-address-postcode'] }}<br/>
+                            </span>
+                            <br/>
+                        </h1>
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                          <h1 class="govuk-heading-m">
+                  Does the other parent still live at this address?
+                            </h1>
+                        </legend>
+                        <span id="other-parent-date-of-birth-hint" class="govuk-hint">
+                    This information will help make sure we send letters to the other parent's correct address.
+                        </span>
+
+
+                                                    <div class="govuk-radios govuk-radios">
+                                                        <div class="govuk-radios__item">
+                                                            <input class="govuk-radios__input" id="yes" name="other-parent-still-live-there" type="radio" value="yes~pp-other-info">
+                                                            <label class="govuk-label govuk-radios__label" for="yes">
+                                                                Yes
+                                                            </label>
+                                                        </div>
+                                                        <div class="govuk-radios__item">
+                                                            <input class="govuk-radios__input" id="no" name="other-parent-still-live-there" type="radio" value="no~pp-address-1-current">
+                                                            <label class="govuk-label govuk-radios__label" for="no">
+                                                                No
+                                                            </label>
+                                                        </div>
+                                                        <div class="govuk-radios__item">
+                                                            <input class="govuk-radios__input" id="dk" name="other-parent-still-live-there" type="radio" value="dk~pp-address-4">
+                                                            <label class="govuk-label govuk-radios__label" for="dk">
+                                                              I don't know
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                        </div>
+                    <!--Stop-->
+
+
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+                                                                                         {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+
+
+
+{% endblock %}

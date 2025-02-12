@@ -1,0 +1,135 @@
+{% extends "layout.html" %} {% block pageTitle %} Check this child's details {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <form method="post" novalidate>
+          <h1 class="govuk-heading-xl">Check {{data['child-2-first-name'] }} {{data['child-2-last-name'] }}'s details
+          </h1>
+
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['child-2-first-name'] }} {{data['child-2-middle-name'] }} {{data['child-2-last-name'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="2-name.html">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Date of birth
+              </dt>
+              <dd class="govuk-summary-list__value">
+                5 January 2007
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="2-dob.html">
+                  Change<span class="govuk-visually-hidden"> date of birth</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                {{data['child-2-first-name'] }}'s address
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">10 Dalton Street</p>
+                <p class="govuk-body">Sunderland</p>
+                <p class="govuk-body">England</p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="child-address.html">
+                  Change<span class="govuk-visually-hidden"> contact details</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Child Maintenance frequency
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">Weekly</p>
+                <p class="govuk-body">£37</p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="child-pay.html">
+                  Change<span class="govuk-visually-hidden"> contact details</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Child benefit
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">Yes</p>
+
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="child-benefit.html">
+                  Change<span class="govuk-visually-hidden"> contact details</span>
+                </a>
+              </dd>
+            </div>
+          </dl>
+
+          <form method="post" novalidate>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you need to add another child to this arrangement?
+                  </h1>
+                </legend>
+                <div id="changed-name-hint" class="govuk-hint">
+                  This should be a child you’re already paying for in a private arrangement. We will ask about other
+                  children in the next steps.
+                </div>
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="add-another-named-child" name="add-another-named-child"
+                      type="radio" value="yes~2-name">
+                    <label class="govuk-label govuk-radios__label" for="add-another-named-child">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="add-another-named-child" name="add-another-named-child"
+                      type="radio" value="no~3-children-live-with">
+                    <label class="govuk-label govuk-radios__label" for="add-another-named-child">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+
+          </form>
+
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}

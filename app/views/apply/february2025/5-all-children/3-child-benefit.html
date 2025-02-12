@@ -1,0 +1,63 @@
+{% extends "layout.html" %} {% block pageTitle %} Does the other parent get Child Benefit for this child? {% endblock %}
+{% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="cifba-benefit-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Does {{data['child-3-first-name'] }}'s other parent get Child Benefit for {{data['child-3-first-name']
+                  }}?
+                </h1>
+              </legend>
+              <br>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item" id="cifba-benefit">
+                  <input class="govuk-radios__input" id="cifba-benefit-1" name="cifba-benefit" type="radio"
+                    value="yes~3-check-your-answers-roc">
+                  <label class="govuk-label govuk-radios__label" for="cifba-benefit-1">
+                    Yes
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="cifba-benefit-2" name="cifba-benefit" type="radio"
+                    value="no~3-check-your-answers-roc">
+                  <label class="govuk-label govuk-radios__label" for="cifba-benefit-2">
+                    No
+                  </label>
+                </div>
+
+                <div class="govuk-radios__divider">or</div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="cifba-benefit-3" name="cifba-benefit" type="radio"
+                    value="I don't know~3-check-your-answers-roc">
+                  <label class="govuk-label govuk-radios__label" for="cifba-benefit-3">
+                    I do not know
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <br>
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+
+        </form>
+
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+{% endblock %}
