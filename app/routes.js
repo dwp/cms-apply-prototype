@@ -6,6 +6,7 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 const radioButtonRedirect = require('radio-button-redirect')
+const util = require('util')
 router.use(radioButtonRedirect)
 // Add your routes here
 
@@ -19,6 +20,8 @@ router.use(radioButtonRedirect)
 // New routes start
 
  // do-you-know-your-pin-and-password - october 2022
+
+
 
  router.post('/apply/october2022/mcmc-sign-up/do-you-know-your-pin-and-password', function(req, res) {
     if (req.body['know-pin'] === 'yes') {
@@ -2286,6 +2289,27 @@ router.post('/apply/october2022/4-pp-income/5-pension-details', function (req, r
   });
 
 
+  router.post('/income-answer', function(request, response) {
+
+    var income = request.session.data['income']
+    if (income.includes("benefits")){
+        response.redirect("/apply/february2025/4-pp-income/2-benefit-list")
+    } 
+    
+    else if (income.includes("employment")){
+        response.redirect("/apply/february2025/4-pp-income/3-job-details")
+    } 
+
+    else if (income.includes("self")){
+        response.redirect("/apply/february2025/4-pp-income/4-company-details")
+    } 
+
+    else {
+        response.redirect("/next-question")
+    }
+})
+
+
 router.post('/apply/october2022/4-pp-income/5-private-pension', function (req, res) {
     res.redirect('/apply/october2022/5-all-children/child-section-start.html')
 });
@@ -2832,7 +2856,8 @@ router.post('/apply/february2025/3-applicant-info/pp-home-3', function (req, res
 
 router.post('/apply/february2025/3-applicant-info/check-ans', function (req, res) {
     res.redirect('/apply/february2025/3-applicant-info-RP/equality/extra-question-pp')
-});
+}); 
+
 
 router.post('/apply/february2025/3-applicant-info/pp-address-2', function (req, res) {
     res.redirect('/apply/february2025/3-applicant-info/check-ans')
