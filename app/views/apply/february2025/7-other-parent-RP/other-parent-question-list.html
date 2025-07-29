@@ -1,0 +1,118 @@
+{% extends "layout.html" %} {% block pageTitle %} Tell us about your children {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <form method="post" novalidate>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
+                    Tell us what you know about the other parent.
+                  </h1>
+                </legend>
+
+                <div class="govuk-warning-text govuk-!-padding-top-5">
+                  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                  <strong class="govuk-warning-text__text">
+                    <span class="govuk-visually-hidden">Warning</span>
+                    Giving us as much information as possible can help us process your application faster.
+                  </strong>
+                </div>
+
+                <!-- <p class="govuk-body">This section will ask you questions about the other parent.</p> -->
+
+                <div class="govuk-form-group">
+
+                  <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                      <h1 class="govuk-fieldset__heading">
+                        Will you be travelling to any of these countries?
+                      </h1>
+                    </legend> -->
+                  <!-- <div class="govuk-inset-text">
+                    This section will ask you questions about the other parent.
+                  </div> -->
+                  <div id="countries-hint" class="govuk-hint">
+                    Select all questions that you can answer
+                  </div>
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="countries" name="countries" type="checkbox"
+                        value="Name">
+                      <label class="govuk-label govuk-checkboxes__label" for="countries">
+                         name
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox"
+                        value="Date of birth">
+                      <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                        date of birth or age
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox"
+                        value="National Insurnace number">
+                      <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+                        National Insurance number
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="countries-4" name="countries" type="checkbox"
+                        value="Phone number">
+                      <label class="govuk-label govuk-checkboxes__label" for="countries-4">
+                        telephone number
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox"
+                        value="Address">
+                      <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+                        address or general location
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="countries-7" name="countries" type="checkbox"
+                        value="Other information">
+                      <label class="govuk-label govuk-checkboxes__label" for="countries-7">
+                        any other details about them
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__divider">or</div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="countries-8" name="countries" type="checkbox"
+                        value="none" data-behaviour="exclusive">
+                      <label class="govuk-label govuk-checkboxes__label" for="countries-8">
+                        I do not know anything about the other parent
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+                
+              </fieldset>
+            </div>
+            <p class="govuk-body govuk-!-padding-bottom-5">We will also ask if there is anything else that we should know about the other parent.</p>
+            <!-- <div class="govuk-inset-text">We will also ask if there is anything else that we should know about the other parent.</div> -->
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+
+          </form>
+
+        </div>
+        {% include "exit-button.html" %}
+      </div>
+    </main>
+</div>
+
+
+{% endblock %}

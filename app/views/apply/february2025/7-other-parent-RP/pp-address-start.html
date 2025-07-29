@@ -1,0 +1,112 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+{% include "feedback-banner.html" %}
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <!--start-->
+
+                    <fieldset class="govuk-fieldset" aria-describedby="otherParentKnowAddressInformation">
+                        <div class="govuk-form-group">
+
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                                <h1 class="govuk-fieldset__heading">
+                                    Do you know anything about where the other parent lives?
+                                </h1>
+                            </legend>
+                            <div class="govuk-warning-text govuk-!-padding-top-5">
+                                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                                <strong class="govuk-warning-text__text">
+                                    <span class="govuk-visually-hidden">Warning</span>
+                                    Giving us as much information as possible can help us process your application faster.
+                                </strong>
+                            </div>
+                            <!-- <div class="govuk-inset-text">
+                                    You might not know all the information or details for the other parent, telling us
+                                    as much as you
+                                    know
+                                    can speed up your application.
+                                </div> -->
+                            <div id="countries-hint" class="govuk-hint">
+                                Select all addresses that you can tell us about
+                            </div>
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="countries" name="countries"
+                                        type="checkbox" value="Name">
+                                    <label class="govuk-label govuk-checkboxes__label" for="countries">
+                                        The other parents current address
+                                    </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="countries-2" name="countries"
+                                        type="checkbox" value="Date of birth">
+                                    <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                                        The other parents previous address
+                                    </label>
+                                </div>
+                                <!-- <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="countries-3" name="countries"
+                                        type="checkbox" value="National Insurnace number">
+                                    <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+                                        An address we lived at together
+                                    </label>
+                                </div> -->
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="countries-4" name="countries"
+                                        type="checkbox" value="Phone number">
+                                    <label class="govuk-label govuk-checkboxes__label" for="countries-4">
+                                        An address where I drop off my child[ren]
+                                    </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="countries-5" name="countries"
+                                        type="checkbox" value="Address">
+                                    <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+                                        An address confirmed by court papers, letters or documents
+                                    </label>
+                                </div>
+                                <!-- <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="countries-6" name="countries"
+                                        type="checkbox" value="Address">
+                                    <label class="govuk-label govuk-checkboxes__label" for="countries-6">
+                                        An address the other parent told me thay live at
+                                    </label>
+                                </div> -->
+                                <!-- <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="countries-7" name="countries"
+                                            type="checkbox" value="Other information">
+                                        <label class="govuk-label govuk-checkboxes__label" for="countries-7">
+                                            Any other details to help trace the other parent
+                                        </label>
+                                    </div> -->
+                                <div class="govuk-checkboxes__divider">or</div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="countries-8" name="countries"
+                                        type="checkbox" value="none" data-behaviour="exclusive">
+                                    <label class="govuk-label govuk-checkboxes__label" for="countries-8">
+                                        I do not know anything about the other parents address
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            {% include "exit-button.html" %}
+
+        </div>
+    </main>
+</div>
+
+{% endblock %}
