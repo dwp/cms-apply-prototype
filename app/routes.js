@@ -3365,10 +3365,15 @@ router.post('/apply/february2025/6-service-types-RP/check-your-answers', functio
 });
 
 //Section 7: Other Parent RP
+
+
 router.post('/apply/february2025/7-other-parent-rp/check-your-answers', function (req, res) {
     res.redirect('../9-confirmation-RP/declaration-fee')
 });
 
+router.post('/apply/february2025/7-other-parent-rp/other-parent-start', function (req, res) {
+    res.redirect('../7-other-parent-RP/pp-name')
+});
 
 
 router.post('/apply/february2025/6-service-types-RP/check-your-answers-bank', function (req, res) {
@@ -3377,6 +3382,10 @@ router.post('/apply/february2025/6-service-types-RP/check-your-answers-bank', fu
 
 router.post('/apply/february2025/7-other-parent-RP/pp-name', function (req, res) {
     res.redirect('../7-other-parent-RP/pp-dob')
+});
+
+router.post('/apply/february2025/7-other-parent-RP/pp-phone', function (req, res) {
+    res.redirect('../7-other-parent-RP/pp-address-1')
 });
 
 router.post('/apply/february2025/7-other-parent-RP/pp-address-2', function (req, res) {
