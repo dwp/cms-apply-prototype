@@ -21,48 +21,51 @@ endblock %} {% block content %}
               <br>
               <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="religion" name="religion" type="radio"
-                    value="etrosexual~mobility" data-aria-controls="conditional-religion">
-                  <label class="govuk-label govuk-radios__label" for="religion">
+                  <input class="govuk-radios__input" id="orientation-1" name="orientation" type="radio"
+                    value="hetrosexual~../check-ans-equality">
+                  <label class="govuk-label govuk-radios__label" for="orientation-1">
                     Hetrosexual or Straight
                   </label>
                 </div>
+
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="religion-2" name="religion" type="radio" value="gay~mobility"
-                    data-aria-controls="conditional-religion-2">
-                  <label class="govuk-label govuk-radios__label" for="religion-2">
+                  <input class="govuk-radios__input" id="orientation-2" name="orientation" type="radio"
+                    value="gay~../check-ans-equality" data-aria-controls="conditional-religion-2">
+                  <label class="govuk-label govuk-radios__label" for="orientation-2">
                     Gay or Lesbian
                   </label>
                 </div>
+
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="religion-2" name="religion" type="radio"
-                    value="bisexual~mobility" data-aria-controls="conditional-religion-2">
-                  <label class="govuk-label govuk-radios__label" for="religion-2">
+                  <input class="govuk-radios__input" id="orientation-3" name="orientation" type="radio"
+                    value="bisexual~../check-ans-equality">
+                  <label class="govuk-label govuk-radios__label" for="orientation-3">
                     Bisexual
                   </label>
                 </div>
 
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="religion-7" name="religion" type="radio" value="other~mobility"
-                    data-aria-controls="conditional-religion-7">
-                  <label class="govuk-label govuk-radios__label" for="religion-7">
+                  <input class="govuk-radios__input" id="orientation-4" name="orientation" type="radio"
+                    value="other~../check-ans-equality" data-aria-controls="conditional-orientation">
+                  <label class="govuk-label govuk-radios__label" for="orientation-4">
                     Any other sexual orientation
                   </label>
                 </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-religion-7">
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-orientation">
                   <div class="govuk-form-group">
-                    <label class="govuk-label" for="religion-by-text">
+                    <label class="govuk-label" for="orientation-by-text">
                       What is your sexual orientation? (optional)
                     </label>
-                    <input class="govuk-input govuk-!-width-one-third" id="religion-by-text" name="religion-by-text"
-                      type="tel">
+                    <input class="govuk-input govuk-!-width-one-third" id="rorientation-by-text"
+                      name="orientation-by-text" type="text">
                   </div>
                 </div>
+
                 <div class="govuk-radios__divider">or</div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="religion-8" name="religion" type="radio" value="no~mobility"
-                    data-aria-controls="conditional-religion-8">
-                  <label class="govuk-label govuk-radios__label" for="religion-8">
+                  <input class="govuk-radios__input" id="orientation-5" name="orientation" type="radio"
+                    value="no~../check-ans-equality">
+                  <label class="govuk-label govuk-radios__label" for="orientation-5">
                     Prefer not to say
                   </label>
                 </div>
@@ -75,6 +78,7 @@ endblock %} {% block content %}
           <button id="personalDetailsBtn" type="submit" class="govuk-button">
             Continue
           </button>
+
         </form>
       </div>
       {% include "exit-button.html" %}

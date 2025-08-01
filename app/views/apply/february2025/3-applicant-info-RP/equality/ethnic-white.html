@@ -23,35 +23,37 @@ endblock %} {% block content %}
               <br>
               <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="religion" name="religion" type="radio" value="none~religion"
-                    data-aria-controls="conditional-religion">
+                  <input class="govuk-radios__input" id="ethnic-background-1" name="ethnic-background" type="radio" value="English Welsh Scottish Northern Irish or British~religion">
                   <label class="govuk-label govuk-radios__label" for="religion">
                     English, Welsh, Scottish, Northern Irish or British
                   </label>
                 </div>
+
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="religion-2" name="religion" type="radio"
-                    value="buddhist~religion" data-aria-controls="conditional-religion-2">
-                  <label class="govuk-label govuk-radios__label" for="religion-2">
+                  <input class="govuk-radios__input" id="ethnic-background-2" name="ethnic-background" type="radio"
+                    value="Irish~religion">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-background-2">
                     Irish
                   </label>
                 </div>
+                
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="religion-2" name="religion" type="radio"
-                    value="christian~religion" data-aria-controls="conditional-religion-2">
-                  <label class="govuk-label govuk-radios__label" for="religion-2">
+                  <input class="govuk-radios__input" id="ethnic-background-3" name="ethnic-background" type="radio"
+                    value="Gypsy or Irish Traveller~religion">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-background-3">
                     Gypsy or Irish Traveller
                   </label>
                 </div>
+                
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="ethnic-group-4" name="ethnic-group" type="radio"
-                    value="another-mixed-background~religion" data-aria-controls="conditional-ethnic-group-4">
-                  <label class="govuk-label govuk-radios__label" for="ethnic-group-4">
+                  <input class="govuk-radios__input" id="ethnic-background-4" name="ethnic-background" type="radio"
+                    value="Any other White background~religion" data-aria-controls="conditional-ethnic-background-4">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-background-4">
                     Any other White background
                   </label>
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                  id="conditional-ethnic-group-4">
+                  id="conditional-ethnic-white-4">
                   <div class="govuk-form-group">
                     <label class="govuk-label" for="ethnicity-white-other">
                       Your White background (optional)
@@ -60,11 +62,13 @@ endblock %} {% block content %}
                       name="ethnicity-white-other" type="text">
                   </div>
                 </div>
+
                 <div class="govuk-radios__divider">or</div>
+                
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="religion-8" name="religion" type="radio"
-                    value="no~religion-irish" data-aria-controls="conditional-religion-8">
-                  <label class="govuk-label govuk-radios__label" for="religion-8">
+                  <input class="govuk-radios__input" id="ethnic-background-5" name="ethnic-background" type="radio"
+                    value="Prefer not to say~religion">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-background-5">
                     Prefer not to say
                   </label>
                 </div>
