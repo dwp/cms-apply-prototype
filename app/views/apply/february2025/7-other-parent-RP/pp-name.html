@@ -74,27 +74,51 @@
                     </div>
 
                     <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                                 <h1 class="govuk-fieldset__heading">
                                     Has the other parent ever been known by a different name?
                                 </h1>
                             </legend>
-                            <div id="changedName-hint" class="govuk-hint">
-                                For example, a maiden name, middle name or previous legal name.
+                            <div id="contact-hint" class="govuk-hint">
+                               For example, a maiden name, middle name or previous legal name.
                             </div>
                             <div class="govuk-radios" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="changedName" name="changedName" type="radio"
-                                        value="yes">
-                                    <label class="govuk-label govuk-radios__label" for="changedName">
+                                    <input class="govuk-radios__input" id="pp-name-1" name="pp-name" type="radio"
+                                        value="email" data-aria-controls="conditional-pp-name-1">
+                                    <label class="govuk-label govuk-radios__label" for="pp-name">
                                         Yes
                                     </label>
                                 </div>
+                                <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                                    id="conditional-pp-name-1">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label" for="previous-first-anme">
+                                           First name
+                                        </label>
+                                        <input class="govuk-input govuk-!-width-two-thirds" id="previous-first-anme"
+                                            name="previous-first-anme" type="text" spellcheck="false">
+                                    </div>
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label" for="previous-middle-name">
+                                            Middle names (optional)
+                                        </label>
+                                        <input class="govuk-input govuk-!-width-two-thirds" id="previous-middle-name"
+                                            name="previous-middle-name" type="text" spellcheck="false">
+                                    </div>
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label" for="previous-last-name">
+                                           Last name
+                                        </label>
+                                        <input class="govuk-input govuk-!-width-two-thirds" id="previous-last-name"
+                                            name="previous-last-name" type="text" spellcheck="false" >
+                                    </div>
+                                </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="changedName-2" name="changedName"
-                                        type="radio" value="no">
-                                    <label class="govuk-label govuk-radios__label" for="changedName-2">
+                                    <input class="govuk-radios__input" id="pp-name-2" name="pp-name" type="radio"
+                                        value="phone">
+                                    <label class="govuk-label govuk-radios__label" for="pp-name-2">
                                         No
                                     </label>
                                 </div>
