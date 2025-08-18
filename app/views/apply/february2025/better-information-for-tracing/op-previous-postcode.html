@@ -7,10 +7,8 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <form action="/apply/february2025/7-other-parent-RP/pp-address-3" method="post" novalidate>
+                <form method="post" novalidate>
                     <!--start-->
-
-
 
                     <div class="govuk-width-container">
                         <h1 class="govuk-heading-xl">Find an address</h1>
@@ -20,8 +18,8 @@
                             </label>
                             <div id="postcode-hint" class="govuk-hint">
                                 For example, AA3 1AB.
-                            </div><input class="govuk-input govuk-!-width-two-thirds" id="postcode-parent"
-                                name="postcode" type="text" aria-describedby="postcode-hint">
+                            </div><input class="govuk-input govuk-!-width-two-thirds" id="postcode" name="postcode"
+                                type="text" aria-describedby="postcode-hint">
                         </div>
                         <div class="govuk-form-group">
                             <label class="govuk-label" for="searchString">
@@ -29,21 +27,25 @@
                             </label>
                             <div id="searchString-hint" class="govuk-hint">
                                 For example, 15 or Prospect Cottage.
-                            </div><input class="govuk-input govuk-!-width-two-thirds" id="searchString-parent"
+                            </div><input class="govuk-input govuk-!-width-two-thirds" id="searchString"
                                 name="searchString" type="text" aria-describedby="searchString-hint">
-                        </div><button type="submit" class="govuk-button" data-module="govuk-button">
+                        </div>
+
+
+                        <a href="/apply/february2025/better-information-for-tracing/op-previous-replay.html" role="button"
+                            draggable="false" class="govuk-button">
                             Find address
-                        </button>
+                        </a>
+
                         <p class="govuk-body govuk-!-margin-bottom-0"><a
-                                href="/apply/october2024/7-other-parent-RP/pp-address-2" class="govuk-link">Enter
-                                address manually</a></p>
+                                href="/apply/february2025/better-information-for-tracing/op-previous-address-2"
+                                class="govuk-link">Enter address manually</a></p>
                     </div>
 
 
-
+                </form> 
             </div>
             {% include "exit-button.html" %}
-
         </div>
     </main>
 </div>

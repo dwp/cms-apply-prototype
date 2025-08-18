@@ -7,7 +7,7 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <form method="post" novalidate>
+                <form method="get" action="op-address-3.html" novalidate>
                     <!--start-->
                     <fieldset class="govuk-fieldset">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
@@ -15,81 +15,89 @@
                                 Give as much of the other parent’s current address as you can
                             </h1>
                         </legend>
-                        <span id="other-parent-date-of-birth-hint" class="govuk-hint">
+                        <span id="op-date-of-birth-hint" class="govuk-hint">
                             For example, you might know just the street or town.
                         </span>
 
                         <div class="govuk-!-padding-bottom-5"></div>
 
                         <div class="govuk-form-group">
-                            <label class="govuk-label" for="other-parent-address-line-1">
-                                 Address line 1
+                            <label class="govuk-label" for="op-address-line-1">
+                                Address line 1
                                 <span class="govuk-visually-hidden">Address line 1</span>
                             </label>
-                            <input class="govuk-input" id="other-parent-address-line-1" name="other-parent-address-line-1" type="text">
+                            <input class="govuk-input" id="op-address-line-1"
+                                name="op-address-line-1" type="text">
                         </div>
 
                         <div class="govuk-form-group">
-                            <label class="govuk-label" for="other-parent-address-line-2">
-                                 Address line 2
+                            <label class="govuk-label" for="op-address-line-2">
+                                Address line 2
                                 <span class="govuk-visually-hidden">Address line 2</span>
                             </label>
-                            <input class="govuk-input" id="other-parent-address-line-2" name="other-parent-address-line-2" type="text">
+                            <input class="govuk-input" id="op-address-line-2"
+                                name="op-address-line-2" type="text">
                         </div>
 
                         <div class="govuk-form-group">
-                            <label class="govuk-label" for="other-parent-address-town">
+                            <label class="govuk-label" for="op-address-town">
                                 Town or city
                             </label>
-                            <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-address-town" name="other-parent-address-town" type="text">
+                            <input class="govuk-input govuk-!-width-two-thirds" id="op-address-town"
+                                name="op-address-town" type="text">
                         </div>
 
 
                         <div class="govuk-form-group">
-                            <label class="govuk-label" for="other-parent-address-county">
+                            <label class="govuk-label" for="op-address-county">
                                 County
                             </label>
-                            <input class="govuk-input govuk-!-width-two-thirds" id="other-parent-address-county" name="other-parent-address-county" type="text">
+                            <input class="govuk-input govuk-!-width-two-thirds" id="op-address-county"
+                                name="op-address-county" type="text">
                         </div>
 
 
                         <div class="govuk-form-group">
-                            <label class="govuk-label" for="other-parent-address-postcode">
+                            <label class="govuk-label" for="op-address-postcode">
                                 Postcode
                             </label>
-                            <input class="govuk-input govuk-input--width-10" id="other-parent-address-postcode" name="other-parent-address-postcode"
-                                type="text">
+                            <input class="govuk-input govuk-input--width-10" id="op-address-postcode"
+                                name="op-address-postcode" type="text">
                         </div>
 
                     </fieldset>
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset">
-                                <p>
-                                   Country
-                                </p>
-                                
-                            
+                            <p>
+                                Country
+                            </p>
+
+
                             <div class="govuk-radios govuk-radios--small">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                                    <input class="govuk-radios__input" id="changed-name" name="changed-name"
+                                        type="radio" value="month">
                                     <label class="govuk-label govuk-radios__label" for="changed-name">
                                         England
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name"
+                                        type="radio" value="year">
                                     <label class="govuk-label govuk-radios__label" for="changed-name-2">
                                         Scotland
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name"
+                                        type="radio" value="year">
                                     <label class="govuk-label govuk-radios__label" for="changed-name-2">
                                         Wales
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                                    <input class="govuk-radios__input" id="changed-name-2" name="changed-name"
+                                        type="radio" value="year">
                                     <label class="govuk-label govuk-radios__label" for="changed-name-2">
                                         Northern Ireland
                                     </label>
@@ -106,7 +114,7 @@
                     </button>
                 </form>
             </div>
-                                                                                         {% include "exit-button.html" %}
+            {% include "exit-button.html" %}
 
         </div>
     </main>

@@ -19,20 +19,21 @@
                                 </h1>
                             </legend>
 
-                            <p class="govuk-body">Tell us as much information as you can.</p>
-
-                           <!--  <div class="govuk-warning-text">
+                            <div class="govuk-warning-text  govuk-!-padding-top-5">
                                 <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                                 <strong class="govuk-warning-text__text">
                                     <span class="govuk-visually-hidden">Warning</span>
-                                    Giving us as much information as possible can help us process your application faster.
+                                    Giving us as much information as possible can help us process your application
+                                    faster.
                                 </strong>
-                            </div> -->
+                            </div>
+
+                            <p class="govuk-body">Tell us as much information as you can.</p>
 
                             <div class="govuk-radios govuk-radios">
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="op-address-1" name="op-address" type="radio"
-                                        value="I know the full address~pp-postcode">
+                                        value="I know the full address~op-postcode">
                                     <label class="govuk-label govuk-radios__label" for="op-address-1">
                                         I know the other parent's full address and postcode 
                                     </label>
@@ -40,7 +41,7 @@
 
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="op-address-2" name="op-address" type="radio"
-                                        value="I know part of the address~pp-address-2">
+                                        value="I know part of the address~op-address-2">
                                     <label class="govuk-label govuk-radios__label" for="op-address-2">
                                         I know part of the other parent's address  
                                     </label>
@@ -51,7 +52,7 @@
                                 <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                     <div class="govuk-radios__item">
                                         <input class="govuk-radios__input" id="op-address-3" name="op-address"
-                                            type="radio" value="I know the town or city~pp-previous-address"
+                                            type="radio" value="I know the town or city~op-previous-address"
                                             data-aria-controls="conditional-op-address-3">
                                         <label class="govuk-label govuk-radios__label" for="op-address-3">
                                             I know the town or city the other parent lives in or near 
@@ -61,7 +62,8 @@
                                         id="conditional-op-address-3">
                                         <div class="govuk-form-group">
                                             <div class="govuk-date-input__item">
-                                                <label class="govuk-label govuk-date-input__label" for="op-address-town">
+                                                <label class="govuk-label govuk-date-input__label"
+                                                    for="op-address-town">
                                                     Town or city
                                                 </label>
 
@@ -74,8 +76,9 @@
                                     </div>
 
                                     <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="op-address-4" name="op-address" type="radio"
-                                            value="I know the area of UK~pp-previous-address" data-aria-controls="conditional-op-address-4">
+                                        <input class="govuk-radios__input" id="op-address-4" name="op-address"
+                                            type="radio" value="I know the area of UK~op-previous-address"
+                                            data-aria-controls="conditional-op-address-4">
                                         <label class="govuk-label govuk-radios__label" for="op-address-4">
                                             I know the area of the UK the other parent lives in
                                         </label>
@@ -97,7 +100,7 @@
 
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="op-address-5" name="op-address" type="radio"
-                                        value="yes~pp-previous-address">
+                                        value="yes~op-previous-address">
                                     <label class="govuk-label govuk-radios__label" for="op-address-5">
                                         I do not know anything about where the other parent lives
                                     </label>
