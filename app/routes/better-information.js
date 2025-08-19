@@ -14,6 +14,8 @@ module.exports = function(router) {
  
 //place routes here
 router.post('/apply/february2025/better-information-for-tracing/op-question-list', function(req, res) {
+  // restsart script
+  delete req.session.data.currentOPStep
   const opData = req.session.data['op-details'];
  
 const redirectMap = {
