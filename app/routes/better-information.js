@@ -23,7 +23,7 @@ const redirectMap = {
   "Date of birth": "/apply/february2025/better-information-for-tracing/op-dob",
   "National Insurance number": "/apply/february2025/better-information-for-tracing/op-nino",
   "Phone number": "/apply/february2025/better-information-for-tracing/op-phone",
-  "Address": "/apply/february2025/better-information-for-tracing/op-postcode",
+  "Address": "/apply/february2025/better-information-for-tracing/op-address-1",
   "Other information": "/apply/february2025/better-information-for-tracing/op-anything-else"
 };
  
@@ -115,7 +115,7 @@ router.post('/apply/february2025/better-information-for-tracing/op-phone', funct
  
 });
  
-router.post('/apply/february2025/better-information-for-tracing/op-postcode', function (req, res) {
+router.post('/apply/february2025/better-information-for-tracing/op-address-1', function (req, res) {
   OPJourneyCount(req);
  
   const journeyFlow = req.session.data['op-journey-flow'];
