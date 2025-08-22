@@ -1,27 +1,27 @@
-% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <!--Feedback banner start-->
 {% include "feedback-banner.html" %}
 <!--Feedback banner stop-->
 <div class="govuk-width-container">
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
- 
+
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds-from-desktop">
- 
+
                 <h1 class="govuk-heading-xl">Check your answers about the other parent</h1>
- 
+
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
- 
-                    
+
+
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                             Information you know about the other parent
                         </dt>
                         <dd class="govuk-summary-list__value">
- 
-                            {{data['op-details']}} 
- 
+
+                            {{data['op-details']}}
+
                         </dd>
                         <dd class="govuk-summary-list__actions">
                             <a class="govuk-link" href="op-question-list.html">
@@ -30,217 +30,221 @@
                             </a>
                         </dd>
                     </div>
- 
- 
+
+                    <!-- name start -->
+                    {% if data['op-details'].includes('Name') %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                             Name
                         </dt>
                         <dd class="govuk-summary-list__value">
- 
-                            {{data['other-parent-first-name']}} {{data['other-parent-middle-name']}}
-                            {{data['other-parent-last-name']}}
- 
+
+                            {{data['op-first-name']}}
+                            {{data['op-middle-name']}} {{data['op-last-name']}}
+
                         </dd>
                         <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="">
+                            <a class="govuk-link" href="op-name.html">
                                 Change
                                 <span class="govuk-visually-hidden"> name</span>
                             </a>
                         </dd>
                     </div>
- 
+
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                             Has the other parent been known by a different name?
                         </dt>
                         <dd class="govuk-summary-list__value">
- 
+                            {{data['op-other-name']}}
                         </dd>
                         <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="">
+                            <a class="govuk-link" href="op-name.html">
                                 Change
                                 <span class="govuk-visually-hidden"> name</span>
                             </a>
                         </dd>
                     </div>
- 
+                    {% endif %}
+                    <!-- name end -->
+
+                    <!-- date of birth start -->
+                    {% if data['op-details'].includes('Date of birth') %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                             Age or date of birth
                         </dt>
                         <dd class="govuk-summary-list__value">
- 
+                            {{data['op-dob-day']}} {{data['op-dob-month']}} {{data['op-dob-year']}} 
+                            {{data['op-dob-part-day']}} {{data['op-dob-part-month']}} {{data['op-dob-part-year']}} 
+                            {{data['op-age']}}
                         </dd>
                         <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="">
+                            <a class="govuk-link" href="op-dob.html">
                                 Change
                                 <span class="govuk-visually-hidden"> name</span>
                             </a>
                         </dd>
                     </div>
- 
+                    {% endif %}
+                    <!-- date of birth end -->
+
+                    <!-- nino start -->
+                    {% if data['op-details'].includes('National Insurance number') %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                             National Insurance number
                         </dt>
                         <dd class="govuk-summary-list__value">
- 
+                             {{data['op-nino']}}
                         </dd>
                         <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="">
+                            <a class="govuk-link" href="op-nino.html">
                                 Change
                                 <span class="govuk-visually-hidden"> name</span>
                             </a>
                         </dd>
                     </div>
- 
+                    {% endif %}
+                    <!-- nino end -->
+
+                    <!-- telehone number start -->
+                    {% if data['op-details'].includes('Phone number') %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
-                            Main contact number
+                            Contact number
                         </dt>
                         <dd class="govuk-summary-list__value">
- 
+                           Main: {{data['op-phone-number-1']}} <br>
+                           Alternative: {{data['op-phone-number-2']}} - {{data['phone-type']}}
                         </dd>
                         <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="">
+                            <a class="govuk-link" href="op-phone.html">
                                 Change
                                 <span class="govuk-visually-hidden"> name</span>
                             </a>
                         </dd>
                     </div>
- 
-                    <!-- q1  -->
+                    {% endif %}
+                    <!-- telephone number end -->
+
+                    <!-- current address start  -->
+                    {% if data['op-details'].includes('Address') %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                             Current address
                         </dt>
                         <dd class="govuk-summary-list__value">
- 
-                            {% if data['op-address'] === 'yes' %}
- 
-                            {{data['other-parent-address-line-1']}} <br />
-                            {{data['other-parent-address-line-2']}} <br />
-                            {{data['other-parent-address-town']}} <br />
-                            {{data['other-parent-address-county']}} <br />
-                            {{data['other-parent-address-postcode']}} <br />
- 
-                            {% elseif data['op-address'] === 'no' %}
-                            No
- 
-                            {% endif %}
- 
+
+                            1 The Towers <br />
+                            Hill Top Road <br />
+                            Leeds <br />
+                            West Yorkshire <br />
+                            LS1 1SL <br />
+                        
                         </dd>
                         <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="pp-address-1">
+                            <a class="govuk-link" href="op-address-1.html">
                                 Change
                                 <span class="govuk-visually-hidden"> name</span>
                             </a>
                         </dd>
                     </div>
- 
- 
+
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                             How you know their current address
                         </dt>
                         <dd class="govuk-summary-list__value">
- 
+                             I have dropped my child off at this address:
+                             08 - 2025
                         </dd>
                         <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="pp-address-3">
+                            <a class="govuk-link" href="op-address-3.html">
                                 Change
                                 <span class="govuk-visually-hidden"> name</span>
                             </a>
                         </dd>
                     </div>
- 
- 
+                    <!-- current address end -->
+
+                    <!-- previous address start -->
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                             Previous address
                         </dt>
                         <dd class="govuk-summary-list__value">
- 
- 
+
+                            {{data['op-prev-address']}}
                         </dd>
                         <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="pp-address-3">
+                            <a class="govuk-link" href="op-previous-address.html">
                                 Change
                                 <span class="govuk-visually-hidden"> name</span>
                             </a>
                         </dd>
                     </div>
- 
+
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                             How you know their previous address
                         </dt>
                         <dd class="govuk-summary-list__value">
- 
- 
+
+
                         </dd>
                         <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="pp-current-town">
+                            <a class="govuk-link" href="op-previous-replay.html">
                                 Change
                                 <span class="govuk-visually-hidden"> name</span>
                             </a>
                         </dd>
                     </div>
- 
- 
-                    <!-- <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key">
-                            Previous area of the UK
-                        </dt>
-                        <dd class="govuk-summary-list__value">
- 
-                        </dd>
-                        <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="pp-address-3">
-                                Change
-                                <span class="govuk-visually-hidden"> name</span>
-                            </a>
-                        </dd>
-                    </div> -->
- 
- 
+                    {% endif %}
+                    <!-- previous address end -->
+
+                    <!-- any other information start -->
+                     {% if data['op-details'].includes('Other information') %}
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                             Other information about them
                         </dt>
                         <dd class="govuk-summary-list__value">
- 
+
+                            {{data['op-other-info']}}
+
                         </dd>
                         <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="pp-address-3">
+                            <a class="govuk-link" href="op-anything-else.html">
                                 Change
                                 <span class="govuk-visually-hidden"> name</span>
                             </a>
                         </dd>
                     </div>
- 
+                     {% endif %}
+                    <!-- any other information end -->
                 </dl>
- 
+
                 <br />
- 
+
                 <form method="post" novalidate>
- 
- 
+
+
                     <button type="submit" class="govuk-button">
                         Continue
                     </button>
- 
+
                     </p>
                 </form>
- 
-                <button type="reset" class="govuk-button govuk-button--secondary" onclick="deleteMatchingCookiesAndRedirect('govuk-prototype-kit-', '/apply/february2025/better-information-for-tracing/op-question-list')">
+
+                <button type="reset" class="govuk-button govuk-button--secondary"
+                    onclick="deleteMatchingCookiesAndRedirect('govuk-prototype-kit-', '/apply/february2025/better-information-for-tracing/op-start')">
                     Start again
                 </button>
                 <!-- <a class="govuk-link" href="../sections">Return to Index</a> -->
             </div>
             {% include "exit-button.html" %}
- 
+
         </div>
     </main>
 </div>
@@ -251,25 +255,25 @@
         }
         else {
             document.getElementById('previous-address').style.display = 'hidden';
- 
+
         }
- 
+
     }
 </script>
- 
- 
+
+
 <script>
     function deleteMatchingCookiesAndRedirect(prefix, redirectUrl) {
-      const cookies = document.cookie.split(';');
-      
-      cookies.forEach(cookie => {
-        const cookieName = cookie.split('=')[0].trim();
-        if (cookieName.startsWith(prefix)) {
-          document.cookie = cookieName + '=; Max-Age=0; path=/;';
-        }
-      });
-  
-      window.location.href = redirectUrl;
+        const cookies = document.cookie.split(';');
+
+        cookies.forEach(cookie => {
+            const cookieName = cookie.split('=')[0].trim();
+            if (cookieName.startsWith(prefix)) {
+                document.cookie = cookieName + '=; Max-Age=0; path=/;';
+            }
+        });
+
+        window.location.href = redirectUrl;
     }
-  </script>
-  {% endblock %}
+</script>
+{% endblock %}
